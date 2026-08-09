@@ -1,0 +1,29 @@
+name: Validate recipes
+
+on:
+  push:
+    branches: ["**"]
+    paths:
+      - "recipes/**"
+      - "scripts/validate-recipes.rb"
+      - ".github/workflows/validate.yml"
+  pull_request:
+    paths:
+      - "recipes/**"
+      - "scripts/validate-recipes.rb"
+      - ".github/workflows/validate.yml"
+  workflow_dispatch:
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: ruby/setup-ruby@v1
+        with:
+          # The validator uses only stdlib (yaml, date), so no bundle needed.
+          ruby-version: "3.3"
+
+      - name: Validate recipe frontmatter and body
+        run: ruby scripts/validate-recipes.rb

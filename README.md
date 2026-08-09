@@ -10,6 +10,7 @@ recipes/                  One Markdown file per recipe. Source of truth.
 docs/standing-parameters.md   Yields, equipment specs, standing techniques.
 SCHEMA.md                 Frontmatter spec. Read before adding a recipe.
 scripts/export-crouton.sh Strips frontmatter, emits Crouton-ready body.
+scripts/validate-recipes.rb   Checks recipes/ against SCHEMA.md. Runs in CI.
 .claude/skills/           Recipe generation skill (see below).
 
 _config.yml               Jekyll config.
@@ -87,6 +88,28 @@ curl -s localhost:4000/recipes/<slug>/ \
 Never promote to `dialed-in` without a cook session. The whole value of
 this repo is that its numbers are observed rather than guessed, and one
 invented yield undermines every recipe that plans against it.
+
+## Validation
+
+```sh
+ruby scripts/validate-recipes.rb           # errors fail, warnings print
+ruby scripts/validate-recipes.rb --strict  # warnings fail too
+```
+
+Runs on every push touching `recipes/` (`.github/workflows/validate.yml`).
+
+**Errors** are contract violations — a missing required field, an equipment
+value outside the controlled list, a slug that doesn't match its filename, a
+body with no step list (which would import into Crouton as an empty shell).
+The two that matter most: an `untested` recipe carrying `yields` or a
+`last_cooked`, and a `dialed-in` recipe with no `last_cooked`. Those are the
+mechanical form of "nothing gets promoted without a cook session."
+
+**Warnings** are the aspirational rules from `docs/standing-parameters.md` —
+the sodium and added-sugar ceilings, vegetables specified by count, a
+temperature that doesn't name its appliance. Several current recipes knowingly
+trip these, so they don't fail the build. They just stay visible instead of
+being rediscovered by reading.
 
 ## Generation skill
 

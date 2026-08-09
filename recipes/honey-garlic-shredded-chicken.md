@@ -2,7 +2,7 @@
 title: Honey Garlic Crockpot Shredded Chicken
 slug: honey-garlic-shredded-chicken
 status: untested
-version: 2
+version: 3
 
 containers: 10
 storage:
@@ -76,7 +76,7 @@ fresh_toppings: []
 
 9.  During the last ~20 minutes of chicken time, rinse 3 ½ cups jasmine rice until the water runs clear. Add to the Instant Pot with 3 ½ cups water. Valve on SEALING. Pressure Cook High 3 minutes, natural release 10 minutes, quick release. Fluff and cool.
 
-10. Trim the green beans and toss with olive oil, salt, and pepper. Roast at 425°F for 15–18 minutes until tender with slightly crispy tips.
+10. Trim the green beans and toss with olive oil, salt, and pepper. Air roast at 400°F in the Ninja toaster oven for 15–18 minutes until tender with slightly crispy tips.
 
 11. Cool everything 10–15 minutes. Assembly line across 10 containers: 170 g chicken, then 140 g rice, then 90 g green beans. The sauce is already in the chicken, so no separate sauce container.
 
@@ -105,6 +105,10 @@ chicken, and eliminate the raw chicken cutting step entirely. Trade-off is
 no seared flavor — the sauce carries it instead.
 
 Green beans are more forgiving than broccoli and hard to overcook.
+
+The beans go in the Ninja toaster oven at 400°F air roast rather than the main
+oven at 425°F — the fan makes up the 25°F, so the timing is unchanged. Nothing
+in this recipe needs the main oven, which leaves it free for a second prep.
 
 **Nutrition:**
 Serving Size: 1 container, Calories: 600 kcal, Protein: 55 g, Carbohydrates: 65 g, Fat: 10 g, Fiber: 4 g, Sodium: 700 mg, Sugar: 17 g. Estimated and unverified — recipe has not been cooked.
