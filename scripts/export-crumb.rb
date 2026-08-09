@@ -111,7 +111,7 @@ CROUTON_TYPES = {
   'isPublicRecipe' => BOOL, 'serves' => [Integer], 'defaultScale' => [Integer],
   'tags' => [Array], 'neutritionalInfo' => [String], 'sourceName' => [String],
   'webLink' => [String], 'steps' => [Array], 'cookingDuration' => [Integer],
-  'images' => [Array]
+  'images' => [Array], 'senderName' => [String], 'sourceImage' => [String]
 }.freeze
 
 INGREDIENT_TYPES = { 'uuid' => [String], 'order' => [Integer], 'ingredient' => [Hash] }.freeze
@@ -255,6 +255,8 @@ def build_crumb(path)
     'notes' => build_notes(fm, body),
     'neutritionalInfo' => build_nutrition(fm),
     'sourceName' => 'ten-containers',
+    'senderName' => 'ten-containers',
+    'sourceImage' => '',
     'webLink' => "#{SITE_URL}/recipes/#{slug}/",
     'images' => []
   }
@@ -281,7 +283,10 @@ stale = []
 files.each do |path|
   crumb = build_crumb(path)
   assert_types!(crumb, File.basename(path))
-  json  = JSON.pretty_generate(crumb) + "\n"
+  # Minified, no trailing newline — byte-style parity with a real Crouton
+  # export. Whitespace is meaningless to a JSON parser, but matching removes
+  # a variable while the import path is still unproven.
+  json  = JSON.generate(crumb)
   dest  = File.join(outdir, "#{File.basename(path, '.md')}.crumb")
 
   if check
