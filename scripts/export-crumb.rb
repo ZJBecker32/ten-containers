@@ -111,8 +111,24 @@ CROUTON_TYPES = {
   'isPublicRecipe' => BOOL, 'serves' => [Integer], 'defaultScale' => [Integer],
   'tags' => [Array], 'neutritionalInfo' => [String], 'sourceName' => [String],
   'webLink' => [String], 'steps' => [Array], 'cookingDuration' => [Integer],
-  'images' => [Array], 'senderName' => [String], 'sourceImage' => [String]
+  'images' => [Array]
 }.freeze
+
+# Determined by testing against Crouton, not by reading the schema.
+#
+# The reference export has "tags": [], so it shows the field but never an
+# element, and it carries a real sourceImage and senderName. Emitting string
+# tags plus empty-string sourceImage/senderName produced a file Crouton would
+# not open; removing all three fixed it. A file with those fields absent
+# entirely imports fine, which also rules them out as required.
+#
+# Which of the two was actually at fault is still unresolved — most likely
+# `tags` is an array of objects rather than strings. Until that is tested,
+# tags ship empty and the tag text goes into the notes, so no information is
+# lost even though Crouton-side tag filtering is.
+#
+# Do not re-add either field without importing the result into Crouton first.
+EMPTY_TAGS = true
 
 INGREDIENT_TYPES = { 'uuid' => [String], 'order' => [Integer], 'ingredient' => [Hash] }.freeze
 STEP_TYPES = { 'uuid' => [String], 'order' => [Integer], 'step' => [String], 'isSection' => BOOL }.freeze
@@ -172,6 +188,11 @@ def build_notes(fm, body)
     out << "PER CONTAINER (#{fm['containers']} total)"
     pc.each { |k, v| out << "  #{k.to_s.tr('_', ' ')}: #{v} g" }
     out << "  total: #{pc.values.select { |v| v.is_a?(Integer) }.sum} g"
+  end
+
+  if (tags = Array(fm['tags'])) && !tags.empty?
+    out << ''
+    out << "TAGS: #{tags.join(', ')}"
   end
 
   if (st = fm['storage'])
@@ -249,15 +270,14 @@ def build_crumb(path)
     'defaultScale' => 1,
     'isPublicRecipe' => false,
     'folderIDs' => [],
-    'tags' => Array(fm['tags']),
     'ingredients' => ingredients,
     'steps' => steps,
     'notes' => build_notes(fm, body),
     'neutritionalInfo' => build_nutrition(fm),
     'sourceName' => 'ten-containers',
-    'senderName' => 'ten-containers',
-    'sourceImage' => '',
     'webLink' => "#{SITE_URL}/recipes/#{slug}/",
+    # See EMPTY_TAGS above. Tag text is carried in the notes instead.
+    'tags' => [],
     'images' => []
   }
 end
