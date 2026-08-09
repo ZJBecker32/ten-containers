@@ -162,8 +162,19 @@ unverified — recipe has not been cooked.
 
 ## After writing
 
-Tell the user which components to weigh during the cook session, and remind
-them that promoting to `dialed-in` means: update quantities, fill `yields`,
-set `last_cooked`, bump `version` — and if an observed yield differs
-meaningfully from `docs/standing-parameters.md`, update that file too. It is
-the shared layer every other recipe plans against.
+Run `scripts/validate-recipes.rb` and fix anything it reports. Errors are
+contract violations; warnings are the sodium and added-sugar ceilings and the
+by-weight rule, which are worth mentioning to the user even when they are
+deliberate.
+
+Then point at the cook-session loop rather than explaining it:
+
+```sh
+scripts/new-session.rb <slug>        # before cooking: prefilled sheet
+scripts/session-report.rb <file>     # after: the exact edits to make
+```
+
+The sheet already lists the components to weigh and the open questions for
+this recipe, so there is no need to restate them. Do say that promotion to
+`dialed-in` happens only after that loop runs — the report prints the field
+changes, including the `yields` block this file was forbidden from inventing.

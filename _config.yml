@@ -36,4 +36,5 @@ exclude:
   - Gemfile
   - Gemfile.lock
   - scripts/
+  - sessions/
   - vendor/

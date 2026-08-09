@@ -19,6 +19,7 @@
 #
 require 'yaml'
 require 'date'
+require 'json'
 
 EQUIPMENT = %w[instant-pot crockpot main-oven toaster-oven stovetop hand-mixer food-scale].freeze
 STATUSES  = %w[untested testing dialed-in].freeze
@@ -40,27 +41,23 @@ APPLIANCE_WORDS = /oven|instant pot|crockpot|slow cooker|stovetop|skillet|pan|ai
 # they are used for juice and the recipes give a bottled equivalent.
 COUNT_VEG = /\A[\d½⅓⅔¼¾]+\s*[–-]?\s*[\d½⅓⅔¼¾]*\s+(?:large\s+|medium\s+|small\s+)?(bell peppers?|peppers?|onions?|zucchinis?|carrots?|potatoes?|tomatoes?|broccoli|heads?)\b/i
 
-strict = ARGV.delete('--strict')
-files  = ARGV.empty? ? Dir.glob(File.join(__dir__, '..', 'recipes', '*.md')).sort : ARGV
+strict    = ARGV.delete('--strict')
+json_mode = ARGV.delete('--json')
+files     = ARGV.empty? ? Dir.glob(File.join(__dir__, '..', 'recipes', '*.md')).sort : ARGV
 
 abort 'validate-recipes.rb: no recipe files found' if files.empty?
 
-errors = 0
-warnings = 0
+results = []
 
 files.each do |path|
   name = File.basename(path)
   problems = []
 
-  def problems_add(list, level, msg) = list << [level, msg]
-
   raw = File.read(path, encoding: 'UTF-8')
   match = raw.match(/\A---\s*\n(.*?)\n---\s*\n(.*)\z/m)
 
   unless match
-    puts "#{name}"
-    puts "  ERROR  no YAML frontmatter block"
-    errors += 1
+    results << { file: name, slug: nil, problems: [[:error, 'no YAML frontmatter block']] }
     next
   end
 
@@ -69,9 +66,7 @@ files.each do |path|
   begin
     fm = YAML.safe_load(fm_text, permitted_classes: [Date], aliases: false)
   rescue Psych::Exception => e
-    puts "#{name}"
-    puts "  ERROR  frontmatter is not valid YAML: #{e.message}"
-    errors += 1
+    results << { file: name, slug: nil, problems: [[:error, "frontmatter is not valid YAML: #{e.message}"]] }
     next
   end
 
@@ -196,32 +191,40 @@ files.each do |path|
     warn_.("ingredient specified by count, not weight: #{item}") if item.match?(COUNT_VEG)
   end
 
-  # --- Report --------------------------------------------------------------
-  next if problems.empty?
+  results << { file: name, slug: fm['slug'], problems: problems }
+end
 
-  puts name
-  problems.each do |level, msg|
-    if level == :error
-      errors += 1
-      puts "  ERROR  #{msg}"
-    else
-      warnings += 1
-      puts "  WARN   #{msg}"
+errors   = results.sum { |r| r[:problems].count { |lvl, _| lvl == :error } }
+warnings = results.sum { |r| r[:problems].count { |lvl, _| lvl == :warn } }
+
+if json_mode
+  puts JSON.pretty_generate(
+    errors: errors,
+    warnings: warnings,
+    recipes: results.map do |r|
+      {
+        file: r[:file],
+        slug: r[:slug],
+        problems: r[:problems].map { |lvl, msg| { level: lvl.to_s, message: msg } }
+      }
     end
-  end
-  puts
-end
-
-checked = files.size
-summary = "#{checked} recipe#{'s' if checked != 1} checked, #{errors} error#{'s' if errors != 1}, #{warnings} warning#{'s' if warnings != 1}"
-
-if errors.positive?
-  puts summary
-  exit 1
-elsif warnings.positive? && strict
-  puts "#{summary} (--strict: warnings are fatal)"
-  exit 1
+  )
 else
-  puts summary.empty? ? 'ok' : summary
-  exit 0
+  results.each do |r|
+    next if r[:problems].empty?
+
+    puts r[:file]
+    r[:problems].each do |level, msg|
+      puts format('  %-6s %s', level == :error ? 'ERROR' : 'WARN', msg)
+    end
+    puts
+  end
+
+  checked = files.size
+  puts "#{checked} recipe#{'s' if checked != 1} checked, " \
+       "#{errors} error#{'s' if errors != 1}, #{warnings} warning#{'s' if warnings != 1}" \
+       "#{' (--strict: warnings are fatal)' if strict && warnings.positive?}"
 end
+
+exit 1 if errors.positive? || (strict && warnings.positive?)
+exit 0
