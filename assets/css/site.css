@@ -100,11 +100,12 @@ h3 { font-size: .8125rem; text-transform: uppercase; letter-spacing: .06em; colo
   padding: 1rem;
   background: var(--surface);
   border: 1px solid var(--line);
-  border-left: 4px solid var(--accent);
   border-radius: 8px;
 }
 .card[hidden] { display: none; }
-.card.status-untested { border-left-style: dashed; border-left-color: var(--warn-line); background: var(--warn-bg); }
+/* Untested is distinguished by the warm ground and the badge, not by a thick
+   accent stripe down one edge. */
+.card.status-untested { background: var(--warn-bg); border-color: var(--warn-line); }
 .card-title { font-weight: 650; font-size: 1.0625rem; text-decoration: none; }
 .card-meta, .card-nutrition {
   display: flex; flex-wrap: wrap; gap: .5rem 1rem;
