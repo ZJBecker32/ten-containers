@@ -114,21 +114,21 @@ CROUTON_TYPES = {
   'images' => [Array]
 }.freeze
 
-# Determined by testing against Crouton, not by reading the schema.
+# tags, sourceImage and senderName are deliberately omitted. This was
+# determined by importing test files into Crouton, not by reading the schema.
 #
-# The reference export has "tags": [], so it shows the field but never an
-# element, and it carries a real sourceImage and senderName. Emitting string
-# tags plus empty-string sourceImage/senderName produced a file Crouton would
-# not open; removing all three fixed it. A file with those fields absent
-# entirely imports fine, which also rules them out as required.
+# The reference export carries "tags": [] — it shows the field but never an
+# element — so the element type was a guess. Emitting string tags alongside
+# empty-string sourceImage and senderName produced a file Crouton refused to
+# open. Removing all three fixed it, and a real export with sourceImage and
+# senderName stripped still imports, so neither is required.
 #
-# Which of the two was actually at fault is still unresolved — most likely
-# `tags` is an array of objects rather than strings. Until that is tested,
-# tags ship empty and the tag text goes into the notes, so no information is
-# lost even though Crouton-side tag filtering is.
+# Crouton prompts for folder and tags during import anyway, so nothing is
+# gained by sending them. The tag text is written into the notes block so it
+# is on screen while making that choice.
 #
-# Do not re-add either field without importing the result into Crouton first.
-EMPTY_TAGS = true
+# Do not re-add any of the three without importing the result into Crouton
+# first. Reading the schema is what produced two failed attempts.
 
 INGREDIENT_TYPES = { 'uuid' => [String], 'order' => [Integer], 'ingredient' => [Hash] }.freeze
 STEP_TYPES = { 'uuid' => [String], 'order' => [Integer], 'step' => [String], 'isSection' => BOOL }.freeze
@@ -276,7 +276,7 @@ def build_crumb(path)
     'neutritionalInfo' => build_nutrition(fm),
     'sourceName' => 'ten-containers',
     'webLink' => "#{SITE_URL}/recipes/#{slug}/",
-    # See EMPTY_TAGS above. Tag text is carried in the notes instead.
+    # Always empty — see the note above the type table. Tag text goes in notes.
     'tags' => [],
     'images' => []
   }

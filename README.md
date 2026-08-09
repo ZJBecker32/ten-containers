@@ -55,6 +55,12 @@ JSON-LD has nowhere to put: per-container gram targets, the fridge/freezer
 split, observed yields, the fresh-toppings warning, and the full Notes. Tap it
 on the phone and it opens in Crouton.
 
+Tags are sent empty on purpose — Crouton prompts for folder and tags during
+import, and the tag text is written into the notes so it is on screen while
+choosing. The comment above the type table in `export-crumb.rb` explains what
+else was removed and why; do not re-add any of it without importing the result
+into Crouton to check.
+
 The files are generated but **committed**, because GitHub Pages serves what is
 in the branch. CI runs `export-crumb.rb --check` and fails if a recipe changed
 without a re-export, so they cannot silently drift. After editing a recipe:
