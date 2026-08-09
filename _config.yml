@@ -38,11 +38,20 @@ defaults:
     values:
       layout: page
       permalink: /docs/:basename/
+  # Sessions are published so the sheet can be read on a phone at the counter.
+  # It is filled in on paper or in Notes; this is the read-only copy.
+  - scope:
+      path: "sessions"
+      type: "pages"
+    values:
+      layout: session
+      is_session: true
+      permalink: /sessions/:basename/
 
 exclude:
   - README.md
   - Gemfile
   - Gemfile.lock
   - scripts/
-  - sessions/
+  - sessions/README.md
   - vendor/

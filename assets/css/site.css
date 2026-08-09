@@ -169,6 +169,20 @@ h3 { font-size: .8125rem; text-transform: uppercase; letter-spacing: .06em; colo
 .grams th { text-align: left; font-weight: 400; color: var(--muted); padding: .25rem 0; }
 .grams td { text-align: right; font-variant-numeric: tabular-nums; font-weight: 600; padding: .25rem 0; }
 .grams tr.total th, .grams tr.total td { border-top: 1px solid var(--line); padding-top: .5rem; }
+.grams.weigh thead th {
+  font-size: .6875rem; text-transform: uppercase; letter-spacing: .05em;
+  border-bottom: 1px solid var(--line); text-align: right;
+}
+.grams.weigh thead th:first-child { text-align: left; }
+.grams.weigh td { text-align: right; }
+.blank {
+  display: inline-block; min-width: 3.5rem;
+  border-bottom: 1.5px solid var(--muted); vertical-align: baseline;
+}
+.planned { display: block; font-size: .6875rem; font-weight: 400; color: var(--muted); }
+
+.prose pre { overflow-x: auto; background: var(--surface); border: 1px solid var(--line); border-radius: 6px; padding: .625rem .75rem; }
+.prose pre code { background: none; border: 0; padding: 0; }
 
 /* Prose */
 .prose { overflow-wrap: break-word; }

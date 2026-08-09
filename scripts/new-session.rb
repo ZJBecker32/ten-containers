@@ -123,9 +123,8 @@ lines << '# Left over after the last container (positive) or short (negative).'
 lines << 'leftover_g:'
 lines << '---'
 lines << ''
-lines << "# Cook session — #{fm['title']}"
-lines << ''
-lines << "Recipe v#{fm['version']}, status `#{fm['status']}`, cooked #{date}."
+# No title or status heading here: the frontmatter carries both, and the
+# session layout renders them. Repeating them shows up twice on the phone.
 lines << ''
 
 unless open_questions.empty?

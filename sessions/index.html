@@ -1,0 +1,36 @@
+---
+title: Cook Sessions
+permalink: /sessions/
+is_session: false
+layout: page
+---
+{%- assign sessions = site.pages | where: 'is_session', true | sort: 'date' | reverse -%}
+
+<h1>Cook Sessions</h1>
+<p class="lede">
+  The observed record behind every yield. Open the current sheet on your phone
+  while cooking — weigh each component after cooking and before portioning.
+</p>
+
+{% if sessions.size == 0 %}
+<p class="empty">
+  No sessions recorded yet. Generate one with
+  <code>scripts/new-session.rb &lt;slug&gt;</code>, commit it, and it appears here.
+</p>
+{% else %}
+<ul class="cards">
+{%- for s in sessions %}
+  <li class="card">
+    <a class="card-title" href="{{ s.url | relative_url }}">{{ s.recipe }}</a>
+    <p class="card-meta">
+      <span>{{ s.date | date: "%Y-%m-%d" }}</span>
+      <span>cooked v{{ s.version_cooked }}</span>
+    </p>
+  </li>
+{%- endfor %}
+</ul>
+{% endif %}
+
+<p style="margin-top:2rem">
+  Workflow: <a href="{{ '/docs/cook-session/' | relative_url }}">docs/cook-session</a>
+</p>

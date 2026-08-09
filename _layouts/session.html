@@ -1,0 +1,76 @@
+---
+layout: default
+---
+{%- comment -%}
+  A session sheet keeps its data in frontmatter, which Jekyll strips before
+  rendering — so on the phone the important half (what to weigh, and the
+  target it is being compared against) would be invisible without this.
+  Planned totals are not stored in the session file; they are looked up from
+  the recipe so the two cannot disagree.
+{%- endcomment -%}
+{%- assign recipe = site.pages | where: 'slug', page.recipe | first -%}
+{%- assign containers = recipe.containers | default: 10 -%}
+
+<article class="recipe">
+
+  <h1>{{ recipe.title | default: page.recipe }}</h1>
+  <p class="lede">
+    Cook session, {{ page.date | date: "%Y-%m-%d" }} &middot; recipe v{{ page.version_cooked }}
+    {%- if recipe %} &middot; <a href="{{ recipe.url | relative_url }}">open the recipe</a>{% endif %}
+  </p>
+
+  <section class="panel toppings">
+    <h3>Weigh after cooking, before portioning</h3>
+    <p>
+      All of it, while it is still in one pan. Once it is split across
+      {{ containers }} containers the number is gone. Leave anything you did not
+      actually weigh blank — a blank is fine, a guess is not.
+    </p>
+  </section>
+
+  {%- if page.measurements %}
+  <section class="panel">
+    <h3>Components</h3>
+    <table class="grams weigh">
+      <thead>
+        <tr><th>component</th><th>planned</th><th>raw</th><th>cooked</th></tr>
+      </thead>
+      <tbody>
+      {%- for m in page.measurements %}
+        {%- assign key = m[0] -%}
+        {%- assign per = recipe.per_container[key] -%}
+        <tr>
+          <th>{{ key | replace: '_', ' ' }}</th>
+          <td>{% if per %}{{ per | times: containers }} g{% else %}&mdash;{% endif %}</td>
+          <td>{% if m[1].raw_g %}{{ m[1].raw_g }} g{% else %}<span class="blank"></span>{% endif %}</td>
+          <td>{% if m[1].cooked_g %}{{ m[1].cooked_g }} g{% else %}<span class="blank"></span>{% endif %}</td>
+        </tr>
+      {%- endfor %}
+      </tbody>
+    </table>
+  </section>
+  {%- endif %}
+
+  <section class="panel">
+    <h3>Timing</h3>
+    <table class="grams">
+      <tbody>
+        <tr>
+          <th>active (hands-on)</th>
+          <td>{% if page.active_time_min %}{{ page.active_time_min }} min{% else %}<span class="blank"></span>{% endif %}
+              <span class="planned">recipe says {{ recipe.active_time_min }}</span></td>
+        </tr>
+        <tr>
+          <th>total (wall clock)</th>
+          <td>{% if page.total_time_min %}{{ page.total_time_min }} min{% else %}<span class="blank"></span>{% endif %}
+              <span class="planned">recipe says {{ recipe.total_time_min }}</span></td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+
+  <div class="prose">
+  {{ content }}
+  </div>
+
+</article>

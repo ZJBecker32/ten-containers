@@ -67,24 +67,40 @@ UNITS = {
   'ml' => 'MILLILITRE', 'l' => 'LITRE'
 }.freeze
 
-# Parse a leading quantity only when it is unambiguous. A range ("2–3 limes",
-# "8–9 cloves garlic") gets no quantity at all and keeps its full text as the
-# name — Crouton stores a single amount, and half of "2–3" is worse than none.
-# This mirrors what Crouton itself does with an entry like "Salt/Pepper".
+FRACTION = '[½⅓⅔¼¾⅛⅜⅝⅞]'
+# A quantity: whole number, mixed number ("3 ½"), or a bare fraction.
+NUM = /(?:\d+(?:\.\d+)?\s*#{FRACTION}?|#{FRACTION})/o
+
+def parse_number(str)
+  whole = str[/\A\d+(?:\.\d+)?/]
+  frac  = str[/#{FRACTION}/o]
+  (whole ? whole.to_f : 0) + (frac ? VULGAR[frac] : 0)
+end
+
+# Parse a leading quantity into an amount, a unit, and the remaining name.
+#
+# A range takes its UPPER bound. Crouton stores one number and drives the
+# shopping list from it, so "2–3 limes" going across as 3 is right: over-buying
+# a lime is free, and sending no amount at all leaves a blank line in
+# Reminders. The range still reads in full on the site and in the recipe body.
+#
+# Anything with no leading number keeps its whole text and gets no quantity —
+# "Olive oil, salt, pepper" is not a shopping quantity. Crouton's own export
+# does the same for an entry like "Salt/Pepper".
 def parse_ingredient(text)
   t = text.strip.sub(/\A~\s*/, '')
+  amount = nil
+  rest   = nil
 
-  # Any range means hands off. The leading term may itself be a mixed number
-  # ("3 ½–4 lbs broccoli"), so allow a whole part, then an optional fraction,
-  # before the dash.
-  return [nil, nil, text.strip] if t.match?(/\A[\d.]*\s*[½⅓⅔¼¾⅛⅜⅝⅞]?\s*[–—-]\s*[\d½⅓⅔¼¾⅛⅜⅝⅞.]/)
+  if (m = t.match(/\A(#{NUM})\s*[–—-]\s*(#{NUM})\s+(.*)\z/mo))
+    amount = [parse_number(m[1]), parse_number(m[2])].max
+    rest   = m[3].strip
+  elsif (m = t.match(/\A(#{NUM})\s+(.*)\z/mo))
+    amount = parse_number(m[1])
+    rest   = m[2].strip
+  end
 
-  m = t.match(/\A(\d+)?\s*([½⅓⅔¼¾⅛⅜⅝⅞])?\s+?(.*)\z/m)
-  return [nil, nil, text.strip] unless m && (m[1] || m[2])
-
-  amount = (m[1] ? m[1].to_f : 0) + (m[2] ? VULGAR[m[2]] : 0)
-  rest   = m[3].to_s.strip
-  return [nil, nil, text.strip] if rest.empty?
+  return [nil, nil, text.strip] if amount.nil? || amount.zero? || rest.nil? || rest.empty?
 
   word = rest.split(/\s+/).first.to_s.downcase.delete('.,')
   if UNITS.key?(word)
