@@ -3,6 +3,14 @@ description: >-
   Source of truth for a weekly 10-container meal prep rotation.
   Markdown in, GitHub Pages out, Crouton on the phone at the end.
 
+# This is a project site, served from <user>.github.io/<repo>/, so baseurl
+# must carry the repo name. GitHub Pages does not set it for you. Without it
+# every link resolves to the domain root and 404s, and — worse — the JSON-LD
+# `url` comes out wrong, which is the field Crouton imports against.
+# On a custom domain, set url to the domain and baseurl to "".
+url: "https://zjbecker32.github.io"
+baseurl: "/ten-containers"
+
 markdown: kramdown
 kramdown:
   input: GFM

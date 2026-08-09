@@ -70,10 +70,14 @@ bundle install
 bundle exec jekyll serve
 ```
 
+Serves at <http://localhost:4000/ten-containers/> — `baseurl` carries the repo
+name because this is a project site. Add `--baseurl ""` to serve from root
+instead.
+
 Then check a recipe page's JSON-LD before trusting a Crouton import:
 
 ```sh
-curl -s localhost:4000/recipes/<slug>/ \
+curl -s localhost:4000/ten-containers/recipes/<slug>/ \
   | sed -n '/application\/ld+json/,/<\/script>/p' \
   | sed '1d;$d' | python3 -m json.tool
 ```
