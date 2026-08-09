@@ -108,5 +108,15 @@ This is the cheapest prep in the rotation and the only one requiring no oven.
 
 Open item: sodium runs high at ~950 mg per container, most of it from the 4 seasoning packets. Next version, try swapping 2 packets for bulk cumin, chili powder, paprika, garlic powder, and oregano.
 
+Open item: the vegetable arithmetic does not close. Using only measured
+figures — 57 g per cooked pepper and ~80 g per cooked onion, both now in
+`docs/standing-parameters.md` — 6 peppers plus 1 onion plus a 12–16 oz bag of
+corn comes to roughly 760–880 g. That is 76–87 g per container, not the 110 g
+this recipe claims, a shortfall of 220–340 g per batch. Either the veg was
+never weighed on the sessions behind this recipe, or more onion went in than
+the ingredient list records. Weigh the combined veg before portioning on the
+next cook and correct whichever end is wrong. Nothing here has been changed
+without a scale behind it.
+
 **Nutrition:**
 Serving Size: 1 container, Calories: 700 kcal, Protein: 52 g, Carbohydrates: 60 g, Fat: 25 g, Fiber: 9 g, Sodium: 950 mg, Sugar: 2 g. Estimated, excludes fresh toppings.

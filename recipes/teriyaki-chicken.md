@@ -2,21 +2,21 @@
 title: Teriyaki Chicken
 slug: teriyaki-chicken
 status: untested
-version: 1
+version: 2
 
 containers: 10
 storage:
   fridge: 6
   freezer: 4
-active_time_min: 60
-total_time_min: 120
-prep_time_min: 30
-cook_time_min: 50
+active_time_min: 40
+total_time_min: 240
+prep_time_min: 15
+cook_time_min: 210
 
-equipment: [main-oven, toaster-oven, instant-pot, food-scale]
+equipment: [crockpot, hand-mixer, instant-pot, toaster-oven, food-scale]
 store: aldi
 protein_source: chicken-breast
-tags: [freezer-friendly, sauce-packed-separately, bottled-sauce]
+tags: [no-cutting, freezer-friendly, hands-off, sauce-packed-separately, bottled-sauce]
 
 per_container:
   chicken: 145
@@ -28,7 +28,7 @@ nutrition_per_container:
   calories: 540
   protein_g: 52
   carbs_g: 60
-  fat_g: 12
+  fat_g: 11
   fiber_g: 4
   sodium_mg: 1400
   added_sugar_g: 12
@@ -42,76 +42,92 @@ fresh_toppings: []
 ## Teriyaki Chicken
 
 **Serves:** 10
-**Prep Time:** 30 min
-**Cook Time:** 50 min
+**Prep Time:** 15 min
+**Cook Time:** 3–4 hrs
 
 **Ingredients:**
 
-  - 6–6 ½ lbs chicken breast, raw
+  - 4 ½ lbs chicken breast, whole (not cubed)
+  - ½ cup chicken broth
   - 3 ½ cups jasmine rice (dry)
-  - 3 ½–4 lbs broccoli florets
+  - ~5 ½ lbs broccoli florets (yields ~1200 g roasted)
   - 2 bottles teriyaki sauce (~422 g total)
-  - Olive oil, salt, pepper, garlic powder
+  - Olive oil, salt, pepper
 
 **Steps:**
 
-1.  Preheat the main oven to 425°F with the sheet pans inside, and the Ninja toaster oven to 400°F air roast. Hot pans sear on contact instead of steaming.
+1.  Place 4 ½ lbs whole chicken breasts in the crockpot. Season with salt and pepper and add ½ cup chicken broth for moisture. No cutting required.
 
-2.  Rinse 3 ½ cups jasmine rice 2–3 times until the water runs mostly clear. Add to the Instant Pot with 3 ½ cups water (1:1).
+2.  Cook on High 3–4 hours, or Low 6–7 hours, until the chicken reaches 165°F and is fork-tender.
 
-3.  Confirm the valve is set to SEALING. Pressure Cook (Manual) on High for 3 minutes, natural release 10 minutes, then quick release. Start this first — it takes ~10 minutes to come to pressure. Fluff and leave the lid off to cool.
+3.  Drain the cooking liquid. Draining prevents a watery result once the sauce goes on.
 
-4.  Cube the chicken into 1-inch pieces. This is easier while the breasts are partially frozen. Trim any tough bits — that waste is why the buy quantity is 6–6 ½ lbs rather than 5.
+4.  Shred the chicken with a hand mixer directly in the crockpot — this takes about 30 seconds. A few pulses is enough; over-mixing turns it mushy.
 
-5.  Pat the cubed chicken completely dry with paper towels. This is the single biggest factor in whether it roasts or steams.
+5.  During the last ~20 minutes of chicken time, rinse 3 ½ cups jasmine rice 2–3 times until the water runs mostly clear. Add to the Instant Pot with 3 ½ cups water (1:1).
 
-6.  Toss the chicken with olive oil, salt, pepper, and garlic powder. Keep the seasoning light — the teriyaki sauce is already salty.
+6.  Confirm the valve is set to SEALING. Pressure Cook (Manual) on High for 3 minutes, natural release 10 minutes, then quick release. Fluff and leave the lid off to cool.
 
-7.  Pull the hot pans and spread the chicken across 2 pans in a single layer, nothing touching. Roast at 425°F in the main oven for 22–25 minutes, flipping halfway, until it reaches 165°F.
+7.  Toss the broccoli with olive oil, salt, and pepper. Air roast at 400°F in the Ninja toaster oven for 12–15 minutes until the edges are slightly crispy. Do this in 2 batches — 5 ½ lbs will not fit in a single layer.
 
-8.  Toss the broccoli with olive oil, salt, and pepper. Air roast at 400°F in the Ninja toaster oven for 12–15 minutes until the edges are slightly crispy. This runs in parallel with the chicken; do 2 batches if it does not fit in a single layer.
+8.  Let the chicken, rice, and broccoli cool 10–15 minutes before portioning. Spread the rice on a sheet pan to cool it faster.
 
-9.  Let the chicken, rice, and broccoli cool 10–15 minutes before portioning. Spread the rice on a sheet pan to cool it faster.
+9.  Assembly line across 10 open containers: 145 g chicken, then 140 g rice, then 120 g broccoli.
 
-10. Assembly line across 10 open containers: 145 g chicken, then 140 g rice, then 120 g broccoli.
+10. Portion ~42 g teriyaki sauce into 10 separate small containers. The sauce is packed separately here — adding it before storage makes the rice soggy by day 2.
 
-11. Portion ~42 g teriyaki sauce into 10 separate small containers. The sauce is packed separately here — adding it before storage makes the rice soggy by day 2.
-
-12. Label with a dry-erase marker. 6 containers to the fridge, 4 to the freezer. Move freezer containers to the fridge the night before eating.
+11. Label with a dry-erase marker. 6 containers to the fridge, 4 to the freezer. Move freezer containers to the fridge the night before eating.
 
 **Notes:**
 
-UNTESTED IN THIS REPO — the quantities below came from earlier cook sessions
-but no dated session record exists yet, so nothing is recorded in `yields`.
-Weigh the roasted chicken after step 7, the cooked rice after step 3, and the
-roasted broccoli after step 8, then promote to dialed-in with a real date.
+UNTESTED IN THIS FORM — v2 moved this recipe from cubed oven-roasted chicken
+to whole breasts in the crockpot. The quantities below are planned against
+`docs/standing-parameters.md`, not observed for this version. Weigh the
+shredded chicken after step 4, the cooked rice after step 6, and the roasted
+broccoli after step 7, then promote with a real date.
 
-Lessons carried over from those earlier cooks:
+Why the switch. An undated session log of the cubed version measured:
 
-Cubed chicken roasted at 425°F yields roughly 58% of raw weight once trim
-waste is counted, which is why the buy quantity is 6–6 ½ lbs to land 145 g
-across 10 containers. That figure sits at the top of the 0.41–0.58 range in
-standing parameters — worth confirming with a scale, because the bottom of
-that range would leave this recipe about 500 g short.
+  Chicken    5.31 lbs raw → 984 g cooked   (yield 0.409)
+  Broccoli   5.68 lbs raw → 1240 g roasted (yield 0.48)
+  Rice       3 cups dry   → 1220 g cooked  (~407 g per dry cup)
+  Sauce      422 g total  → ~42 g each
 
-Rice was bumped to 3 ½ cups dry to account for what sticks to the pot and to
-give fuller portions. 3 ½–4 lbs of broccoli is plenty for 10 containers; an
-earlier version overbought badly. Two bottles of teriyaki coats everything
-with some to spare.
+Cubed chicken roasted at 425°F came in at 0.409 — the bottom of the 0.41–0.58
+range, not the ~0.58 an earlier write-up assumed. That session portioned 98 g
+per container against a 145 g target, roughly 30 g of protein rather than 45.
+Hitting 145 g at that yield would mean buying 7.8 lbs.
 
-Sodium is the problem with this recipe. At roughly 1400 mg per container it is
-by far the worst in the rotation and nearly double the 800 mg ceiling, almost
-all of it from the bottled sauce. Added sugar at ~12 g is under the ceiling
-but not by much. This is exactly the bottled-sauce pattern standing parameters
-warns about, and the honey garlic recipe is the worked example of the fix —
-a scratch sauce there lands at 700 mg. A scratch teriyaki of soy, mirin,
-ginger, garlic, and a cornstarch slurry would do the same here.
+Whole breasts in the crockpot plan at 0.72, so the same 1450 g of cooked meat
+needs about 4 ½ lbs — a little over half the chicken, and no raw cubing. The
+trade-off is shredded rather than cubed, and no seared edges; the sauce
+carries it. This is the default standing parameters already recommends.
 
-Sauce is packed separately in this recipe, unlike the others, where the sauce
-is already in the meat. Add it after reheating.
+Broccoli was the other correction. Standing parameters used to claim 3 ½–4 lbs
+raw gives ~1200 g roasted. Measured yield is 0.48, so 1200 g takes ~5 ½ lbs.
+The old number under-buys by about 40%, which is why this recipe now calls for
+5 ½ lbs and two batches in the toaster oven.
+
+The session log noted "~50 g each" for sauce while also recording 422 g total,
+which only divides to 42 g across 10 containers. 42 g is what the arithmetic
+supports; if 50 g is what it actually takes to coat a bowl, that is a third
+bottle and about 500 mg more sodium per container. Worth settling on the next
+cook.
+
+Sodium remains the problem. At roughly 1400 mg per container this is the worst
+in the rotation and nearly double the 800 mg ceiling, essentially all of it
+from the bottled sauce — the crockpot switch does not change that. The honey
+garlic recipe is the worked example of the fix: a scratch sauce there lands at
+700 mg. A scratch teriyaki of soy, mirin, ginger, garlic, and a cornstarch
+slurry would do the same here.
+
+Sauce is packed separately in this recipe, unlike the others where it is
+already in the meat. Shredded chicken absorbs sauce well, so stirring it in
+during a Warm hold is an option — but it was kept separate to protect the rice
+from going soggy. Add it after reheating.
 
 Reheat in the air fryer at 350°F for 5–7 minutes. Rice and chicken freeze
 well; broccoli softens slightly but holds.
 
 **Nutrition:**
-Serving Size: 1 container, Calories: 540 kcal, Protein: 52 g, Carbohydrates: 60 g, Fat: 12 g, Fiber: 4 g, Sodium: 1400 mg, Sugar: 12 g. Estimated and unverified — recipe has not been cooked in this repo. Includes the packed sauce.
+Serving Size: 1 container, Calories: 540 kcal, Protein: 52 g, Carbohydrates: 60 g, Fat: 11 g, Fiber: 4 g, Sodium: 1400 mg, Sugar: 12 g. Estimated and unverified — this version has not been cooked. Includes the packed sauce.

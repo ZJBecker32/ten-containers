@@ -32,12 +32,24 @@ containers are eaten first, in the first 3–4 days.
 
 Cooked weight ÷ raw weight, from actual cook sessions.
 
+Several figures below come from an undated session log (a Mediterranean bowls
+cook and a teriyaki chicken cook) rather than from a dated record in
+`sessions/`. They are real scale readings, so they are recorded here, but no
+recipe was promoted to `dialed-in` on the strength of them — that still needs
+a dated session. See `docs/cook-session.md`.
+
 | Ingredient | Yield | Notes |
 |---|---|---|
 | Chicken breast, whole, crockpot | 0.70–0.76 | Wide range across sessions; plan at 0.72 |
-| Chicken breast, cubed, oven 425°F | 0.41–0.58 | Highly variable, plus trim waste |
+| Chicken breast, cubed, oven 425°F | 0.41–0.58 | **Plan at 0.41.** Measured 0.409 (5.31 lbs → 984 g) |
 | Ground beef 90/10 | 0.75 | Drains more fat than turkey |
-| Ground turkey 93/7 | 0.75 | Browns down ~25% |
+| Ground turkey 93/7 | 0.72–0.75 | Measured 0.72 (4.6 lbs → 1500 g) |
+
+**Plan cubed chicken at the bottom of its range, not the middle.** The one
+session with numbers landed at 0.409, and a recipe built on 0.58 came up
+roughly a third short — 98 g per container against a 145 g target. The spread
+is trim waste and how hard the oven drives off moisture, and neither is
+controllable enough to plan around.
 
 **Crockpot beats the oven on yield and labor both.** Whole breasts in the
 crockpot retain more weight than cubed in the oven and eliminate raw
@@ -46,15 +58,30 @@ seared texture.
 
 ## Non-meat yields
 
-| Ingredient | Yield |
-|---|---|
-| Jasmine rice | 3 ½ cups dry → ~1500 g cooked (~428 g per dry cup) |
-| Bell peppers | ~57 g each cooked — shrink hard, buy 6 not 3 |
-| Broccoli | 3 ½–4 lbs raw → ~1200 g roasted |
-| Green beans | ~2 lbs raw → ~900 g roasted |
+| Ingredient | Yield | Notes |
+|---|---|---|
+| Jasmine rice | ~407–428 g per dry cup | Two sessions: 3 cups → 1220 g, 3 ½ cups → ~1500 g. **Plan at 410.** |
+| Bell peppers | ~57 g each cooked | Confirmed twice, both at 3 peppers → 170 g |
+| Onion | ~80 g each cooked | 3 onions → 240 g |
+| Zucchini | 0.72 | 2.31 lbs → 750 g |
+| Broccoli, roasted | 0.48 | 5.68 lbs → 1240 g. **For 1200 g roasted, buy ~5 ½ lbs.** |
+| Green beans | ~2 lbs raw → ~900 g roasted | Unverified — see below |
+
+**The broccoli figure was wrong and has been corrected.** This table
+previously read "3 ½–4 lbs raw → ~1200 g roasted", which implies a yield near
+0.70. Measured is 0.48. Anything planned against the old number under-buys by
+roughly 40%, which is why a recipe targeting 120 g per container needs 5 ½ lbs
+and not 3 ½.
+
+Treat the green bean row with suspicion. As written it implies a yield near
+0.99, which cannot be right next to broccoli at 0.48 — green beans are denser
+with less surface area, so they should lose less, but not nothing. Weigh them
+on the next honey garlic cook.
 
 Buy vegetables **by weight, not by count.** Head-count buying is what
-caused the broccoli overbuying and the pepper shortfall.
+caused the broccoli overbuying and the pepper shortfall. Peppers and onions
+are still recorded per-each above only because no raw weight was logged for
+them; the cooked figure is what the recipes plan against.
 
 ---
 

@@ -121,11 +121,11 @@
       "order": 9,
       "ingredient": {
         "uuid": "89803106-8986-5131-858F-7C9FD1D8EBD6",
-        "name": "zucchini"
+        "name": "zucchini (~1050 g, yields ~750 g roasted)"
       },
       "quantity": {
         "quantityType": "POUND",
-        "amount": 2
+        "amount": 2.25
       }
     },
     {
@@ -133,7 +133,11 @@
       "order": 10,
       "ingredient": {
         "uuid": "D3ABF155-B7B1-5934-9169-BCFDE58494E2",
-        "name": "3–4 bell peppers"
+        "name": "bell peppers (~170 g roasted)"
+      },
+      "quantity": {
+        "quantityType": "ITEM",
+        "amount": 3
       }
     },
     {
@@ -141,11 +145,11 @@
       "order": 11,
       "ingredient": {
         "uuid": "E2B2312D-FDE5-5C3B-B53B-48B80DE59227",
-        "name": "large red onion"
+        "name": "red onions (~240 g roasted)"
       },
       "quantity": {
         "quantityType": "ITEM",
-        "amount": 1
+        "amount": 3
       }
     },
     {
@@ -193,7 +197,7 @@
     {
       "uuid": "379EF5B8-52CE-5CFE-85D9-3976578DC9EB",
       "order": 4,
-      "step": "Chop the bell peppers and red onion into pieces the same size as the zucchini so they roast evenly.",
+      "step": "Chop the 3 bell peppers and 3 red onions into pieces the same size as the zucchini so they roast evenly.",
       "isSection": false
     },
     {
@@ -241,7 +245,7 @@
     {
       "uuid": "27E36702-02DD-534A-82C0-DC754B03BD22",
       "order": 12,
-      "step": "Assembly line across 10 open containers: 150 g turkey, then 150 g rice, then 110 g roasted vegetables. No separate sauce container — the seasoning is already in the meat and the rice.",
+      "step": "Assembly line across 10 open containers: 150 g turkey, then 150 g rice, then 116 g roasted vegetables. No separate sauce container — the seasoning is already in the meat and the rice.",
       "isSection": false
     },
     {
@@ -251,7 +255,7 @@
       "isSection": false
     }
   ],
-  "notes": "UNTESTED — v1, never cooked\nQuantities are planned, not observed. Weigh the components and update the recipe before trusting these numbers.\n\nPER CONTAINER (10 total)\n  turkey: 150 g\n  rice: 150 g\n  veg: 110 g\n  total: 410 g\n\nSTORAGE: 6 fridge, 4 freezer\nFreezer containers move to the fridge the night before eating.\n\nFRESH TOPPINGS — NEVER PACKED: tzatziki, feta crumbles, cherry tomatoes, cucumber\nAdded at eating time only.\n\nUNTESTED — quantities are planned, not observed. Weigh the browned turkey\nafter step 9, the cooked rice after step 11, and the roasted vegetables after\nstep 7, then update the recipe with real numbers and promote to dialed-in.\n\nPlanning arithmetic: 4 ½ lbs raw turkey is 2041 g; ground turkey 93/7 browns\ndown to about 0.75, so roughly 1530 g cooked, which lands 150 g per container\nwith a little slack.\n\nThe vegetable total is the weak point in this plan. 110 g × 10 needs 1100 g\nroasted, and zucchini loses a lot of water in a hot oven. Weigh the roasted\nvegetables before portioning — if this comes up short the way the taco bowls\ndid, buy by weight next time rather than adding another pepper.\n\nPeppers hold up better than zucchini in the freezer. If you are freezing half\nthe batch, go lighter on zucchini and heavier on peppers in the freezer\ncontainers.\n\nThis is the no-chicken option in the rotation, and the only one with no\nbottled sauce anywhere in it — which is why the sodium projection is the\nlowest of the four.\n\nCold toppings — tzatziki, feta, cherry tomatoes, cucumber — go on fresh at\neating time, never packed. Aldi carries tzatziki and feta in the refrigerated\nsection.\n\nReheat, then top. A dollop of tzatziki and a handful of halved tomatoes takes\nthirty seconds and is the difference between a reheated bowl and something\nthat tastes made that day.",
+  "notes": "UNTESTED — v2, never cooked\nQuantities are planned, not observed. Weigh the components and update the recipe before trusting these numbers.\n\nPER CONTAINER (10 total)\n  turkey: 150 g\n  rice: 150 g\n  veg: 116 g\n  total: 416 g\n\nSTORAGE: 6 fridge, 4 freezer\nFreezer containers move to the fridge the night before eating.\n\nFRESH TOPPINGS — NEVER PACKED: tzatziki, feta crumbles, cherry tomatoes, cucumber\nAdded at eating time only.\n\nUNTESTED — quantities are planned, not observed. Weigh the browned turkey\nafter step 9, the cooked rice after step 11, and the roasted vegetables after\nstep 7, then update the recipe with real numbers and promote to dialed-in.\n\nQuantities in v2 were rebuilt from an undated session log that weighed this\ncook. Those readings are recorded in `docs/standing-parameters.md`, but with\nno date behind them nothing goes in `yields` and the status stays untested.\n\nWhat that session measured:\n\n  Turkey     4.6 lbs raw  → 1500 g cooked   (yield 0.72)\n  Zucchini   2.31 lbs raw →  750 g roasted  (yield 0.72)\n  Peppers    3 whole      →  170 g roasted  (~57 g each)\n  Onions     3 whole      →  240 g roasted  (~80 g each)\n\nTurkey landed at exactly 150 g per container, so that target is real. Note the\nyield was 0.72, not the 0.75 this repo had been planning against — 4 ½ lbs is\nthe buy quantity, and it comes out a hair under 1500 g.\n\nThe vegetable count changed in v2. An earlier write-up of this recipe called\nfor 1 onion; the session that produced these weights used 3, and the three\nvegetables together came to 1160 g — 116 g per container, slightly over the\n110 g that was planned. With 1 onion it would have been roughly 900 g and come\nup short, the same failure the taco bowls have. Buy 3.\n\nPeppers hold up better than zucchini in the freezer. If you are freezing half\nthe batch, go lighter on zucchini and heavier on peppers in the freezer\ncontainers.\n\nThis is the no-chicken option in the rotation, and the only one with no\nbottled sauce anywhere in it — which is why the sodium projection is the\nlowest of the four.\n\nCold toppings — tzatziki, feta, cherry tomatoes, cucumber — go on fresh at\neating time, never packed. Aldi carries tzatziki and feta in the refrigerated\nsection.\n\nReheat, then top. A dollop of tzatziki and a handful of halved tomatoes takes\nthirty seconds and is the difference between a reheated bowl and something\nthat tastes made that day.",
   "neutritionalInfo": "Serving Size: 1 container,\nCalories: 585 kcal,\nProtein: 46 g,\nCarbohydrates: 52 g,\nFat: 21 g,\nFiber: 4 g,\nSodium: 500 mg,\nSugar: 0 g",
   "sourceName": "ten-containers",
   "webLink": "https://zjbecker32.github.io/ten-containers/recipes/mediterranean-turkey-bowls/",

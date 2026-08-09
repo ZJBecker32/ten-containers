@@ -2,7 +2,7 @@
 title: Mediterranean Turkey Bowls
 slug: mediterranean-turkey-bowls
 status: untested
-version: 1
+version: 2
 
 containers: 10
 storage:
@@ -21,7 +21,7 @@ tags: [no-cutting, freezer-friendly, no-crockpot, fresh-toppings]
 per_container:
   turkey: 150
   rice: 150
-  veg: 110
+  veg: 116
 
 nutrition_per_container:
   calories: 585
@@ -59,9 +59,9 @@ fresh_toppings:
   - 3 ½ cups jasmine rice (dry)
   - 3–4 tbsp lemon juice (for the rice)
   - 1 tbsp dried dill or parsley
-  - ~2 lbs zucchini
-  - 3–4 bell peppers
-  - 1 large red onion
+  - ~2 ¼ lbs zucchini (~1050 g, yields ~750 g roasted)
+  - 3 bell peppers (~170 g roasted)
+  - 3 red onions (~240 g roasted)
   - Olive oil, salt, pepper
   - Tzatziki, feta, cherry tomatoes, cucumber (added fresh when eating)
 
@@ -75,7 +75,7 @@ fresh_toppings:
 
 4.  Cut the zucchini into thick ½-inch half-moons. Thin slices are mush by day 3.
 
-5.  Chop the bell peppers and red onion into pieces the same size as the zucchini so they roast evenly.
+5.  Chop the 3 bell peppers and 3 red onions into pieces the same size as the zucchini so they roast evenly.
 
 6.  Toss the vegetables with olive oil, salt, and pepper. Spread across 2 preheated pans in a single layer, nothing touching.
 
@@ -91,7 +91,7 @@ fresh_toppings:
 
 12. Let the turkey, rice, and vegetables cool 10–15 minutes before portioning. Sealing hot food causes condensation and sogginess.
 
-13. Assembly line across 10 open containers: 150 g turkey, then 150 g rice, then 110 g roasted vegetables. No separate sauce container — the seasoning is already in the meat and the rice.
+13. Assembly line across 10 open containers: 150 g turkey, then 150 g rice, then 116 g roasted vegetables. No separate sauce container — the seasoning is already in the meat and the rice.
 
 14. Label with a dry-erase marker. 6 containers to the fridge, 4 to the freezer. Move freezer containers to the fridge the night before eating.
 
@@ -101,14 +101,26 @@ UNTESTED — quantities are planned, not observed. Weigh the browned turkey
 after step 9, the cooked rice after step 11, and the roasted vegetables after
 step 7, then update the recipe with real numbers and promote to dialed-in.
 
-Planning arithmetic: 4 ½ lbs raw turkey is 2041 g; ground turkey 93/7 browns
-down to about 0.75, so roughly 1530 g cooked, which lands 150 g per container
-with a little slack.
+Quantities in v2 were rebuilt from an undated session log that weighed this
+cook. Those readings are recorded in `docs/standing-parameters.md`, but with
+no date behind them nothing goes in `yields` and the status stays untested.
 
-The vegetable total is the weak point in this plan. 110 g × 10 needs 1100 g
-roasted, and zucchini loses a lot of water in a hot oven. Weigh the roasted
-vegetables before portioning — if this comes up short the way the taco bowls
-did, buy by weight next time rather than adding another pepper.
+What that session measured:
+
+  Turkey     4.6 lbs raw  → 1500 g cooked   (yield 0.72)
+  Zucchini   2.31 lbs raw →  750 g roasted  (yield 0.72)
+  Peppers    3 whole      →  170 g roasted  (~57 g each)
+  Onions     3 whole      →  240 g roasted  (~80 g each)
+
+Turkey landed at exactly 150 g per container, so that target is real. Note the
+yield was 0.72, not the 0.75 this repo had been planning against — 4 ½ lbs is
+the buy quantity, and it comes out a hair under 1500 g.
+
+The vegetable count changed in v2. An earlier write-up of this recipe called
+for 1 onion; the session that produced these weights used 3, and the three
+vegetables together came to 1160 g — 116 g per container, slightly over the
+110 g that was planned. With 1 onion it would have been roughly 900 g and come
+up short, the same failure the taco bowls have. Buy 3.
 
 Peppers hold up better than zucchini in the freezer. If you are freezing half
 the batch, go lighter on zucchini and heavier on peppers in the freezer
