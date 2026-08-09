@@ -39,7 +39,12 @@ APPLIANCE_WORDS = /oven|instant pot|crockpot|slow cooker|stovetop|skillet|pan|ai
 
 # Vegetables that must be bought by weight. Limes and lemons are excluded:
 # they are used for juice and the recipes give a bottled equivalent.
-COUNT_VEG = /\A[\d½⅓⅔¼¾]+\s*[–-]?\s*[\d½⅓⅔¼¾]*\s+(?:large\s+|medium\s+|small\s+)?(bell peppers?|peppers?|onions?|zucchinis?|carrots?|potatoes?|tomatoes?|broccoli|heads?)\b/i
+COUNT_VEG = /\A[\d½⅓⅔¼¾]+\s*[–-]?\s*[\d½⅓⅔¼¾]*\s+(?:large\s+|medium\s+|small\s+)?(?:red\s+|yellow\s+|white\s+|green\s+)?(bell peppers?|peppers?|onions?|zucchinis?|carrots?|potatoes?|tomatoes?|broccoli|heads?)\b/i
+
+# Body prose says "Prep Time: 20 min" / "Cook Time: 3–4 hrs". Frontmatter
+# carries the same values as integers because Liquid cannot parse a range and
+# GitHub Pages forbids the plugin that could. These two must agree.
+PHASE_LABELS = { 'prep_time_min' => 'Prep Time', 'cook_time_min' => 'Cook Time' }.freeze
 
 strict    = ARGV.delete('--strict')
 json_mode = ARGV.delete('--json')
@@ -127,6 +132,31 @@ files.each do |path|
     err.('active_time_min exceeds total_time_min')
   end
 
+  prep = fm['prep_time_min']
+  cook = fm['cook_time_min']
+  if prep && cook && fm['total_time_min'] && (prep + cook) > fm['total_time_min']
+    err.("prep_time_min + cook_time_min = #{prep + cook}, which exceeds total_time_min #{fm['total_time_min']}")
+  end
+
+  # Each phase integer must fall inside the range the body states in prose.
+  PHASE_LABELS.each do |field, label|
+    value = fm[field] or next
+    m = body.match(/\*\*#{label}:\*\*\s*([^\n]+)/) or begin
+      warn_("#{field} is set but the body has no **#{label}:** line to check it against")
+      next
+    end
+    text  = m[1].strip
+    unit  = text.match?(/hr|hour/i) ? 60 : 1
+    nums  = text.scan(/[\d.]+/).map { |s| (s.to_f * unit).round }
+    next if nums.empty?
+
+    low, high = nums.min, nums.max
+    unless value.between?(low, high)
+      warn_("#{field} is #{value} but the body says **#{label}:** #{text} " \
+            "(#{low == high ? low : "#{low}–#{high}"} min)")
+    end
+  end
+
   # --- Sourcing ------------------------------------------------------------
   Array(fm['equipment']).each do |e|
     err.("equipment `#{e}` is not in the controlled list (#{EQUIPMENT.join(', ')})") unless EQUIPMENT.include?(e)
@@ -162,6 +192,9 @@ files.each do |path|
   # the numbered step list straight out of the rendered body. If either is
   # missing the recipe imports into Crouton as an empty shell.
   ing_section, step_section = body.split(/^\*\*Steps:\*\*/, 2)
+  # Stop at Notes — that section is prose about past cooks and legitimately
+  # discusses temperatures without giving an instruction.
+  step_section = step_section.split(/^\*\*Notes:\*\*/, 2).first if step_section
 
   err.('body has no `**Ingredients:**` heading') unless body.include?('**Ingredients:**')
   err.('body has no `**Steps:**` heading')       unless body.include?('**Steps:**')

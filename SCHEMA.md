@@ -46,6 +46,24 @@ The generation skill must always emit `untested`.
 | `storage.freezer` | int | yes | Containers going to freezer. |
 | `active_time_min` | int | yes | Hands-on minutes, not wall clock. |
 | `total_time_min` | int | no | Wall clock, including passive cook time. |
+| `prep_time_min` | int | no | Prep phase. Must match the body's **Prep Time:**. |
+| `cook_time_min` | int | no | Cook phase. Must match the body's **Cook Time:**. |
+
+**There are two different pairs of time fields here, and they are not
+redundant.** `active_time_min` / `total_time_min` are the meal-prep planning
+numbers — hands-on cost and wall clock, used to decide whether a Sunday has
+room. `prep_time_min` / `cook_time_min` are the *recipe* phases, and they
+exist because Crouton stores exactly those two values (`duration` and
+`cookingDuration`) and nothing else.
+
+The body already states prep and cook in prose. These fields duplicate them as
+integers because Liquid cannot parse `3–4 hrs`, and GitHub Pages forbids the
+custom plugin that could. `validate-recipes.rb` checks the frontmatter integer
+against the range stated in the body, so the duplication cannot drift.
+
+Where the body gives a range, use a value inside it. `prep_time_min +
+cook_time_min` must not exceed `total_time_min`; the slack is cooling and
+portioning.
 
 ### Sourcing
 

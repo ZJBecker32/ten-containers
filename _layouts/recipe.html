@@ -34,14 +34,27 @@ layout: default
   {%- endfor -%}
 {%- endif -%}
 
+{%- comment -%}
+  Crouton stores prep and cook as two separate values (`duration` and
+  `cookingDuration`) and maps them from schema.org prepTime and cookTime.
+  It has nowhere to put active-vs-wall-clock, so feeding it active_time_min
+  as prepTime — with no cookTime at all — is what made an earlier import
+  read "prep 75 min, cook nothing" on a 20/55 recipe.
+  prepTime and cookTime come from the recipe phases; totalTime stays the
+  planning number.
+{%- endcomment -%}
 {%- assign tmin = page.total_time_min | default: page.active_time_min -%}
 {%- assign thours = tmin | divided_by: 60 -%}
 {%- assign tmins = tmin | modulo: 60 -%}
 {%- capture total_iso -%}PT{% if thours > 0 %}{{ thours }}H{% endif %}{% if tmins > 0 %}{{ tmins }}M{% endif %}{%- endcapture -%}
-{%- assign amin = page.active_time_min -%}
-{%- assign ahours = amin | divided_by: 60 -%}
-{%- assign amins = amin | modulo: 60 -%}
-{%- capture active_iso -%}PT{% if ahours > 0 %}{{ ahours }}H{% endif %}{% if amins > 0 %}{{ amins }}M{% endif %}{%- endcapture -%}
+{%- assign pmin = page.prep_time_min -%}
+{%- assign phours = pmin | divided_by: 60 -%}
+{%- assign pmins = pmin | modulo: 60 -%}
+{%- capture prep_iso -%}PT{% if phours > 0 %}{{ phours }}H{% endif %}{% if pmins > 0 %}{{ pmins }}M{% endif %}{%- endcapture -%}
+{%- assign cmin = page.cook_time_min -%}
+{%- assign chours = cmin | divided_by: 60 -%}
+{%- assign cmins = cmin | modulo: 60 -%}
+{%- capture cook_iso -%}PT{% if chours > 0 %}{{ chours }}H{% endif %}{% if cmins > 0 %}{{ cmins }}M{% endif %}{%- endcapture -%}
 {%- assign n = page.nutrition_per_container -%}
 
 <script type="application/ld+json">
@@ -54,8 +67,11 @@ layout: default
   {%- if page.tags %}
   "keywords": {{ page.tags | join: ", " | jsonify }},
   {%- endif %}
-  {%- if amin %}
-  "prepTime": {{ active_iso | jsonify }},
+  {%- if pmin %}
+  "prepTime": {{ prep_iso | jsonify }},
+  {%- endif %}
+  {%- if cmin %}
+  "cookTime": {{ cook_iso | jsonify }},
   {%- endif %}
   {%- if tmin %}
   "totalTime": {{ total_iso | jsonify }},
@@ -119,6 +135,14 @@ layout: default
   {%- if page.equipment %}
   <p class="chips">{% for e in page.equipment %}<span class="chip">{{ e }}</span>{% endfor %}</p>
   {%- endif %}
+
+  <p class="crumb-download">
+    <a href="{{ '/crumb/' | append: page.slug | append: '.crumb' | relative_url }}" download>
+      Download for Crouton
+    </a>
+    <span>Crouton's own format — carries the gram targets, storage split, and
+    yields that a URL import drops.</span>
+  </p>
 
   {%- if page.per_container %}
   <section class="panel">

@@ -108,6 +108,8 @@ storage:
   freezer: 4
 active_time_min: <hands-on minutes>
 total_time_min: <wall clock>
+prep_time_min: <must match the body's **Prep Time:**>
+cook_time_min: <must match the body's **Cook Time:**>
 
 equipment: [<from: instant-pot, crockpot, main-oven, toaster-oven, stovetop, hand-mixer, food-scale>]
 store: aldi
@@ -166,6 +168,13 @@ Run `scripts/validate-recipes.rb` and fix anything it reports. Errors are
 contract violations; warnings are the sodium and added-sugar ceilings and the
 by-weight rule, which are worth mentioning to the user even when they are
 deliberate.
+
+Then regenerate the Crouton file and stage it — the committed `.crumb` files
+are served for download from the site, and CI fails if one is stale:
+
+```sh
+scripts/export-crumb.rb && git add crumb/
+```
 
 Then point at the cook-session loop rather than explaining it:
 

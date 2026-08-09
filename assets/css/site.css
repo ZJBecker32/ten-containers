@@ -137,6 +137,18 @@ h3 { font-size: .8125rem; text-transform: uppercase; letter-spacing: .06em; colo
   border-radius: 8px; font-size: .875rem;
 }
 
+.crumb-download {
+  display: flex; flex-wrap: wrap; align-items: baseline; gap: .5rem .75rem;
+  margin: 1.25rem 0; padding: .875rem 1rem;
+  background: var(--surface); border: 1px solid var(--line); border-radius: 8px;
+}
+.crumb-download a {
+  font-weight: 650; font-size: .9375rem; text-decoration: none;
+  padding: .3125rem .75rem; border-radius: 6px;
+  background: var(--accent); color: var(--bg);
+}
+.crumb-download span { font-size: .8125rem; color: var(--muted); flex: 1 1 16rem; }
+
 .facts {
   display: grid; grid-template-columns: repeat(auto-fit, minmax(8.5rem, 1fr));
   gap: .75rem; margin: 1.25rem 0; padding: 1rem;

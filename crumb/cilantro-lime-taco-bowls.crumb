@@ -1,0 +1,221 @@
+{
+  "uuid": "E830F46E-7C18-5F57-A4D1-CC32B311EAD7",
+  "name": "Cilantro Lime Taco Bowls",
+  "serves": "10",
+  "duration": "20",
+  "cookingDuration": "55",
+  "defaultScale": "1",
+  "isPublicRecipe": "false",
+  "folderIDs": [
+
+  ],
+  "tags": [
+    "no-oven",
+    "freezer-friendly",
+    "budget",
+    "high-fiber"
+  ],
+  "ingredients": [
+    {
+      "uuid": "F3C436B8-4634-5904-B064-F47CD6610F90",
+      "order": "0",
+      "ingredient": {
+        "uuid": "7159C11A-24D4-54B9-9954-0778D5829618",
+        "name": "ground beef (90/10) or ground turkey"
+      },
+      "quantity": {
+        "quantityType": "POUND",
+        "amount": "5"
+      }
+    },
+    {
+      "uuid": "4E1CDAC5-DF77-55B7-B329-63029386B331",
+      "order": "1",
+      "ingredient": {
+        "uuid": "4127D2DC-D7B8-5C0E-9603-D7700CDC34C2",
+        "name": "packets taco seasoning"
+      },
+      "quantity": {
+        "quantityType": "ITEM",
+        "amount": "4"
+      }
+    },
+    {
+      "uuid": "E00B7A2C-183C-52F5-945E-B9D8D0F40975",
+      "order": "2",
+      "ingredient": {
+        "uuid": "A461D129-E763-5F93-AEBC-7D177D4C00B2",
+        "name": "cans black beans"
+      },
+      "quantity": {
+        "quantityType": "ITEM",
+        "amount": "3"
+      }
+    },
+    {
+      "uuid": "6C680146-E2D0-5A16-B659-EE4D43F30C39",
+      "order": "3",
+      "ingredient": {
+        "uuid": "6D3C6CC4-2ECF-581D-BABD-301BB0DB997B",
+        "name": "jasmine rice (dry)"
+      },
+      "quantity": {
+        "quantityType": "CUP",
+        "amount": "3.5"
+      }
+    },
+    {
+      "uuid": "701C1D0D-B129-50D6-BE87-11D0589118C7",
+      "order": "4",
+      "ingredient": {
+        "uuid": "6C21BEA2-EEA9-5E90-AB41-42933C692365",
+        "name": "2–3 limes, juiced (or 3–4 tbsp bottled)"
+      }
+    },
+    {
+      "uuid": "D2CC4BD6-5F40-5119-800E-A095F9CBABAE",
+      "order": "5",
+      "ingredient": {
+        "uuid": "B9747176-15EC-5A56-9B7C-C0C2914D7E0C",
+        "name": "bunch fresh cilantro, chopped (optional)"
+      },
+      "quantity": {
+        "quantityType": "ITEM",
+        "amount": "0.5"
+      }
+    },
+    {
+      "uuid": "6753520B-012D-5806-AD68-97D5268C249B",
+      "order": "6",
+      "ingredient": {
+        "uuid": "BB109108-CE3D-5115-B6E2-7CF74E2668EA",
+        "name": "bell peppers"
+      },
+      "quantity": {
+        "quantityType": "ITEM",
+        "amount": "6"
+      }
+    },
+    {
+      "uuid": "9E5E2A28-9D46-595A-8782-D0ADF13F4CBD",
+      "order": "7",
+      "ingredient": {
+        "uuid": "941912A2-8101-5159-AC26-081CDB89AD26",
+        "name": "large onion"
+      },
+      "quantity": {
+        "quantityType": "ITEM",
+        "amount": "1"
+      }
+    },
+    {
+      "uuid": "C2C3493F-B32E-594A-B1FE-8217CCD50F84",
+      "order": "8",
+      "ingredient": {
+        "uuid": "E388E846-60C7-5C30-AA2F-DE6B3B6FFF74",
+        "name": "bag frozen sweet corn (12–16 oz)"
+      },
+      "quantity": {
+        "quantityType": "ITEM",
+        "amount": "1"
+      }
+    },
+    {
+      "uuid": "AC2AE4FC-4DE8-5A97-B932-BF117B8DB2EE",
+      "order": "9",
+      "ingredient": {
+        "uuid": "CC8627AF-79AF-5549-A1D6-D1F01ECDC8EC",
+        "name": "Olive oil, as needed"
+      }
+    },
+    {
+      "uuid": "AC14D483-8FA4-5336-8850-C8F281B09021",
+      "order": "10",
+      "ingredient": {
+        "uuid": "6C8F980F-85AF-5B6F-8779-D4D498B6CFE6",
+        "name": "Shredded cheese, salsa, sour cream (added fresh when eating)"
+      }
+    }
+  ],
+  "steps": [
+    {
+      "uuid": "F8E336FC-25D4-57DB-A563-5CED3A91A357",
+      "order": "0",
+      "step": "Rinse 3 ½ cups jasmine rice 2–3 times until the water runs mostly clear. Add to the Instant Pot with 3 ½ cups water (1:1).",
+      "isSection": "false"
+    },
+    {
+      "uuid": "23D89A46-7593-55FD-A9E0-60033FFFB156",
+      "order": "1",
+      "step": "Confirm the valve is set to SEALING and the float valve pops up. Pressure Cook (Manual) on High for 3 minutes, natural release 10 minutes, then quick release.",
+      "isSection": "false"
+    },
+    {
+      "uuid": "5394414D-EA70-59DC-A9C5-5AFE70002CD6",
+      "order": "2",
+      "step": "Fluff the rice, then stir in the lime juice and chopped cilantro. Leave the lid off to cool. Add the lime after cooking, not before.",
+      "isSection": "false"
+    },
+    {
+      "uuid": "E9A00228-C579-54E4-9A68-E2F57CEB5765",
+      "order": "3",
+      "step": "Heat a large pan over medium-high. Add 5 lbs ground beef, breaking it up as it cooks. Brown 10–12 minutes until no pink remains and it reaches 165°F. Work in 2 batches if the pan is crowded — crowding steams the meat instead of browning it.",
+      "isSection": "false"
+    },
+    {
+      "uuid": "A632D338-4C61-5E50-81B0-BA25563A54A8",
+      "order": "4",
+      "step": "Drain the excess fat thoroughly. Beef renders noticeably more than turkey, and skipping this makes the bowls greasy by day 3.",
+      "isSection": "false"
+    },
+    {
+      "uuid": "648BD883-48C8-50D7-B835-D0C5568466CC",
+      "order": "5",
+      "step": "Add 4 packets taco seasoning plus the water called for on the packets. Simmer 2–3 minutes until thickened.",
+      "isSection": "false"
+    },
+    {
+      "uuid": "04EC6A90-D5AF-5094-8AD5-0C7B2415ABF9",
+      "order": "6",
+      "step": "In a separate pan, heat a little olive oil. Add the diced bell peppers and onion and sauté 6–8 minutes until softened.",
+      "isSection": "false"
+    },
+    {
+      "uuid": "2E375031-1BD6-5699-A32B-F05C1CF5F576",
+      "order": "7",
+      "step": "Add the frozen corn for the last 3–4 minutes. Let it pick up a few golden char spots for a fire-roasted flavor.",
+      "isSection": "false"
+    },
+    {
+      "uuid": "706F8EA9-2630-5EAC-A5D4-500CE779E9C5",
+      "order": "8",
+      "step": "Rinse and drain 3 cans black beans, then warm them in a small pot or the microwave. Rinsing cuts sodium and stops the cloudy can liquid from making the bowls mushy.",
+      "isSection": "false"
+    },
+    {
+      "uuid": "32136017-0E02-50DF-BB8E-EE564BD62DE3",
+      "order": "9",
+      "step": "Let the meat, rice, veggies, and beans cool 10 minutes before portioning. Sealing hot food causes condensation and sogginess.",
+      "isSection": "false"
+    },
+    {
+      "uuid": "351F3F74-533D-5955-BB2B-F4EC2C785D89",
+      "order": "10",
+      "step": "Assembly line across 10 open containers: 170 g meat, then 150 g rice, then 80 g beans, then 110 g veg and corn. No separate sauce container — the taco seasoning is already in the meat.",
+      "isSection": "false"
+    },
+    {
+      "uuid": "38A74339-0D48-558A-98BA-0F2654CDCBCB",
+      "order": "11",
+      "step": "Label with a dry-erase marker. 6 containers to the fridge for the first half of the week, 4 to the freezer. Move freezer containers to the fridge the night before eating.",
+      "isSection": "false"
+    }
+  ],
+  "notes": "DIALED-IN — v3, last cooked 2026-07-26\n\nPER CONTAINER (10 total)\n  meat: 170 g\n  rice: 150 g\n  beans: 80 g\n  veg: 110 g\n  total: 510 g\n\nSTORAGE: 6 fridge, 4 freezer\nFreezer containers move to the fridge the night before eating.\n\nFRESH TOPPINGS — NEVER PACKED: shredded cheese, salsa, sour cream\nAdded at eating time only.\n\nOBSERVED YIELDS\n  ground beef 90 10: 0.75\n  jasmine rice g per cup dry: 428\n  bell pepper g each cooked: 57\n\nLessons from real cook sessions:\n\nProtein was bumped from 3.5 lbs to 5 lbs — 120 g per container was too light to stay full through the afternoon. Bell peppers shrink hard when cooked; 3 peppers only yielded ~170 g total, so buy 6. Rice at 3 ½ cups dry yields ~1500 g cooked, which lands 150 g per container.\n\nAldi is frequently out of fresh limes and cilantro. Bottled lime juice is a fine fallback and the dish still works with the cilantro skipped entirely.\n\nDouble-check the Instant Pot valve is on SEALING before walking away. This has gone wrong before.\n\nCold toppings — cheese, salsa, sour cream — go on fresh at eating time, never packed into the containers.\n\nThis is the cheapest prep in the rotation and the only one requiring no oven.\n\nOpen item: sodium runs high at ~950 mg per container, most of it from the 4 seasoning packets. Next version, try swapping 2 packets for bulk cumin, chili powder, paprika, garlic powder, and oregano.",
+  "neutritionalInfo": "Serving Size: 1 container,\nCalories: 700 kcal,\nProtein: 52 g,\nCarbohydrates: 60 g,\nFat: 25 g,\nFiber: 9 g,\nSodium: 950 mg,\nSugar: 2 g",
+  "sourceName": "ten-containers",
+  "webLink": "https://zjbecker32.github.io/ten-containers/recipes/cilantro-lime-taco-bowls/",
+  "images": [
+
+  ]
+}

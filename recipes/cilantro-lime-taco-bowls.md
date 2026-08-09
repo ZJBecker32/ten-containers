@@ -11,6 +11,8 @@ storage:
   freezer: 4
 active_time_min: 75
 total_time_min: 75
+prep_time_min: 20
+cook_time_min: 55
 
 equipment: [instant-pot, stovetop, food-scale]
 store: aldi

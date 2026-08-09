@@ -8,10 +8,12 @@ GitHub Pages site out, Crouton on the phone at the end.
 ```
 recipes/                  One Markdown file per recipe. Source of truth.
 sessions/                 One file per cook session. The observed record.
+crumb/                    Generated Crouton files. Committed, served for download.
 docs/standing-parameters.md   Yields, equipment specs, standing techniques.
 docs/cook-session.md      How a recipe gets promoted to dialed-in.
 SCHEMA.md                 Frontmatter spec. Read before adding a recipe.
 scripts/export-crouton.sh Strips frontmatter, emits Crouton-ready body.
+scripts/export-crumb.rb   Emits Crouton .crumb files. Runs in CI (--check).
 scripts/validate-recipes.rb   Checks recipes/ against SCHEMA.md. Runs in CI.
 scripts/new-session.rb    Prefills a cook session sheet from a recipe.
 scripts/session-report.rb Turns a filled sheet into the edits to make.
@@ -42,6 +44,35 @@ by parsing structured data off the page, so the site is what gets recipes
 back onto the phone. A page without JSON-LD imports unreliably or not at
 all.
 
+### Getting a recipe onto the phone
+
+There are two paths, and they are not equal.
+
+**`.crumb` file — preferred.** Each recipe page has a *Download for Crouton*
+button serving `crumb/<slug>.crumb`. That is Crouton's own format, generated
+by `scripts/export-crumb.rb` from the same Markdown, and it carries the things
+JSON-LD has nowhere to put: per-container gram targets, the fridge/freezer
+split, observed yields, the fresh-toppings warning, and the full Notes. Tap it
+on the phone and it opens in Crouton.
+
+The files are generated but **committed**, because GitHub Pages serves what is
+in the branch. CI runs `export-crumb.rb --check` and fails if a recipe changed
+without a re-export, so they cannot silently drift. After editing a recipe:
+
+```sh
+scripts/export-crumb.rb && git add crumb/
+```
+
+**URL import — fallback.** Crouton can also parse the JSON-LD off a recipe
+page. It works, but it only recovers name, ingredients, steps, times,
+nutrition, and tags. Everything in the notes block is lost.
+
+Note that Crouton stores prep and cook as two separate plain-minute fields
+(`duration` and `cookingDuration`) and maps them from `prepTime` and
+`cookTime`. Feeding it `active_time_min` as `prepTime` with no `cookTime` is
+what once made a 20/55 recipe import as "prep 75, cook nothing". That is why
+`prep_time_min` and `cook_time_min` exist as separate frontmatter fields.
+
 Map to JSON-LD as follows:
 
 | Frontmatter / body | JSON-LD |
@@ -49,10 +80,15 @@ Map to JSON-LD as follows:
 | `title` | `name` |
 | `containers` | `recipeYield` |
 | Ingredients list | `recipeIngredient[]` |
-| Each numbered step | `recipeInstruction` (`HowToStep`) |
+| Each numbered step | `recipeInstructions[]` (`HowToStep`) |
 | `nutrition_per_container` | `nutrition` (`NutritionInformation`) |
+| `prep_time_min` | `prepTime` (ISO 8601 duration) |
+| `cook_time_min` | `cookTime` (ISO 8601 duration) |
 | `total_time_min` | `totalTime` (ISO 8601 duration) |
 | `tags` | `keywords` |
+
+(The schema.org property is `recipeInstructions`, plural — the singular does
+not parse.)
 
 Index page filters on `status`, `equipment`, and `protein_source`, sorted by
 `last_cooked` descending. Recipes with `status: untested` should be visually

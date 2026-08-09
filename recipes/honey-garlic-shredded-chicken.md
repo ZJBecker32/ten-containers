@@ -10,6 +10,8 @@ storage:
   freezer: 4
 active_time_min: 30
 total_time_min: 240
+prep_time_min: 15
+cook_time_min: 210
 
 equipment: [crockpot, instant-pot, toaster-oven, hand-mixer, food-scale]
 store: aldi

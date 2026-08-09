@@ -3,15 +3,14 @@ name: Validate recipes
 on:
   push:
     branches: ["**"]
-    paths:
+    paths: &watched
       - "recipes/**"
+      - "crumb/**"
       - "scripts/validate-recipes.rb"
+      - "scripts/export-crumb.rb"
       - ".github/workflows/validate.yml"
   pull_request:
-    paths:
-      - "recipes/**"
-      - "scripts/validate-recipes.rb"
-      - ".github/workflows/validate.yml"
+    paths: *watched
   workflow_dispatch:
 
 jobs:
@@ -27,3 +26,8 @@ jobs:
 
       - name: Validate recipe frontmatter and body
         run: ruby scripts/validate-recipes.rb
+
+      # The .crumb files are generated but committed, so the site can serve
+      # them for download. This fails if a recipe changed without a re-export.
+      - name: Check committed .crumb files are current
+        run: ruby scripts/export-crumb.rb --check
