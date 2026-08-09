@@ -184,6 +184,72 @@ h3 { font-size: .8125rem; text-transform: uppercase; letter-spacing: .06em; colo
 .prose pre { overflow-x: auto; background: var(--surface); border: 1px solid var(--line); border-radius: 6px; padding: .625rem .75rem; }
 .prose pre code { background: none; border: 0; padding: 0; }
 
+/* Cook-session form */
+.session-form {
+  margin: 1.5rem 0; background: var(--surface);
+  border: 1px solid var(--line); border-radius: 8px;
+}
+.session-form summary {
+  padding: .875rem 1rem; cursor: pointer; font-weight: 650; font-size: .9375rem;
+  list-style: none;
+}
+.session-form summary::-webkit-details-marker { display: none; }
+.session-form summary::before { content: '+ '; color: var(--accent); font-weight: 700; }
+.session-form[open] summary::before { content: '– '; }
+.session-form[open] summary { border-bottom: 1px solid var(--line); }
+.sf-body { padding: 1rem; }
+.sf-intro { margin: 0 0 1rem; font-size: .8125rem; color: var(--muted); }
+
+.sf-row { display: flex; flex-wrap: wrap; gap: .75rem; margin-bottom: 1rem; }
+.sf-row label { display: flex; flex-direction: column; gap: .25rem; flex: 1 1 6rem; }
+.session-form label {
+  font-size: .6875rem; text-transform: uppercase; letter-spacing: .05em; color: var(--muted);
+}
+.session-form input, .session-form textarea {
+  font: inherit; font-size: 1rem; padding: .5rem;
+  color: var(--text); background: var(--bg);
+  border: 1px solid var(--line); border-radius: 6px; width: 100%;
+  -webkit-appearance: none; appearance: none;
+}
+.session-form input:focus, .session-form textarea:focus {
+  outline: 2px solid var(--accent); outline-offset: -1px;
+}
+
+.sf-table { width: 100%; border-collapse: collapse; margin-bottom: 1rem; }
+.sf-table thead th {
+  font-size: .625rem; text-transform: uppercase; letter-spacing: .05em;
+  color: var(--muted); font-weight: 500; text-align: left;
+  padding-bottom: .375rem; border-bottom: 1px solid var(--line);
+}
+.sf-table tbody th {
+  text-align: left; font-weight: 600; font-size: .875rem;
+  padding: .5rem .5rem .5rem 0; vertical-align: middle; width: 34%;
+}
+.sf-table td { padding: .375rem .1875rem; }
+.sf-planned {
+  display: block; font-size: .625rem; font-weight: 400; color: var(--muted);
+  text-transform: uppercase; letter-spacing: .04em;
+}
+.sf-notes { display: block; margin-bottom: 1rem; }
+.sf-notes textarea { margin-top: .25rem; resize: vertical; }
+
+.sf-out {
+  white-space: pre-wrap; font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+  font-size: .75rem; line-height: 1.5; padding: .875rem;
+  background: var(--bg); border: 1px solid var(--line); border-radius: 6px;
+  overflow-x: auto; margin-bottom: .875rem;
+}
+.sf-out.sf-empty { color: var(--muted); font-style: italic; font-family: inherit; }
+
+.sf-actions { display: flex; flex-wrap: wrap; gap: .5rem; }
+.sf-actions button {
+  font: inherit; font-size: .875rem; font-weight: 600; cursor: pointer;
+  padding: .5rem .875rem; border-radius: 6px;
+  background: var(--accent); color: var(--bg); border: 1px solid transparent;
+}
+.sf-actions button.sf-secondary { background: transparent; color: var(--muted); border-color: var(--line); }
+.sf-hint { margin: .5rem 0 0; font-size: .75rem; color: var(--accent); min-height: 1em; }
+
 /* Prose */
 .prose { overflow-wrap: break-word; }
 .prose h2 { border-bottom: 1px solid var(--line); padding-bottom: .375rem; }

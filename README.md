@@ -15,8 +15,6 @@ SCHEMA.md                 Frontmatter spec. Read before adding a recipe.
 scripts/export-crouton.sh Strips frontmatter, emits Crouton-ready body.
 scripts/export-crumb.rb   Emits Crouton .crumb files. Runs in CI (--check).
 scripts/validate-recipes.rb   Checks recipes/ against SCHEMA.md. Runs in CI.
-scripts/new-session.rb    Prefills a cook session sheet from a recipe.
-scripts/session-report.rb Turns a filled sheet into the edits to make.
 .claude/skills/           Recipe generation skill (see below).
 
 _config.yml               Jekyll config.
@@ -129,17 +127,16 @@ curl -s localhost:4000/ten-containers/recipes/<slug>/ \
 1. Read `SCHEMA.md`.
 2. Plan quantities against `docs/standing-parameters.md`.
 3. Ship it as `status: untested` with empty `yields: {}`.
-4. Cook it. Weigh the components. Record what actually happened:
-   ```sh
-   scripts/new-session.rb <slug>          # before: prefilled session sheet
-   scripts/session-report.rb <file>       # after: the edits to make
-   ```
+4. Cook it. Weigh the components. Expand **Record a cook session** on the
+   recipe page and enter the weights as you go — it runs on the phone, saves
+   as you type, and computes the yields live.
 5. Update quantities, fill in `yields`, set `last_cooked`, bump `version`,
-   promote to `dialed-in`. The report prints each of these as a concrete
-   field change.
+   promote to `dialed-in`. The form prints each of these as a concrete field
+   change, plus a session file to paste into `sessions/`.
 6. If a yield differs meaningfully from `standing-parameters.md`, update
-   that file too. It's the shared layer. The report flags what moved but
+   that file too. It's the shared layer. The form flags what moved but
    deliberately does not write it — see `docs/cook-session.md`.
+7. Re-run `scripts/export-crumb.rb` so the Crouton download matches.
 
 Never promote to `dialed-in` without a cook session. The whole value of
 this repo is that its numbers are observed rather than guessed, and one

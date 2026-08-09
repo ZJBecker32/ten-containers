@@ -176,14 +176,12 @@ are served for download from the site, and CI fails if one is stale:
 scripts/export-crumb.rb && git add crumb/
 ```
 
-Then point at the cook-session loop rather than explaining it:
+Then point at the cook-session loop rather than explaining it: the recipe page
+carries a **Record a cook session** form that runs on the phone, computes the
+yields live, and prints both the field changes and a session file to paste
+into `sessions/`.
 
-```sh
-scripts/new-session.rb <slug>        # before cooking: prefilled sheet
-scripts/session-report.rb <file>     # after: the exact edits to make
-```
-
-The sheet already lists the components to weigh and the open questions for
-this recipe, so there is no need to restate them. Do say that promotion to
-`dialed-in` happens only after that loop runs — the report prints the field
-changes, including the `yields` block this file was forbidden from inventing.
+The form already lists the components to weigh and their planned totals, so
+there is no need to restate them. Do say that promotion to `dialed-in` happens
+only after that loop runs — the form produces the `yields` block this file was
+forbidden from inventing.

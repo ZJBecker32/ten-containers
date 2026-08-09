@@ -185,4 +185,65 @@ layout: default
   {{ content }}
   </div>
 
+  {%- comment -%}
+    Cook-session capture. This is the phone-side replacement for running
+    new-session.rb and session-report.rb on a laptop: type the weights at the
+    counter, and it computes the yields and prints the exact edits and a
+    session file to paste. Entries persist in localStorage because a cook runs
+    for hours and the page will get backgrounded.
+  {%- endcomment -%}
+  <details class="session-form" id="sf">
+    <summary>Record a cook session</summary>
+    <div class="sf-body">
+      <p class="sf-intro">
+        Weigh each component <strong>after cooking, before portioning</strong> —
+        all of it, while it is still in one pan. Leave anything you did not
+        actually weigh blank. A blank is fine; a guess ends up in
+        standing parameters.
+      </p>
+
+      <div class="sf-row">
+        <label>Date<input type="date" id="sf-date"></label>
+        <label>Active min<input type="number" inputmode="numeric" id="sf-active"
+               placeholder="{{ page.active_time_min }}"></label>
+        <label>Total min<input type="number" inputmode="numeric" id="sf-total"
+               placeholder="{{ page.total_time_min }}"></label>
+      </div>
+
+      <table class="sf-table">
+        <thead><tr><th>component</th><th>raw g</th><th>cooked g</th></tr></thead>
+        <tbody id="sf-rows"></tbody>
+      </table>
+
+      <label class="sf-notes">What happened
+        <textarea id="sf-notes" rows="3"
+          placeholder="Substitutions, timing surprises, anything for the recipe Notes."></textarea>
+      </label>
+
+      <div id="sf-out" class="sf-out"></div>
+
+      <div class="sf-actions">
+        <button type="button" id="sf-copy-edits">Copy the edits</button>
+        <button type="button" id="sf-copy-file">Copy session file</button>
+        <button type="button" id="sf-clear" class="sf-secondary">Clear</button>
+      </div>
+      <p class="sf-hint" id="sf-hint"></p>
+    </div>
+  </details>
+
+  <script type="application/json" id="sf-data">
+  {
+    "slug": {{ page.slug | jsonify }},
+    "version": {{ page.version | jsonify }},
+    "status": {{ page.status | jsonify }},
+    "containers": {{ page.containers | jsonify }},
+    "activeTime": {{ page.active_time_min | jsonify }},
+    "totalTime": {{ page.total_time_min | jsonify }},
+    "proteinSource": {{ page.protein_source | jsonify }},
+    "perContainer": {{ page.per_container | jsonify }},
+    "priorYields": {{ page.yields | jsonify }}
+  }
+  </script>
+  <script src="{{ '/assets/js/session-form.js' | relative_url }}" defer></script>
+
 </article>
