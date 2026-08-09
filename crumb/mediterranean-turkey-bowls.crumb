@@ -1,11 +1,11 @@
 {
   "uuid": "EB73AD2A-7CDA-5F81-BE2E-B84130BDFB9B",
   "name": "Mediterranean Turkey Bowls",
-  "serves": "10",
-  "duration": "20",
-  "cookingDuration": "55",
-  "defaultScale": "1",
-  "isPublicRecipe": "false",
+  "serves": 10,
+  "duration": 20,
+  "cookingDuration": 55,
+  "defaultScale": 1,
+  "isPublicRecipe": false,
   "folderIDs": [
 
   ],
@@ -18,31 +18,31 @@
   "ingredients": [
     {
       "uuid": "18CC3920-4BA4-5C42-A4B9-9C4BC56963D1",
-      "order": "0",
+      "order": 0,
       "ingredient": {
         "uuid": "4E7EEA1E-B644-55CB-B577-1B8855E1E2D4",
         "name": "ground turkey (93/7)"
       },
       "quantity": {
         "quantityType": "POUND",
-        "amount": "4.5"
+        "amount": 4.5
       }
     },
     {
       "uuid": "D80CB595-6A87-5BD6-9E51-D657F794E995",
-      "order": "1",
+      "order": 1,
       "ingredient": {
         "uuid": "87AC7B3F-589B-5D71-988B-57AF6CA4E032",
         "name": "dried oregano"
       },
       "quantity": {
         "quantityType": "TABLESPOON",
-        "amount": "2"
+        "amount": 2
       }
     },
     {
       "uuid": "ED0A82C3-7D06-5557-9740-827C53BC64F8",
-      "order": "2",
+      "order": 2,
       "ingredient": {
         "uuid": "59A146A9-50F6-5071-AAF3-EAA9B11A2D2D",
         "name": "5–6 cloves garlic, minced"
@@ -50,55 +50,55 @@
     },
     {
       "uuid": "051680E1-1412-5116-98B4-712B25F5903B",
-      "order": "3",
+      "order": 3,
       "ingredient": {
         "uuid": "83689DF7-EA03-5EF4-8E1E-2E55DBF7B646",
         "name": "ground cumin"
       },
       "quantity": {
         "quantityType": "TEASPOON",
-        "amount": "2"
+        "amount": 2
       }
     },
     {
       "uuid": "6E4CE1C6-B620-51E3-87A5-08156BFBD621",
-      "order": "4",
+      "order": 4,
       "ingredient": {
         "uuid": "432C2858-27FF-5B98-9C4F-98377AEF62BA",
         "name": "paprika"
       },
       "quantity": {
         "quantityType": "TEASPOON",
-        "amount": "2"
+        "amount": 2
       }
     },
     {
       "uuid": "0F387D37-7614-53D2-878D-C58FA4009272",
-      "order": "5",
+      "order": 5,
       "ingredient": {
         "uuid": "BBF6786D-801A-58FB-B009-70D779E5E689",
         "name": "lemon juice (for the turkey)"
       },
       "quantity": {
         "quantityType": "TABLESPOON",
-        "amount": "3"
+        "amount": 3
       }
     },
     {
       "uuid": "9857F116-1C50-5B6B-8AD0-EC6320F918BF",
-      "order": "6",
+      "order": 6,
       "ingredient": {
         "uuid": "B9C2FB02-B63F-50EF-847E-0B822FA3E8B9",
         "name": "jasmine rice (dry)"
       },
       "quantity": {
         "quantityType": "CUP",
-        "amount": "3.5"
+        "amount": 3.5
       }
     },
     {
       "uuid": "A1A45B83-7060-5F5B-B0C1-CDDF0105F198",
-      "order": "7",
+      "order": 7,
       "ingredient": {
         "uuid": "F9D60E78-8AC4-5BC0-B331-8F52FC1C2BF9",
         "name": "3–4 tbsp lemon juice (for the rice)"
@@ -106,31 +106,31 @@
     },
     {
       "uuid": "37B93CAF-94F8-53CC-B6FB-1598F5E6B5D5",
-      "order": "8",
+      "order": 8,
       "ingredient": {
         "uuid": "AEB8C02D-CF1B-511F-9276-67AF628D0BB9",
         "name": "dried dill or parsley"
       },
       "quantity": {
         "quantityType": "TABLESPOON",
-        "amount": "1"
+        "amount": 1
       }
     },
     {
       "uuid": "D067A127-1B02-56D3-8126-06B0D179B89E",
-      "order": "9",
+      "order": 9,
       "ingredient": {
         "uuid": "89803106-8986-5131-858F-7C9FD1D8EBD6",
         "name": "zucchini"
       },
       "quantity": {
         "quantityType": "POUND",
-        "amount": "2"
+        "amount": 2
       }
     },
     {
       "uuid": "869CBDC6-88BE-53B1-9619-0C53B80FCEB1",
-      "order": "10",
+      "order": 10,
       "ingredient": {
         "uuid": "D3ABF155-B7B1-5934-9169-BCFDE58494E2",
         "name": "3–4 bell peppers"
@@ -138,19 +138,19 @@
     },
     {
       "uuid": "7DECDB48-3968-5AA7-A1B6-150C5C7B1045",
-      "order": "11",
+      "order": 11,
       "ingredient": {
         "uuid": "E2B2312D-FDE5-5C3B-B53B-48B80DE59227",
         "name": "large red onion"
       },
       "quantity": {
         "quantityType": "ITEM",
-        "amount": "1"
+        "amount": 1
       }
     },
     {
       "uuid": "88491930-E7CD-5413-9BBF-2BE744656F62",
-      "order": "12",
+      "order": 12,
       "ingredient": {
         "uuid": "C72CB03A-ABFA-5134-932D-B881188378DB",
         "name": "Olive oil, salt, pepper"
@@ -158,7 +158,7 @@
     },
     {
       "uuid": "8A9C4687-7BF8-58D1-BB89-F9D4FB2D471F",
-      "order": "13",
+      "order": 13,
       "ingredient": {
         "uuid": "21E97A2E-2E7D-55D9-9521-51EAC44EC71A",
         "name": "Tzatziki, feta, cherry tomatoes, cucumber (added fresh when eating)"
@@ -168,87 +168,87 @@
   "steps": [
     {
       "uuid": "72A30A38-5A63-5699-A40D-FF20193A50D3",
-      "order": "0",
+      "order": 0,
       "step": "Preheat the main oven to 425°F with the sheet pans inside. Hot pans sear on contact instead of steaming.",
-      "isSection": "false"
+      "isSection": false
     },
     {
       "uuid": "344CF649-B745-5AB9-8155-25F3168630AE",
-      "order": "1",
+      "order": 1,
       "step": "Rinse 3 ½ cups jasmine rice 2–3 times until the water runs mostly clear. Add to the Instant Pot with 3 ½ cups water (1:1).",
-      "isSection": "false"
+      "isSection": false
     },
     {
       "uuid": "C52DC849-52FC-5D65-B272-BEB165690B80",
-      "order": "2",
+      "order": 2,
       "step": "Confirm the valve is set to SEALING. Pressure Cook (Manual) on High for 3 minutes, natural release 10 minutes, then quick release. Start this first — it takes ~10 minutes to come to pressure.",
-      "isSection": "false"
+      "isSection": false
     },
     {
       "uuid": "67C22C42-E27E-50C6-8242-2A03DCDCDF75",
-      "order": "3",
+      "order": 3,
       "step": "Cut the zucchini into thick ½-inch half-moons. Thin slices are mush by day 3.",
-      "isSection": "false"
+      "isSection": false
     },
     {
       "uuid": "379EF5B8-52CE-5CFE-85D9-3976578DC9EB",
-      "order": "4",
+      "order": 4,
       "step": "Chop the bell peppers and red onion into pieces the same size as the zucchini so they roast evenly.",
-      "isSection": "false"
+      "isSection": false
     },
     {
       "uuid": "706DEB69-DDE5-5A40-A663-461288C34158",
-      "order": "5",
+      "order": 5,
       "step": "Toss the vegetables with olive oil, salt, and pepper. Spread across 2 preheated pans in a single layer, nothing touching.",
-      "isSection": "false"
+      "isSection": false
     },
     {
       "uuid": "4A4053D7-81BF-5970-A3B5-B32385C74375",
-      "order": "6",
+      "order": 6,
       "step": "Roast the vegetables at 425°F in the main oven for 20–25 minutes, flipping halfway. The edges should caramelize.",
-      "isSection": "false"
+      "isSection": false
     },
     {
       "uuid": "87A66C35-01F5-5507-A03F-9006F2EBCFF6",
-      "order": "7",
+      "order": 7,
       "step": "Heat a large pan on the stovetop over medium-high. Add 4 ½ lbs ground turkey, breaking it up as it cooks. Brown 10–12 minutes until no pink remains and it reaches 165°F. Work in 2 batches if the pan is crowded — crowding steams the meat instead of browning it.",
-      "isSection": "false"
+      "isSection": false
     },
     {
       "uuid": "BCA3DEA2-D700-5342-88E7-3B0CF671E33F",
-      "order": "8",
+      "order": 8,
       "step": "Drain the excess liquid, then add the minced garlic, 2 tbsp oregano, 2 tsp cumin, 2 tsp paprika, salt, and pepper. Cook 2–3 minutes until fragrant.",
-      "isSection": "false"
+      "isSection": false
     },
     {
       "uuid": "0271E41F-E7BD-5499-936C-7DA8E2A8E056",
-      "order": "9",
+      "order": 9,
       "step": "Remove the turkey from the heat and stir in 3 tbsp lemon juice. The acid at the end is what makes it taste Mediterranean rather than generic.",
-      "isSection": "false"
+      "isSection": false
     },
     {
       "uuid": "BA3B2AAB-282F-590A-B586-453FCF089C4F",
-      "order": "10",
+      "order": 10,
       "step": "Fluff the rice, then stir in 3–4 tbsp lemon juice, 1 tbsp dried dill or parsley, and salt. Add the lemon after cooking, not before.",
-      "isSection": "false"
+      "isSection": false
     },
     {
       "uuid": "01539BD9-465C-5E3E-8467-56FF3EFA1A1C",
-      "order": "11",
+      "order": 11,
       "step": "Let the turkey, rice, and vegetables cool 10–15 minutes before portioning. Sealing hot food causes condensation and sogginess.",
-      "isSection": "false"
+      "isSection": false
     },
     {
       "uuid": "27E36702-02DD-534A-82C0-DC754B03BD22",
-      "order": "12",
+      "order": 12,
       "step": "Assembly line across 10 open containers: 150 g turkey, then 150 g rice, then 110 g roasted vegetables. No separate sauce container — the seasoning is already in the meat and the rice.",
-      "isSection": "false"
+      "isSection": false
     },
     {
       "uuid": "E71AC371-1211-5BA8-98D1-DBBB87121536",
-      "order": "13",
+      "order": 13,
       "step": "Label with a dry-erase marker. 6 containers to the fridge, 4 to the freezer. Move freezer containers to the fridge the night before eating.",
-      "isSection": "false"
+      "isSection": false
     }
   ],
   "notes": "UNTESTED — v1, never cooked\nQuantities are planned, not observed. Weigh the components and update the recipe before trusting these numbers.\n\nPER CONTAINER (10 total)\n  turkey: 150 g\n  rice: 150 g\n  veg: 110 g\n  total: 410 g\n\nSTORAGE: 6 fridge, 4 freezer\nFreezer containers move to the fridge the night before eating.\n\nFRESH TOPPINGS — NEVER PACKED: tzatziki, feta crumbles, cherry tomatoes, cucumber\nAdded at eating time only.\n\nUNTESTED — quantities are planned, not observed. Weigh the browned turkey\nafter step 9, the cooked rice after step 11, and the roasted vegetables after\nstep 7, then update the recipe with real numbers and promote to dialed-in.\n\nPlanning arithmetic: 4 ½ lbs raw turkey is 2041 g; ground turkey 93/7 browns\ndown to about 0.75, so roughly 1530 g cooked, which lands 150 g per container\nwith a little slack.\n\nThe vegetable total is the weak point in this plan. 110 g × 10 needs 1100 g\nroasted, and zucchini loses a lot of water in a hot oven. Weigh the roasted\nvegetables before portioning — if this comes up short the way the taco bowls\ndid, buy by weight next time rather than adding another pepper.\n\nPeppers hold up better than zucchini in the freezer. If you are freezing half\nthe batch, go lighter on zucchini and heavier on peppers in the freezer\ncontainers.\n\nThis is the no-chicken option in the rotation, and the only one with no\nbottled sauce anywhere in it — which is why the sodium projection is the\nlowest of the four.\n\nCold toppings — tzatziki, feta, cherry tomatoes, cucumber — go on fresh at\neating time, never packed. Aldi carries tzatziki and feta in the refrigerated\nsection.\n\nReheat, then top. A dollop of tzatziki and a handful of halved tomatoes takes\nthirty seconds and is the difference between a reheated bowl and something\nthat tastes made that day.",

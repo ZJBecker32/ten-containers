@@ -1,11 +1,11 @@
 {
   "uuid": "AD76986A-C075-53D5-A449-A8A91439832B",
   "name": "Honey Garlic Crockpot Shredded Chicken",
-  "serves": "10",
-  "duration": "15",
-  "cookingDuration": "210",
-  "defaultScale": "1",
-  "isPublicRecipe": "false",
+  "serves": 10,
+  "duration": 15,
+  "cookingDuration": 210,
+  "defaultScale": 1,
+  "isPublicRecipe": false,
   "folderIDs": [
 
   ],
@@ -18,55 +18,55 @@
   "ingredients": [
     {
       "uuid": "03BD226C-F126-5D15-A03D-0D9B96EFCA34",
-      "order": "0",
+      "order": 0,
       "ingredient": {
         "uuid": "7AFF82D7-77D1-57B2-B5BC-1F23564FA913",
         "name": "chicken breast, whole (not cubed)"
       },
       "quantity": {
         "quantityType": "POUND",
-        "amount": "6"
+        "amount": 6
       }
     },
     {
       "uuid": "8D023F03-AC09-531D-8F26-F2112492BBF9",
-      "order": "1",
+      "order": 1,
       "ingredient": {
         "uuid": "5BFBA7B5-A9F2-5192-8639-498E709A910A",
         "name": "chicken broth"
       },
       "quantity": {
         "quantityType": "CUP",
-        "amount": "0.5"
+        "amount": 0.5
       }
     },
     {
       "uuid": "4A62047C-2EFA-52E6-87E2-516D149C9A06",
-      "order": "2",
+      "order": 2,
       "ingredient": {
         "uuid": "0682D755-DCA9-506E-8A23-F8F262CF1645",
         "name": "honey"
       },
       "quantity": {
         "quantityType": "CUP",
-        "amount": "0.6667"
+        "amount": 0.6667
       }
     },
     {
       "uuid": "4A0BFB00-D4E8-57F0-9A7E-A6C524ED4E91",
-      "order": "3",
+      "order": 3,
       "ingredient": {
         "uuid": "39CA3450-24C1-586C-B0C6-507DECD0A3FB",
         "name": "low-sodium soy sauce"
       },
       "quantity": {
         "quantityType": "CUP",
-        "amount": "0.5"
+        "amount": 0.5
       }
     },
     {
       "uuid": "8A9AC34E-BB2D-580D-9D49-311533B70604",
-      "order": "4",
+      "order": 4,
       "ingredient": {
         "uuid": "2B5CB1FA-F0A1-5A61-892A-51DBAAF8398C",
         "name": "8–9 cloves garlic, minced"
@@ -74,67 +74,67 @@
     },
     {
       "uuid": "97BB1E98-2B4E-52D8-9435-9CAD345688D8",
-      "order": "5",
+      "order": 5,
       "ingredient": {
         "uuid": "B83564BF-FE7E-5385-8700-931CBD5391C1",
         "name": "butter"
       },
       "quantity": {
         "quantityType": "TABLESPOON",
-        "amount": "4"
+        "amount": 4
       }
     },
     {
       "uuid": "B4800542-7EBB-5809-B759-DFA24120DF79",
-      "order": "6",
+      "order": 6,
       "ingredient": {
         "uuid": "FA5434D7-DF8D-50C4-B90A-445993339862",
         "name": "cornstarch + 3 tbsp cold water"
       },
       "quantity": {
         "quantityType": "TABLESPOON",
-        "amount": "1.5"
+        "amount": 1.5
       }
     },
     {
       "uuid": "24BD5B49-49FB-56A6-B81F-B3C608F294C0",
-      "order": "7",
+      "order": 7,
       "ingredient": {
         "uuid": "902A37BC-48F8-5E7F-B6D1-199A3AAE0B47",
         "name": "reserved crockpot liquid"
       },
       "quantity": {
         "quantityType": "CUP",
-        "amount": "0.5"
+        "amount": 0.5
       }
     },
     {
       "uuid": "162B405B-F10E-5E8E-9C9F-D1344CCCCB7B",
-      "order": "8",
+      "order": 8,
       "ingredient": {
         "uuid": "267C762A-11EA-5C71-807F-560E0CF6869F",
         "name": "jasmine rice (dry)"
       },
       "quantity": {
         "quantityType": "CUP",
-        "amount": "3.5"
+        "amount": 3.5
       }
     },
     {
       "uuid": "D721B500-1124-5991-A57C-E396F471782C",
-      "order": "9",
+      "order": 9,
       "ingredient": {
         "uuid": "04FC00C3-48A4-5094-B42E-D43BDD9061D7",
         "name": "fresh green beans"
       },
       "quantity": {
         "quantityType": "POUND",
-        "amount": "2"
+        "amount": 2
       }
     },
     {
       "uuid": "D56B5F23-B502-541B-B2E9-12A4A401FAA2",
-      "order": "10",
+      "order": 10,
       "ingredient": {
         "uuid": "98157717-03F2-541B-A1A8-6B0671BA1ABF",
         "name": "Olive oil, salt, pepper"
@@ -144,75 +144,75 @@
   "steps": [
     {
       "uuid": "91D4B146-F61A-5CE7-913F-BB70E1A7C9F7",
-      "order": "0",
+      "order": 0,
       "step": "Place 6 lbs whole chicken breasts in the crockpot. Season with salt and pepper and add ½ cup chicken broth for moisture. No cutting required — this is the point of the recipe.",
-      "isSection": "false"
+      "isSection": false
     },
     {
       "uuid": "2817E768-3427-57AB-9964-BBA1FA9BF84B",
-      "order": "1",
+      "order": 1,
       "step": "Cook on High 3–4 hours, or Low 6–7 hours, until the chicken reaches 165°F and is fork-tender.",
-      "isSection": "false"
+      "isSection": false
     },
     {
       "uuid": "1EBA3EA9-1217-519B-875C-BDAD93C99636",
-      "order": "2",
+      "order": 2,
       "step": "Drain the cooking liquid but reserve ½ cup of it. Draining prevents a watery result; the reserved half cup goes back into the sauce for volume and flavor without added sugar.",
-      "isSection": "false"
+      "isSection": false
     },
     {
       "uuid": "4106F3B1-B8C7-57DD-B08E-3E4193461CE0",
-      "order": "3",
+      "order": 3,
       "step": "Shred the chicken with a hand mixer directly in the crockpot — 6 lbs takes about 30 seconds. A few pulses is enough; over-mixing turns it mushy.",
-      "isSection": "false"
+      "isSection": false
     },
     {
       "uuid": "31839D4C-8A0D-5188-94F7-7C39C14DCBF6",
-      "order": "4",
+      "order": 4,
       "step": "In a saucepan, combine ⅔ cup honey, ½ cup low-sodium soy sauce, 8–9 cloves minced garlic, 4 tbsp butter, and the ½ cup reserved crockpot liquid. Simmer 3–4 minutes.",
-      "isSection": "false"
+      "isSection": false
     },
     {
       "uuid": "2D43E493-F322-522C-A526-4381EF44CFBF",
-      "order": "5",
+      "order": 5,
       "step": "Taste the sauce before thickening. Low-sodium soy is noticeably less punchy than regular — add a splash more soy or a pinch of salt if it reads flat.",
-      "isSection": "false"
+      "isSection": false
     },
     {
       "uuid": "1E19E003-7AAD-54BB-9462-5B018050BF54",
-      "order": "6",
+      "order": 6,
       "step": "Whisk 1 ½ tbsp cornstarch into 3 tbsp cold water, then stir the slurry into the simmering sauce. Cook 1–2 minutes until it coats the back of a spoon.",
-      "isSection": "false"
+      "isSection": false
     },
     {
       "uuid": "38646A4B-6909-57CE-88C5-017A9946A277",
-      "order": "7",
+      "order": 7,
       "step": "Pour the sauce over the shredded chicken and stir. Hold on Warm for 10–15 minutes so the shredded meat absorbs it.",
-      "isSection": "false"
+      "isSection": false
     },
     {
       "uuid": "8755D0A1-F5E5-5D72-A542-A97D8F4FC5D4",
-      "order": "8",
+      "order": 8,
       "step": "During the last ~20 minutes of chicken time, rinse 3 ½ cups jasmine rice until the water runs clear. Add to the Instant Pot with 3 ½ cups water. Valve on SEALING. Pressure Cook High 3 minutes, natural release 10 minutes, quick release. Fluff and cool.",
-      "isSection": "false"
+      "isSection": false
     },
     {
       "uuid": "E60A8504-2B3E-5BE7-815A-2363B80E6746",
-      "order": "9",
+      "order": 9,
       "step": "Trim the green beans and toss with olive oil, salt, and pepper. Air roast at 400°F in the Ninja toaster oven for 15–18 minutes until tender with slightly crispy tips.",
-      "isSection": "false"
+      "isSection": false
     },
     {
       "uuid": "63B4FA58-D809-5DC9-9413-167FCB2029F6",
-      "order": "10",
+      "order": 10,
       "step": "Cool everything 10–15 minutes. Assembly line across 10 containers: 170 g chicken, then 140 g rice, then 90 g green beans. The sauce is already in the chicken, so no separate sauce container.",
-      "isSection": "false"
+      "isSection": false
     },
     {
       "uuid": "A7CAE4ED-9C19-541A-A9EE-774232A8E13B",
-      "order": "11",
+      "order": 11,
       "step": "Label with a dry-erase marker. 6 to the fridge, 4 to the freezer. Move freezer containers to the fridge the night before.",
-      "isSection": "false"
+      "isSection": false
     }
   ],
   "notes": "UNTESTED — v3, never cooked\nQuantities are planned, not observed. Weigh the components and update the recipe before trusting these numbers.\n\nPER CONTAINER (10 total)\n  chicken: 170 g\n  rice: 140 g\n  green beans: 90 g\n  total: 400 g\n\nSTORAGE: 6 fridge, 4 freezer\nFreezer containers move to the fridge the night before eating.\n\nUNTESTED — quantities below are planned, not observed. Weigh the shredded\nchicken after step 4 and the cooked rice after step 9, then update the\nrecipe with real numbers and promote to dialed-in.\n\nSauce was scaled up from a smaller scratch recipe. Shredded chicken absorbs\nfar more sauce than cubed does, and the original ½ cup honey / ⅓ cup soy\nversion yields roughly 300 g of sauce against 6 lbs of meat — not enough.\nThe reserved crockpot liquid is what closes the volume gap without adding\nsugar. If it still reads dry after step 8, add more reserved liquid rather\nthan more honey.\n\nLow-sodium soy was chosen deliberately: Aldi does not reliably carry a\nbottled honey garlic sauce, and the bottled version runs ~25 g added sugar\nand ~1400 mg sodium per container. The scratch version should land closer\nto 17 g and 700 mg.\n\nCrockpot whole breasts retain considerably more weight than oven-cubed\nchicken, and eliminate the raw chicken cutting step entirely. Trade-off is\nno seared flavor — the sauce carries it instead.\n\nGreen beans are more forgiving than broccoli and hard to overcook.\n\nThe beans go in the Ninja toaster oven at 400°F air roast rather than the main\noven at 425°F — the fan makes up the 25°F, so the timing is unchanged. Nothing\nin this recipe needs the main oven, which leaves it free for a second prep.",

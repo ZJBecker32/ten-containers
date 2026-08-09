@@ -8,12 +8,21 @@
 # observed yields, and it guesses at prep and cook time. A .crumb file is
 # Crouton's own format and carries all of it.
 #
-# Schema derived from a real Crouton export. The fields that matter:
-#   duration          prep minutes, as a string
-#   cookingDuration   cook minutes, as a string
-#   serves            string integer
-#   ingredients[]     {uuid, order, ingredient:{uuid,name}, quantity:{quantityType,amount}}
-#   steps[]           {uuid, order, step, isSection}
+# Schema derived from a real Crouton export. Types are load-bearing: Crouton
+# decodes into Swift structs, so a number sent as a string fails the whole
+# file, not just that field. An earlier version quoted all the numerics and
+# Crouton refused to open the result. CROUTON_TYPES below is checked against
+# every generated file so that cannot happen again.
+#
+#   duration          prep minutes, Integer
+#   cookingDuration   cook minutes, Integer
+#   serves            Integer
+#   defaultScale      Integer
+#   isPublicRecipe    Boolean
+#   ingredients[]     {uuid, order:Int, ingredient:{uuid,name},
+#                      quantity:{quantityType, amount:Numeric}}   quantity omitted
+#                      entirely when there is no unambiguous amount
+#   steps[]           {uuid, order:Int, step, isSection:Bool}
 #   notes             free text — where the meal-prep metadata goes
 #   neutritionalInfo  free text, "Label: value," lines (spelling is Crouton's)
 #
@@ -87,10 +96,58 @@ def parse_ingredient(text)
   end
 end
 
+# Crouton stores amount as a JSON number, integer where it is whole.
 def fmt_amount(a)
   return nil if a.nil?
 
-  (a % 1).zero? ? a.to_i.to_s : a.round(4).to_s
+  (a % 1).zero? ? a.to_i : a.round(4)
+end
+
+BOOL = [TrueClass, FalseClass].freeze
+
+CROUTON_TYPES = {
+  'uuid' => [String], 'folderIDs' => [Array], 'notes' => [String],
+  'name' => [String], 'duration' => [Integer], 'ingredients' => [Array],
+  'isPublicRecipe' => BOOL, 'serves' => [Integer], 'defaultScale' => [Integer],
+  'tags' => [Array], 'neutritionalInfo' => [String], 'sourceName' => [String],
+  'webLink' => [String], 'steps' => [Array], 'cookingDuration' => [Integer],
+  'images' => [Array]
+}.freeze
+
+INGREDIENT_TYPES = { 'uuid' => [String], 'order' => [Integer], 'ingredient' => [Hash] }.freeze
+STEP_TYPES = { 'uuid' => [String], 'order' => [Integer], 'step' => [String], 'isSection' => BOOL }.freeze
+
+# Fails loudly rather than writing a file Crouton will silently refuse.
+def assert_types!(crumb, label)
+  problems = []
+  check = lambda do |hash, spec, where|
+    spec.each do |key, types|
+      unless hash.key?(key)
+        problems << "#{where}: missing #{key}"
+        next
+      end
+      actual = hash[key].class
+      problems << "#{where}: #{key} is #{actual}, expected #{types.join('/')}" unless types.include?(actual)
+    end
+  end
+
+  check.call(crumb, CROUTON_TYPES, 'top level')
+  crumb['ingredients'].each_with_index do |ing, i|
+    check.call(ing, INGREDIENT_TYPES, "ingredient[#{i}]")
+    inner = ing['ingredient']
+    problems << "ingredient[#{i}].name not String" unless inner['name'].is_a?(String)
+    next unless (q = ing['quantity'])
+
+    problems << "ingredient[#{i}].quantityType not String" unless q['quantityType'].is_a?(String)
+    problems << "ingredient[#{i}].amount is #{q['amount'].class}, expected Numeric" unless q['amount'].is_a?(Numeric)
+  end
+  crumb['steps'].each_with_index { |s, i| check.call(s, STEP_TYPES, "step[#{i}]") }
+
+  return if problems.empty?
+
+  warn "export-crumb.rb: #{label} does not match Crouton's schema:"
+  problems.each { |p| warn "  #{p}" }
+  exit 1
 end
 
 def frontmatter_and_body(path)
@@ -169,7 +226,7 @@ def build_crumb(path)
     amount, type, name = parse_ingredient(line)
     entry = {
       'uuid' => uuid5("#{slug}/ingredient/#{i}"),
-      'order' => i.to_s,
+      'order' => i,
       'ingredient' => { 'uuid' => uuid5("#{slug}/ingredient-name/#{i}"), 'name' => name }
     }
     entry['quantity'] = { 'quantityType' => type, 'amount' => fmt_amount(amount) } if amount
@@ -180,17 +237,17 @@ def build_crumb(path)
                       .map { |s| s.strip.gsub(/\s*\n\s*/, ' ') }
                       .reject(&:empty?)
                       .each_with_index.map do |text, i|
-    { 'uuid' => uuid5("#{slug}/step/#{i}"), 'order' => i.to_s, 'step' => text, 'isSection' => 'false' }
+    { 'uuid' => uuid5("#{slug}/step/#{i}"), 'order' => i, 'step' => text, 'isSection' => false }
   end
 
   {
     'uuid' => uuid5(slug),
     'name' => fm['title'],
-    'serves' => fm['containers'].to_s,
-    'duration' => fm['prep_time_min'].to_s,
-    'cookingDuration' => fm['cook_time_min'].to_s,
-    'defaultScale' => '1',
-    'isPublicRecipe' => 'false',
+    'serves' => fm['containers'].to_i,
+    'duration' => fm['prep_time_min'].to_i,
+    'cookingDuration' => fm['cook_time_min'].to_i,
+    'defaultScale' => 1,
+    'isPublicRecipe' => false,
     'folderIDs' => [],
     'tags' => Array(fm['tags']),
     'ingredients' => ingredients,
@@ -223,6 +280,7 @@ Dir.mkdir(outdir) unless check || Dir.exist?(outdir)
 stale = []
 files.each do |path|
   crumb = build_crumb(path)
+  assert_types!(crumb, File.basename(path))
   json  = JSON.pretty_generate(crumb) + "\n"
   dest  = File.join(outdir, "#{File.basename(path, '.md')}.crumb")
 
