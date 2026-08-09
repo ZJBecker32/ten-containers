@@ -215,27 +215,28 @@ h3 { font-size: .8125rem; text-transform: uppercase; letter-spacing: .06em; colo
   outline: 2px solid var(--accent); outline-offset: -1px;
 }
 
-.sf-table { width: 100%; border-collapse: collapse; margin-bottom: 1rem; }
-.sf-table thead th {
-  font-size: .625rem; text-transform: uppercase; letter-spacing: .05em;
-  color: var(--muted); font-weight: 500; text-align: left;
-  padding-bottom: .375rem; border-bottom: 1px solid var(--line);
+.sf-rows { margin-bottom: 1rem; }
+.sf-comp { padding: .75rem 0; border-top: 1px solid var(--line); }
+.sf-comp:first-child { border-top: 0; padding-top: 0; }
+.sf-comp-head {
+  display: flex; justify-content: space-between; align-items: baseline;
+  gap: .75rem; margin-bottom: .375rem;
 }
-.sf-table tbody th {
-  text-align: left; font-weight: 600; font-size: .875rem;
-  padding: .5rem .5rem .5rem 0; vertical-align: middle; width: 34%;
-}
-.sf-table td { padding: .375rem .1875rem; }
+.sf-comp-name { font-weight: 650; font-size: .9375rem; }
 .sf-planned {
-  display: block; font-size: .625rem; font-weight: 400; color: var(--muted);
-  text-transform: uppercase; letter-spacing: .04em;
+  font-size: .6875rem; color: var(--muted);
+  text-transform: uppercase; letter-spacing: .04em; white-space: nowrap;
 }
+.sf-comp-inputs { display: flex; gap: .5rem; }
+.sf-comp-inputs label { flex: 1 1 0; display: flex; flex-direction: column; gap: .1875rem; }
 .sf-notes { display: block; margin-bottom: 1rem; }
 .sf-notes textarea { margin-top: .25rem; resize: vertical; }
 
 .sf-out {
-  white-space: pre-wrap; font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
-  font-size: .75rem; line-height: 1.5; padding: .875rem;
+  /* pre, not pre-wrap: lines are written short enough to fit, and a stray
+     long one should scroll rather than ragged-wrap the whole block. */
+  white-space: pre; font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+  font-size: .6875rem; line-height: 1.55; padding: .875rem;
   background: var(--bg); border: 1px solid var(--line); border-radius: 6px;
   overflow-x: auto; margin-bottom: .875rem;
 }

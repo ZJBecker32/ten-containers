@@ -80,54 +80,31 @@ fresh_toppings: []
 
 **Notes:**
 
-UNTESTED IN THIS FORM — v2 moved this recipe from cubed oven-roasted chicken
-to whole breasts in the crockpot. The quantities below are planned against
-`docs/standing-parameters.md`, not observed for this version. Weigh the
-shredded chicken after step 4, the cooked rice after step 6, and the roasted
-broccoli after step 7, then promote with a real date.
+UNTESTED IN THIS FORM — v2 switched from cubed oven-roasted chicken to whole
+breasts in the crockpot, so quantities are planned, not observed. Weigh the
+shredded chicken, the cooked rice, and the roasted broccoli, then promote with
+a real date.
 
-Why the switch. An undated session log of the cubed version measured:
+Why crockpot: cubed chicken measured 0.409 last session, the bottom of its
+range. Hitting 145 g per container that way needs 7.8 lbs of chicken; whole
+breasts at 0.72 need about 4 ½. Trade-off is shredded rather than cubed and no
+seared edges — the sauce carries it.
 
-  Chicken    5.31 lbs raw → 984 g cooked   (yield 0.409)
-  Broccoli   5.68 lbs raw → 1240 g roasted (yield 0.48)
-  Rice       3 cups dry   → 1220 g cooked  (~407 g per dry cup)
-  Sauce      422 g total  → ~42 g each
+Broccoli takes 5 ½ lbs, not the 3 ½–4 an earlier version called for; measured
+yield is 0.48. It will not fit the toaster oven in one layer, so plan on
+2 batches.
 
-Cubed chicken roasted at 425°F came in at 0.409 — the bottom of the 0.41–0.58
-range, not the ~0.58 an earlier write-up assumed. That session portioned 98 g
-per container against a 145 g target, roughly 30 g of protein rather than 45.
-Hitting 145 g at that yield would mean buying 7.8 lbs.
+Sauce: 422 g across 10 containers is 42 g each. An earlier note said "~50 g
+each", which does not divide. If 50 g is what it actually takes to coat a
+bowl, that is a third bottle and ~500 mg more sodium. Settle it this cook.
 
-Whole breasts in the crockpot plan at 0.72, so the same 1450 g of cooked meat
-needs about 4 ½ lbs — a little over half the chicken, and no raw cubing. The
-trade-off is shredded rather than cubed, and no seared edges; the sauce
-carries it. This is the default standing parameters already recommends.
+Sodium is the problem here — ~1400 mg per container, nearly double the
+ceiling, essentially all from the bottled sauce. Honey garlic is the worked
+example of the fix: scratch sauce lands at 700 mg.
 
-Broccoli was the other correction. Standing parameters used to claim 3 ½–4 lbs
-raw gives ~1200 g roasted. Measured yield is 0.48, so 1200 g takes ~5 ½ lbs.
-The old number under-buys by about 40%, which is why this recipe now calls for
-5 ½ lbs and two batches in the toaster oven.
-
-The session log noted "~50 g each" for sauce while also recording 422 g total,
-which only divides to 42 g across 10 containers. 42 g is what the arithmetic
-supports; if 50 g is what it actually takes to coat a bowl, that is a third
-bottle and about 500 mg more sodium per container. Worth settling on the next
-cook.
-
-Sodium remains the problem. At roughly 1400 mg per container this is the worst
-in the rotation and nearly double the 800 mg ceiling, essentially all of it
-from the bottled sauce — the crockpot switch does not change that. The honey
-garlic recipe is the worked example of the fix: a scratch sauce there lands at
-700 mg. A scratch teriyaki of soy, mirin, ginger, garlic, and a cornstarch
-slurry would do the same here.
-
-Sauce is packed separately in this recipe, unlike the others where it is
-already in the meat. Shredded chicken absorbs sauce well, so stirring it in
-during a Warm hold is an option — but it was kept separate to protect the rice
-from going soggy. Add it after reheating.
-
-Reheat in the air fryer at 350°F for 5–7 minutes. Rice and chicken freeze
-well; broccoli softens slightly but holds.
+Sauce is packed separately so the rice does not go soggy. Add it after
+reheating — air fryer 350°F, 5–7 minutes. Rice and chicken freeze well;
+broccoli softens slightly but holds.
 
 **Nutrition:**
 Serving Size: 1 container, Calories: 540 kcal, Protein: 52 g, Carbohydrates: 60 g, Fat: 11 g, Fiber: 4 g, Sodium: 1400 mg, Sugar: 12 g. Estimated and unverified — this version has not been cooked. Includes the packed sauce.

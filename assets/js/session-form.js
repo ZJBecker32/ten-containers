@@ -48,19 +48,35 @@
     return Math.round(n * f) / f;
   }
 
+  function pad(s, n) {
+    s = String(s);
+    return s.length >= n ? s : s + ' '.repeat(n - s.length);
+  }
+
+  function padl(s, n) {
+    s = String(s);
+    return s.length >= n ? s : ' '.repeat(n - s.length) + s;
+  }
+
   // ---- build the rows --------------------------------------------------
-  var tbody = document.getElementById('sf-rows');
+  // Stacked blocks, not a table: three columns on a phone leaves each input
+  // about 110px, which is too narrow for a four-digit gram weight plus the
+  // number spinner.
+  var rowsEl = document.getElementById('sf-rows');
   components.forEach(function (c) {
     var planned = R.perContainer[c] * R.containers;
-    var tr = document.createElement('tr');
-    tr.innerHTML =
-      '<th>' + c.replace(/_/g, ' ') +
-      '<span class="sf-planned">plan ' + planned + ' g</span></th>' +
-      '<td><input type="number" inputmode="decimal" step="any" data-c="' + c +
-      '" data-f="raw" placeholder="' + (isDry(c) ? 'cups dry' : 'raw g') + '"></td>' +
-      '<td><input type="number" inputmode="decimal" step="any" data-c="' + c +
-      '" data-f="cooked" placeholder="cooked g"></td>';
-    tbody.appendChild(tr);
+    var row = document.createElement('div');
+    row.className = 'sf-comp';
+    row.innerHTML =
+      '<div class="sf-comp-head"><span class="sf-comp-name">' + c.replace(/_/g, ' ') +
+      '</span><span class="sf-planned">plan ' + planned + ' g</span></div>' +
+      '<div class="sf-comp-inputs">' +
+      '<label>' + (isDry(c) ? 'dry cups' : 'raw g') +
+      '<input type="number" inputmode="decimal" step="any" data-c="' + c + '" data-f="raw"></label>' +
+      '<label>cooked g' +
+      '<input type="number" inputmode="decimal" step="any" data-c="' + c + '" data-f="cooked"></label>' +
+      '</div>';
+    rowsEl.appendChild(row);
   });
 
   var inputs = Array.prototype.slice.call(root.querySelectorAll('input, textarea'));
@@ -120,25 +136,25 @@
         }
       }
 
+      // Lines are kept under ~46 characters so they do not wrap in a
+      // monospace block at phone width.
       var delta = cooked - plannedTotal;
       var pct = Math.abs(delta) / plannedTotal;
+      var head = '  ' + pad(label, 10) + padl(cooked + ' g', 8) + '  ';
+
       if (pct <= TOLERANCE) {
-        lines.push('  ' + label + ': ' + cooked + ' g — on target (planned ' +
-                   plannedTotal + ', ' + (delta >= 0 ? '+' : '') + delta + ')');
+        lines.push(head + 'on target');
       } else if (delta < 0) {
-        var l = '  ' + label + ': ' + cooked + ' g — SHORT ' + delta +
-                ' g against ' + plannedTotal + '\n' +
-                '    → ' + achievable + ' g per container is what this batch supports';
+        lines.push(head + 'SHORT ' + Math.abs(delta) + ' g');
+        lines.push('      -> ' + achievable + ' g/container achievable');
         if (raw !== null && raw > 0 && !isDry(c)) {
           var neededRaw = Math.round(plannedTotal / (cooked / raw));
-          l += '\n    → or buy ' + neededRaw + ' g raw (+' + (neededRaw - raw) +
-               ' g) to hit ' + per + ' g';
+          lines.push('      -> or buy ' + neededRaw + ' g raw (+' + (neededRaw - raw) + ')');
         }
-        lines.push(l);
         edits['per_container.' + c] = 'per_container.' + c + ': ' + per + ' -> ' + achievable;
       } else {
-        lines.push('  ' + label + ': ' + cooked + ' g — surplus +' + delta +
-                   ' g; ' + achievable + ' g per container available');
+        lines.push(head + 'over ' + delta + ' g');
+        lines.push('      -> ' + achievable + ' g/container available');
       }
     });
 
@@ -159,15 +175,14 @@
     var out = [];
 
     if (a.observed.length) {
-      out.push('OBSERVED YIELDS');
+      out.push('YIELDS');
       a.observed.forEach(function (o) {
         var prior = R.priorYields ? R.priorYields[o[0]] : null;
-        out.push('  ' + o[0] + ': ' + o[1] +
-                 (prior != null && prior !== o[1] ? '   (recipe had ' + prior + ')' : ''));
+        out.push('  ' + pad(o[0], 27) + o[1] +
+                 (prior != null && prior !== o[1] ? ' (was ' + prior + ')' : ''));
       });
       out.push('');
-      out.push('  Paste into the recipe yields: block');
-      out.push('');
+      out.push('  paste into yields:');
       a.observed.forEach(function (o) { out.push('    ' + o[0] + ': ' + o[1]); });
       out.push('');
     }
@@ -179,17 +194,17 @@
     }
 
     if (a.notWeighed.length) {
-      out.push('NOT WEIGHED: ' + a.notWeighed.join(', '));
+      out.push('  not weighed: ' + a.notWeighed.join(', '));
       out.push('');
     }
 
     // Grouped by file rather than repeating the path on every line — on a
     // phone the repeated prefix wraps every edit onto three lines.
-    out.push('TO PROMOTE TO dialed-in');
+    out.push('EDITS TO PROMOTE');
     out.push('');
     out.push('recipes/' + R.slug + '.md');
     Object.keys(a.edits).forEach(function (k) { out.push('  ' + a.edits[k]); });
-    if (a.observed.length) { out.push('  yields: fill from the block above'); }
+    if (a.observed.length) { out.push('  yields: paste block above'); }
     out.push('  last_cooked: ' + (dateEl.value || today()));
     out.push('  version: ' + R.version + ' -> ' + (R.version + 1));
     if (R.status !== 'dialed-in') {
@@ -200,18 +215,15 @@
       var prior = R.priorYields ? R.priorYields[o[0]] : null;
       return prior != null && prior !== o[1];
     });
-    out.push('');
-    out.push('docs/standing-parameters.md');
     if (moved.length) {
-      out.push('  these moved — update by hand:');
+      out.push('');
+      out.push('docs/standing-parameters.md');
       moved.forEach(function (o) {
-        out.push('    ' + o[0] + ': ' + R.priorYields[o[0]] + ' -> ' + o[1]);
+        out.push('  ' + o[0] + ': ' + R.priorYields[o[0]] + ' -> ' + o[1]);
       });
-    } else {
-      out.push('  nothing observed that contradicts it');
     }
     out.push('');
-    out.push('Then re-run scripts/export-crumb.rb so the Crouton file matches.');
+    out.push('then: scripts/export-crumb.rb');
 
     return out.join('\n');
   }

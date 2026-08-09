@@ -101,26 +101,18 @@ UNTESTED — quantities are planned, not observed. Weigh the browned turkey
 after step 9, the cooked rice after step 11, and the roasted vegetables after
 step 7, then update the recipe with real numbers and promote to dialed-in.
 
-Quantities in v2 were rebuilt from an undated session log that weighed this
-cook. Those readings are recorded in `docs/standing-parameters.md`, but with
-no date behind them nothing goes in `yields` and the status stays untested.
+An undated session log weighed this cook: turkey 4.6 lbs → 1500 g (0.72),
+zucchini 2.31 lbs → 750 g (0.72), 3 peppers → 170 g, 3 onions → 240 g. Those
+are in `docs/standing-parameters.md`; with no date behind them nothing goes in
+`yields` and the status stays untested.
 
-What that session measured:
+Turkey landed at exactly 150 g per container, so that target is real. The
+yield was 0.72, not the 0.75 this repo had been planning against.
 
-  Turkey     4.6 lbs raw  → 1500 g cooked   (yield 0.72)
-  Zucchini   2.31 lbs raw →  750 g roasted  (yield 0.72)
-  Peppers    3 whole      →  170 g roasted  (~57 g each)
-  Onions     3 whole      →  240 g roasted  (~80 g each)
-
-Turkey landed at exactly 150 g per container, so that target is real. Note the
-yield was 0.72, not the 0.75 this repo had been planning against — 4 ½ lbs is
-the buy quantity, and it comes out a hair under 1500 g.
-
-The vegetable count changed in v2. An earlier write-up of this recipe called
-for 1 onion; the session that produced these weights used 3, and the three
-vegetables together came to 1160 g — 116 g per container, slightly over the
-110 g that was planned. With 1 onion it would have been roughly 900 g and come
-up short, the same failure the taco bowls have. Buy 3.
+Buy 3 onions. An earlier version called for 1; the session that produced these
+weights used 3, and the three vegetables together came to 1160 g — 116 g per
+container. With one onion it is roughly 900 g and comes up short, the same
+failure the taco bowls have.
 
 Peppers hold up better than zucchini in the freezer. If you are freezing half
 the batch, go lighter on zucchini and heavier on peppers in the freezer

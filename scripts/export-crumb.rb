@@ -194,21 +194,15 @@ def build_notes(fm, body)
   out << "#{fm['status'].to_s.upcase} — v#{fm['version']}" \
          "#{fm['last_cooked'] ? ", last cooked #{fm['last_cooked']}" : ', never cooked'}"
 
-  if fm['status'] == 'untested'
-    out << 'Quantities are planned, not observed. Weigh the components and ' \
-           'update the recipe before trusting these numbers.'
-  end
+  # No generic untested warning here: the body Notes of an untested recipe
+  # always open with a specific one naming the components to weigh, and two
+  # warnings in a row is just something to scroll past.
 
   if (pc = fm['per_container']) && !pc.empty?
     out << ''
     out << "PER CONTAINER (#{fm['containers']} total)"
     pc.each { |k, v| out << "  #{k.to_s.tr('_', ' ')}: #{v} g" }
     out << "  total: #{pc.values.select { |v| v.is_a?(Integer) }.sum} g"
-  end
-
-  if (tags = Array(fm['tags'])) && !tags.empty?
-    out << ''
-    out << "TAGS: #{tags.join(', ')}"
   end
 
   if (st = fm['storage'])
@@ -223,11 +217,10 @@ def build_notes(fm, body)
     out << 'Added at eating time only.'
   end
 
-  if (y = fm['yields']) && !y.empty?
-    out << ''
-    out << 'OBSERVED YIELDS'
-    y.each { |k, v| out << "  #{k.to_s.tr('_', ' ')}: #{v}" }
-  end
+  # Deliberately not included: observed yields and tags. Yields are planning
+  # data for the next shopping trip, not something read at the stove, and
+  # Crouton prompts for tags at import. Both were just length in a notes field
+  # you scroll past while cooking.
 
   notes_text = body.split(/^\*\*Notes:\*\*/, 2)[1]&.split(/^\*\*Nutrition:\*\*/, 2)&.first&.strip
   if notes_text && !notes_text.empty?
