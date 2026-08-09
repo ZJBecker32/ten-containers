@@ -1,0 +1,164 @@
+---
+layout: default
+---
+{%- comment -%}
+  Parse the rendered body for the ingredient <ul> and the step <ol>.
+  The body format defined in SCHEMA.md produces exactly one of each:
+  ingredients are a bullet list, steps are a numbered list, notes are prose.
+  We read the rendered HTML (`content`) rather than the raw Markdown so this
+  does not depend on Jekyll's page.content semantics, which vary by version.
+{%- endcomment -%}
+{%- capture body_html -%}{{ content }}{%- endcapture -%}
+
+{%- assign ing_list = "" | split: "" -%}
+{%- assign ul_parts = body_html | split: '<ul>' -%}
+{%- if ul_parts.size > 1 -%}
+  {%- assign ing_html = ul_parts[1] | split: '</ul>' | first -%}
+  {%- assign ing_raw = ing_html | split: '<li>' -%}
+  {%- for item in ing_raw -%}
+    {%- assign clean = item | strip_html | strip -%}
+    {%- assign one = clean | split: '~~NOSPLIT~~' -%}
+    {%- assign ing_list = ing_list | concat: one -%}
+  {%- endfor -%}
+{%- endif -%}
+
+{%- assign step_list = "" | split: "" -%}
+{%- assign ol_parts = body_html | split: '<ol>' -%}
+{%- if ol_parts.size > 1 -%}
+  {%- assign step_html = ol_parts[1] | split: '</ol>' | first -%}
+  {%- assign step_raw = step_html | split: '<li>' -%}
+  {%- for item in step_raw -%}
+    {%- assign clean = item | strip_html | strip | normalize_whitespace -%}
+    {%- assign one = clean | split: '~~NOSPLIT~~' -%}
+    {%- assign step_list = step_list | concat: one -%}
+  {%- endfor -%}
+{%- endif -%}
+
+{%- assign tmin = page.total_time_min | default: page.active_time_min -%}
+{%- assign thours = tmin | divided_by: 60 -%}
+{%- assign tmins = tmin | modulo: 60 -%}
+{%- capture total_iso -%}PT{% if thours > 0 %}{{ thours }}H{% endif %}{% if tmins > 0 %}{{ tmins }}M{% endif %}{%- endcapture -%}
+{%- assign amin = page.active_time_min -%}
+{%- assign ahours = amin | divided_by: 60 -%}
+{%- assign amins = amin | modulo: 60 -%}
+{%- capture active_iso -%}PT{% if ahours > 0 %}{{ ahours }}H{% endif %}{% if amins > 0 %}{{ amins }}M{% endif %}{%- endcapture -%}
+{%- assign n = page.nutrition_per_container -%}
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Recipe",
+  "name": {{ page.title | jsonify }},
+  "url": {{ page.url | absolute_url | jsonify }},
+  "recipeYield": {{ page.containers | append: " containers" | jsonify }},
+  {%- if page.tags %}
+  "keywords": {{ page.tags | join: ", " | jsonify }},
+  {%- endif %}
+  {%- if amin %}
+  "prepTime": {{ active_iso | jsonify }},
+  {%- endif %}
+  {%- if tmin %}
+  "totalTime": {{ total_iso | jsonify }},
+  {%- endif %}
+  "recipeIngredient": {{ ing_list | jsonify }},
+  "recipeInstructions": [
+    {%- for step in step_list %}
+    {"@type": "HowToStep", "text": {{ step | jsonify }}}{% unless forloop.last %},{% endunless %}
+    {%- endfor %}
+  ]{% if n %},
+  "nutrition": {
+    "@type": "NutritionInformation",
+    "servingSize": "1 container"
+    {%- if n.calories %},
+    "calories": {{ n.calories | append: " kcal" | jsonify }}{% endif %}
+    {%- if n.protein_g %},
+    "proteinContent": {{ n.protein_g | append: " g" | jsonify }}{% endif %}
+    {%- if n.carbs_g %},
+    "carbohydrateContent": {{ n.carbs_g | append: " g" | jsonify }}{% endif %}
+    {%- if n.fat_g %},
+    "fatContent": {{ n.fat_g | append: " g" | jsonify }}{% endif %}
+    {%- if n.fiber_g %},
+    "fiberContent": {{ n.fiber_g | append: " g" | jsonify }}{% endif %}
+    {%- if n.sodium_mg %},
+    "sodiumContent": {{ n.sodium_mg | append: " mg" | jsonify }}{% endif %}
+    {%- if n.added_sugar_g %},
+    "sugarContent": {{ n.added_sugar_g | append: " g" | jsonify }}{% endif %}
+  }{% endif %}
+}
+</script>
+
+<article class="recipe">
+
+  <div class="recipe-head">
+    <span class="badge status-{{ page.status }}">{{ page.status }}</span>
+    {%- if page.status == 'untested' %}
+    <p class="untested-warning">
+      Quantities on this page are <strong>planned, not observed</strong>. They came
+      from arithmetic against <a href="{{ '/docs/standing-parameters/' | relative_url }}">standing
+      parameters</a>, not from a scale. Weigh the components during the cook session
+      and update the file before trusting any number here.
+    </p>
+    {%- endif %}
+  </div>
+
+  <dl class="facts">
+    <div><dt>Containers</dt><dd>{{ page.containers }}</dd></div>
+    {%- if page.storage %}
+    <div><dt>Storage</dt><dd>{{ page.storage.fridge }} fridge / {{ page.storage.freezer }} freezer</dd></div>
+    {%- endif %}
+    <div><dt>Active time</dt><dd>{{ page.active_time_min }} min</dd></div>
+    {%- if page.total_time_min %}
+    <div><dt>Total time</dt><dd>{{ page.total_time_min }} min</dd></div>
+    {%- endif %}
+    <div><dt>Protein</dt><dd>{{ page.protein_source }}</dd></div>
+    <div><dt>Store</dt><dd>{{ page.store }}</dd></div>
+    <div><dt>Version</dt><dd>v{{ page.version }}</dd></div>
+    <div><dt>Last cooked</dt><dd>{% if page.last_cooked %}{{ page.last_cooked | date: "%Y-%m-%d" }}{% else %}never{% endif %}</dd></div>
+  </dl>
+
+  {%- if page.equipment %}
+  <p class="chips">{% for e in page.equipment %}<span class="chip">{{ e }}</span>{% endfor %}</p>
+  {%- endif %}
+
+  {%- if page.per_container %}
+  <section class="panel">
+    <h3>Per container</h3>
+    <table class="grams">
+      <tbody>
+      {%- assign total_g = 0 -%}
+      {%- for c in page.per_container %}
+        <tr><th>{{ c[0] | replace: '_', ' ' }}</th><td>{{ c[1] }} g</td></tr>
+        {%- assign total_g = total_g | plus: c[1] -%}
+      {%- endfor %}
+        <tr class="total"><th>total</th><td>{{ total_g }} g</td></tr>
+      </tbody>
+    </table>
+  </section>
+  {%- endif %}
+
+  {%- if page.fresh_toppings and page.fresh_toppings.size > 0 %}
+  <section class="panel toppings">
+    <h3>Fresh toppings &mdash; never packed</h3>
+    <p>Added at eating time only. Packing these is the single most common way to ruin a batch.</p>
+    <ul>{% for t in page.fresh_toppings %}<li>{{ t }}</li>{% endfor %}</ul>
+  </section>
+  {%- endif %}
+
+  {%- if page.yields and page.yields.size > 0 %}
+  <section class="panel">
+    <h3>Observed yields</h3>
+    <table class="grams">
+      <tbody>
+      {%- for y in page.yields %}
+        <tr><th>{{ y[0] | replace: '_', ' ' }}</th><td>{{ y[1] }}</td></tr>
+      {%- endfor %}
+      </tbody>
+    </table>
+  </section>
+  {%- endif %}
+
+  <div class="prose">
+  {{ content }}
+  </div>
+
+</article>

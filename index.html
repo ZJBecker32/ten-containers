@@ -1,0 +1,108 @@
+---
+layout: default
+title: Rotation
+---
+{%- assign recipes = site.pages | where: 'is_recipe', true | sort: 'last_cooked', 'first' | reverse -%}
+
+{%- assign all_equip = "" | split: "" -%}
+{%- assign all_prot = "" | split: "" -%}
+{%- for r in recipes -%}
+  {%- if r.equipment -%}{%- assign all_equip = all_equip | concat: r.equipment -%}{%- endif -%}
+  {%- assign one = r.protein_source | split: '~~NOSPLIT~~' -%}
+  {%- assign all_prot = all_prot | concat: one -%}
+{%- endfor -%}
+{%- assign equip_opts = all_equip | uniq | sort -%}
+{%- assign prot_opts = all_prot | uniq | sort -%}
+
+<h1>Rotation</h1>
+<p class="lede">
+  {{ recipes.size }} recipe{% if recipes.size != 1 %}s{% endif %}, 10 containers each.
+  Sorted by last cooked, most recent first. Never-cooked recipes sort last.
+</p>
+
+<div class="filters">
+  <label>Status
+    <select id="f-status">
+      <option value="">any</option>
+      <option value="dialed-in">dialed-in</option>
+      <option value="testing">testing</option>
+      <option value="untested">untested</option>
+    </select>
+  </label>
+  <label>Equipment
+    <select id="f-equipment">
+      <option value="">any</option>
+      {%- for e in equip_opts %}<option value="{{ e }}">{{ e }}</option>{% endfor %}
+    </select>
+  </label>
+  <label>Protein
+    <select id="f-protein">
+      <option value="">any</option>
+      {%- for p in prot_opts %}<option value="{{ p }}">{{ p }}</option>{% endfor %}
+    </select>
+  </label>
+  <button type="button" id="f-reset">Reset</button>
+</div>
+
+<ul class="cards" id="cards">
+{%- for r in recipes %}
+  <li class="card status-{{ r.status }}"
+      data-status="{{ r.status }}"
+      data-equipment="{{ r.equipment | join: ' ' }}"
+      data-protein="{{ r.protein_source }}">
+    <a class="card-title" href="{{ r.url | relative_url }}">{{ r.title }}</a>
+    <p class="card-meta">
+      <span class="badge status-{{ r.status }}">{{ r.status }}</span>
+      <span>{{ r.protein_source }}</span>
+      <span>{% if r.last_cooked %}cooked {{ r.last_cooked | date: "%Y-%m-%d" }}{% else %}never cooked{% endif %}</span>
+    </p>
+    {%- if r.nutrition_per_container %}
+    {%- assign n = r.nutrition_per_container %}
+    <p class="card-nutrition">
+      <span>{{ n.calories }} kcal</span>
+      <span>{{ n.protein_g }} g protein</span>
+      <span{% if n.sodium_mg >= 800 %} class="over"{% endif %}>{{ n.sodium_mg }} mg sodium</span>
+      <span{% if n.added_sugar_g >= 15 %} class="over"{% endif %}>{{ n.added_sugar_g }} g added sugar</span>
+    </p>
+    {%- endif %}
+    {%- if r.tags %}
+    <p class="chips">{% for t in r.tags %}<span class="chip">{{ t }}</span>{% endfor %}</p>
+    {%- endif %}
+  </li>
+{%- endfor %}
+</ul>
+<p id="empty" class="empty" hidden>No recipes match those filters.</p>
+
+<script>
+(function () {
+  var selects = ['f-status', 'f-equipment', 'f-protein'].map(function (id) {
+    return document.getElementById(id);
+  });
+  var cards = Array.prototype.slice.call(document.querySelectorAll('#cards .card'));
+  var empty = document.getElementById('empty');
+
+  function apply() {
+    var status = selects[0].value;
+    var equipment = selects[1].value;
+    var protein = selects[2].value;
+    var shown = 0;
+
+    cards.forEach(function (card) {
+      var equipList = (card.dataset.equipment || '').split(' ');
+      var ok = (!status || card.dataset.status === status) &&
+               (!equipment || equipList.indexOf(equipment) !== -1) &&
+               (!protein || card.dataset.protein === protein);
+      card.hidden = !ok;
+      if (ok) { shown++; }
+    });
+
+    empty.hidden = shown !== 0;
+  }
+
+  selects.forEach(function (s) { s.addEventListener('change', apply); });
+  document.getElementById('f-reset').addEventListener('click', function () {
+    selects.forEach(function (s) { s.value = ''; });
+    apply();
+  });
+})();
+</script>

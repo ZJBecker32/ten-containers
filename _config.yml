@@ -1,0 +1,39 @@
+title: Ten Containers
+description: >-
+  Source of truth for a weekly 10-container meal prep rotation.
+  Markdown in, GitHub Pages out, Crouton on the phone at the end.
+
+markdown: kramdown
+kramdown:
+  input: GFM
+
+# recipes/ is deliberately NOT a Jekyll collection. Collections must live in an
+# underscore-prefixed directory (_recipes/), which would contradict the layout
+# documented in README.md. Recipes are plain pages instead, tagged via the
+# defaults block below so the index can find them.
+defaults:
+  - scope:
+      path: ""
+      type: "pages"
+    values:
+      layout: page
+  - scope:
+      path: "recipes"
+      type: "pages"
+    values:
+      layout: recipe
+      is_recipe: true
+      permalink: /recipes/:basename/
+  - scope:
+      path: "docs"
+      type: "pages"
+    values:
+      layout: page
+      permalink: /docs/:basename/
+
+exclude:
+  - README.md
+  - Gemfile
+  - Gemfile.lock
+  - scripts/
+  - vendor/
