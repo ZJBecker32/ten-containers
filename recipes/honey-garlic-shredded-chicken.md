@@ -1,8 +1,14 @@
 ---
 title: Honey Garlic Crockpot Shredded Chicken
 slug: honey-garlic-shredded-chicken
-status: untested
-version: 3
+status: dialed-in
+version: 4
+last_cooked: 2026-08-09
+retired: true
+retired_reason: >-
+  Sauce is too sweet at 17 g added sugar per container. The crockpot pulled
+  chicken underneath it was the best in the rotation — that technique moves on
+  to a savory-sauce recipe, this version does not.
 
 containers: 10
 storage:
@@ -33,7 +39,10 @@ nutrition_per_container:
   added_sugar_g: 17
   estimated: true
 
-yields: {}
+yields:
+  chicken_breast_whole_crockpot: 0.637
+  jasmine_rice_g_per_cup_dry: 457
+  green_beans_roasted: 0.601
 
 fresh_toppings: []
 ---
@@ -86,9 +95,30 @@ fresh_toppings: []
 
 **Notes:**
 
-UNTESTED — quantities below are planned, not observed. Weigh the shredded
-chicken after step 4 and the cooked rice after step 9, then update the
-recipe with real numbers and promote to dialed-in.
+RETIRED after the 2026-08-09 cook. The sauce is too sweet — 17 g of added
+sugar per container, over the ceiling, and it read as a glaze rather than a
+savory sauce. Kept here because the numbers below are observed and because the
+chicken underneath was the best pulled chicken the rotation has produced.
+
+Cooked 2026-08-09:
+
+  Chicken      6.23 lbs raw → 1800 g   (yield 0.637)
+  Rice         3 ½ cups dry → 1600 g   (457 g per dry cup)
+  Green beans  2 lbs raw    →  545 g   (yield 0.601)
+
+Two of those corrected `docs/standing-parameters.md`. Green beans had been
+recorded at an implied 0.99, so this batch came up 355 g short — 54 g of
+vegetable per container against a 90 g plan. For 900 g roasted, buy 3 ⅓ lbs.
+Chicken came in at 0.637, below the 0.70–0.76 the file had recorded.
+
+Portioned as 7 fridge containers with all the beans at 78 g each, and 3
+freezer containers with none, on the reasoning that thin roasted green beans
+are the worst thing in the container to freeze and fresh vegetable can be
+added after thawing.
+
+What to keep: whole breasts in the crockpot, shredded with a hand mixer.
+What to replace: the honey. A soy-and-aromatics sauce with a couple of
+tablespoons of sugar lands near 3 g per container instead of 17.
 
 Sauce was scaled up from a smaller scratch recipe. Shredded chicken absorbs
 far more sauce than cubed does, and the original ½ cup honey / ⅓ cup soy

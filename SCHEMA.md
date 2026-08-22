@@ -31,6 +31,19 @@ Frontmatter holds them; the body stays clean.
 | `status` | enum | yes | `untested` \| `testing` \| `dialed-in` |
 | `version` | int | yes | Increment on any quantity change. |
 | `last_cooked` | date | no | `YYYY-MM-DD`. Omit if `untested`. |
+| `retired` | bool | no | Pulled from the rotation. Defaults false. |
+| `retired_reason` | string | no | Required when `retired` is true. |
+
+**`retired` is not a status.** `status` says how much the numbers can be
+trusted; `retired` says whether you would cook it again. They are independent,
+and a recipe can be both `dialed-in` and retired — cooked, weighed, yields
+recorded, and then dropped because the result was not worth eating. That is
+the most useful kind of retirement to keep, because the observed yields in it
+are what every later recipe plans against.
+
+Retiring is not deleting. A retired recipe keeps its file, its yields, and its
+session records. It drops out of the index by default and is excluded from the
+"what should I cook" set.
 
 **`status` is the most important field.** `untested` means quantities are
 planned, not observed — the numbers came from arithmetic, not from a scale.

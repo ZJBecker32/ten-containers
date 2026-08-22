@@ -105,8 +105,18 @@ layout: default
 
 <article class="recipe">
 
+  <h1>{{ page.title }}</h1>
+
   <div class="recipe-head">
     <span class="badge status-{{ page.status }}">{{ page.status }}</span>
+    {%- if page.retired %}
+    <span class="badge status-retired">retired</span>
+    <p class="untested-warning">
+      <strong>Retired from the rotation.</strong> {{ page.retired_reason }}
+      Kept because the observed numbers on this page are what the active
+      recipes plan against.
+    </p>
+    {%- endif %}
     {%- if page.status == 'untested' %}
     <p class="untested-warning">
       Quantities on this page are <strong>planned, not observed</strong>. They came
@@ -146,7 +156,7 @@ layout: default
 
   {%- if page.per_container %}
   <section class="panel">
-    <h3>Per container</h3>
+    <h2>Per container</h2>
     <table class="grams">
       <tbody>
       {%- assign total_g = 0 -%}
@@ -162,7 +172,7 @@ layout: default
 
   {%- if page.fresh_toppings and page.fresh_toppings.size > 0 %}
   <section class="panel toppings">
-    <h3>Fresh toppings &mdash; never packed</h3>
+    <h2>Fresh toppings &mdash; never packed</h2>
     <p>Added at eating time only. Packing these is the single most common way to ruin a batch.</p>
     <ul>{% for t in page.fresh_toppings %}<li>{{ t }}</li>{% endfor %}</ul>
   </section>
@@ -170,7 +180,7 @@ layout: default
 
   {%- if page.yields and page.yields.size > 0 %}
   <section class="panel">
-    <h3>Observed yields</h3>
+    <h2>Observed yields</h2>
     <table class="grams">
       <tbody>
       {%- for y in page.yields %}

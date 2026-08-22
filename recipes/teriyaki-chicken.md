@@ -2,7 +2,7 @@
 title: Teriyaki Chicken
 slug: teriyaki-chicken
 status: untested
-version: 2
+version: 3
 
 containers: 10
 storage:
@@ -47,7 +47,7 @@ fresh_toppings: []
 
 **Ingredients:**
 
-  - 4 ½ lbs chicken breast, whole (not cubed)
+  - 5 lbs chicken breast, whole (not cubed)
   - ½ cup chicken broth
   - 3 ½ cups jasmine rice (dry)
   - ~5 ½ lbs broccoli florets (yields ~1200 g roasted)
@@ -56,7 +56,7 @@ fresh_toppings: []
 
 **Steps:**
 
-1.  Place 4 ½ lbs whole chicken breasts in the crockpot. Season with salt and pepper and add ½ cup chicken broth for moisture. No cutting required.
+1.  Place 5 lbs whole chicken breasts in the crockpot. Season with salt and pepper and add ½ cup chicken broth for moisture. No cutting required.
 
 2.  Cook on High 3–4 hours, or Low 6–7 hours, until the chicken reaches 165°F and is fork-tender.
 
@@ -85,10 +85,14 @@ breasts in the crockpot, so quantities are planned, not observed. Weigh the
 shredded chicken, the cooked rice, and the roasted broccoli, then promote with
 a real date.
 
-Why crockpot: cubed chicken measured 0.409 last session, the bottom of its
-range. Hitting 145 g per container that way needs 7.8 lbs of chicken; whole
-breasts at 0.72 need about 4 ½. Trade-off is shredded rather than cubed and no
-seared edges — the sauce carries it.
+Why crockpot: cubed chicken measured 0.409, the bottom of its range. Hitting
+145 g per container that way needs 7.8 lbs of chicken; whole breasts need
+5 lbs. Trade-off is shredded rather than cubed and no seared edges — the sauce
+carries it.
+
+The 5 lbs is v3. v2 said 4 ½, planned against a crockpot yield of 0.72. The
+2026-08-09 cook measured 0.637, so standing parameters now plans whole breasts
+at 0.65 and this recipe was corrected before ever being cooked.
 
 Broccoli takes 5 ½ lbs, not the 3 ½–4 an earlier version called for; measured
 yield is 0.48. It will not fit the toaster oven in one layer, so plan on
@@ -99,8 +103,11 @@ each", which does not divide. If 50 g is what it actually takes to coat a
 bowl, that is a third bottle and ~500 mg more sodium. Settle it this cook.
 
 Sodium is the problem here — ~1400 mg per container, nearly double the
-ceiling, essentially all from the bottled sauce. Honey garlic is the worked
-example of the fix: scratch sauce lands at 700 mg.
+ceiling, essentially all from the bottled sauce. The ground beef and broccoli
+recipe is the worked example of the fix: the same soy-and-aromatics profile
+built from scratch projects at ~750 mg and 3 g of added sugar. Swapping that
+sauce in here is the obvious next version, and would make the bottled bottles
+unnecessary.
 
 Sauce is packed separately so the rice does not go soggy. Add it after
 reheating — air fryer 350°F, 5–7 minutes. Rice and chicken freeze well;

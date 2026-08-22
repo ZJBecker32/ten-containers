@@ -68,6 +68,18 @@ h1 { font-size: 1.75rem; line-height: 1.2; margin: 0 0 .5rem; }
 h2 { font-size: 1.25rem; margin: 2rem 0 .5rem; }
 h3 { font-size: .8125rem; text-transform: uppercase; letter-spacing: .06em; color: var(--muted); margin: 0 0 .5rem; }
 
+/* Panel headings are h2 for a valid document outline, but read as small
+   labels. The body's own title heading is hidden on the site because the
+   layout renders an h1 — it stays in the Markdown because the body has to
+   stand alone in a Crouton export. */
+.panel h2, .panel h3 {
+  font-size: .8125rem; text-transform: uppercase; letter-spacing: .06em;
+  color: var(--muted); margin: 0 0 .5rem; font-weight: 600;
+  border-bottom: 0; padding-bottom: 0;
+}
+.recipe > h1 { margin-bottom: .75rem; }
+.recipe .prose > h2:first-child { display: none; }
+
 .lede { color: var(--muted); margin-top: 0; }
 
 /* Filters */
@@ -123,6 +135,14 @@ h3 { font-size: .8125rem; text-transform: uppercase; letter-spacing: .06em; colo
 .badge.status-dialed-in { background: var(--accent); color: var(--bg); border-color: transparent; }
 .badge.status-untested { background: var(--warn-bg); color: var(--over); border-color: var(--warn-line); }
 .badge.status-testing { background: transparent; color: var(--muted); }
+.badge.status-retired { background: transparent; color: var(--muted); }
+
+.retired-head { margin-top: 2.5rem; }
+.cards.retired { margin-top: 1rem; }
+.card-retired { opacity: .72; }
+.card-retired:hover { opacity: 1; }
+.card-retired .card-title { color: var(--muted); }
+.card-reason { margin: .5rem 0 0; font-size: .8125rem; color: var(--muted); font-style: italic; }
 
 .chips { display: flex; flex-wrap: wrap; gap: .375rem; margin: .625rem 0 0; }
 .chip {

@@ -2,7 +2,9 @@
 layout: default
 title: Rotation
 ---
-{%- assign recipes = site.pages | where: 'is_recipe', true | sort: 'last_cooked', 'first' | reverse -%}
+{%- assign all_recipes = site.pages | where: 'is_recipe', true | sort: 'last_cooked', 'first' | reverse -%}
+{%- assign recipes = all_recipes | where_exp: 'r', 'r.retired != true' -%}
+{%- assign retired = all_recipes | where: 'retired', true -%}
 
 {%- assign all_equip = "" | split: "" -%}
 {%- assign all_prot = "" | split: "" -%}
@@ -72,6 +74,27 @@ title: Rotation
 {%- endfor %}
 </ul>
 <p id="empty" class="empty" hidden>No recipes match those filters.</p>
+
+{%- if retired.size > 0 %}
+<h2 class="retired-head">Retired</h2>
+<p class="lede">
+  Pulled from the rotation but kept — the observed yields in these are what the
+  active recipes plan against.
+</p>
+<ul class="cards retired">
+{%- for r in retired %}
+  <li class="card card-retired">
+    <a class="card-title" href="{{ r.url | relative_url }}">{{ r.title }}</a>
+    <p class="card-meta">
+      <span class="badge status-retired">retired</span>
+      <span>{{ r.protein_source }}</span>
+      <span>{% if r.last_cooked %}cooked {{ r.last_cooked | date: "%Y-%m-%d" }}{% else %}never cooked{% endif %}</span>
+    </p>
+    <p class="card-reason">{{ r.retired_reason }}</p>
+  </li>
+{%- endfor %}
+</ul>
+{%- endif %}
 
 <script>
 (function () {

@@ -110,6 +110,18 @@ files.each do |path|
     err.('status is `dialed-in` but `last_cooked` is missing — nothing is promoted without a cook session')
   end
 
+  # Retirement is independent of status: a recipe can be dialed-in and retired.
+  # The reason is required, because "why did we stop making this" is the whole
+  # value of keeping the file instead of deleting it.
+  if fm['retired']
+    err.('`retired` must be a boolean') unless [true, false].include?(fm['retired'])
+    if fm['retired'] == true && fm['retired_reason'].to_s.strip.empty?
+      err.('`retired: true` requires a `retired_reason`')
+    end
+  elsif fm['retired_reason']
+    warn_.('`retired_reason` is set but `retired` is not true')
+  end
+
   # --- Batch ---------------------------------------------------------------
   storage = fm['storage']
   if storage.is_a?(Hash)

@@ -40,7 +40,7 @@ a dated session. See `docs/cook-session.md`.
 
 | Ingredient | Yield | Notes |
 |---|---|---|
-| Chicken breast, whole, crockpot | 0.70–0.76 | Wide range across sessions; plan at 0.72 |
+| Chicken breast, whole, crockpot | 0.64–0.76 | **Plan at 0.65.** Measured 0.637 (6.23 lbs → 1800 g), 2026-08-09 |
 | Chicken breast, cubed, oven 425°F | 0.41–0.58 | **Plan at 0.41.** Measured 0.409 (5.31 lbs → 984 g) |
 | Ground beef 90/10 | 0.75 | Drains more fat than turkey |
 | Ground turkey 93/7 | 0.72–0.75 | Measured 0.72 (4.6 lbs → 1500 g) |
@@ -56,16 +56,22 @@ crockpot retain more weight than cubed in the oven and eliminate raw
 chicken cutting entirely. Default to it unless a recipe specifically needs
 seared texture.
 
+Measured head to head: crockpot whole breast 0.637, oven-cubed 0.409. Even at
+the bottom of its range the crockpot returns about 56% more cooked meat per
+pound bought, on top of skipping the cutting. The 2026-08-09 cook produced the
+best pulled chicken in the rotation so far — the technique is settled, and
+what varies is the sauce on top of it.
+
 ## Non-meat yields
 
 | Ingredient | Yield | Notes |
 |---|---|---|
-| Jasmine rice | ~407–428 g per dry cup | Two sessions: 3 cups → 1220 g, 3 ½ cups → ~1500 g. **Plan at 410.** |
+| Jasmine rice | ~407–457 g per dry cup | Three sessions: 1220 g / 3 cups, ~1500 g / 3 ½, 1600 g / 3 ½. **Plan at 410.** |
 | Bell peppers | ~57 g each cooked | Confirmed twice, both at 3 peppers → 170 g |
 | Onion | ~80 g each cooked | 3 onions → 240 g |
 | Zucchini | 0.72 | 2.31 lbs → 750 g |
 | Broccoli, roasted | 0.48 | 5.68 lbs → 1240 g. **For 1200 g roasted, buy ~5 ½ lbs.** |
-| Green beans | ~2 lbs raw → ~900 g roasted | Unverified — see below |
+| Green beans, roasted | 0.60 | Measured 2026-08-09: 2 lbs → 545 g. **For 900 g roasted, buy ~3 ⅓ lbs.** |
 
 **The broccoli figure was wrong and has been corrected.** This table
 previously read "3 ½–4 lbs raw → ~1200 g roasted", which implies a yield near
@@ -73,10 +79,16 @@ previously read "3 ½–4 lbs raw → ~1200 g roasted", which implies a yield ne
 roughly 40%, which is why a recipe targeting 120 g per container needs 5 ½ lbs
 and not 3 ½.
 
-Treat the green bean row with suspicion. As written it implies a yield near
-0.99, which cannot be right next to broccoli at 0.48 — green beans are denser
-with less surface area, so they should lose less, but not nothing. Weigh them
-on the next honey garlic cook.
+**The green bean figure was wrong too, and is now measured.** This table used
+to read "~2 lbs raw → ~900 g roasted", implying a yield near 0.99, flagged
+here as impossible next to broccoli at 0.48. Measured is 0.60. The honey
+garlic cook that produced it came up 355 g short of its 900 g target — 54 g of
+vegetable per container against a 90 g plan — because the recipe was built on
+the bad number.
+
+That is twice now that a wrong figure in this file has been caught by
+arithmetic that would not reconcile, rather than by anyone noticing at the
+store. Both times the recipe planning against it under-bought by roughly 40%.
 
 Buy vegetables **by weight, not by count.** Head-count buying is what
 caused the broccoli overbuying and the pepper shortfall. Peppers and onions
@@ -125,7 +137,9 @@ sauce.
 
 **Hand mixer — shredding**
 Directly in the crockpot. 6 lbs in ~30 seconds. A few pulses only;
-over-mixing turns the meat mushy.
+over-mixing turns the meat mushy. Confirmed 2026-08-09 on 6.23 lbs — this is
+the method for any pulled-chicken recipe, and the reason to keep writing them
+even after one gets retired for its sauce.
 
 **Main oven — 425°F** for chicken and roasted vegetables. Preheat the sheet
 pans. Single layer, no touching.
