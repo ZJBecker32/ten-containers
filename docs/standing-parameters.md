@@ -175,6 +175,18 @@ condensation and sogginess.
 — bottled lime juice is an acceptable substitute and cilantro can be
 skipped. Carries tzatziki and feta in the refrigerated section.
 
+Unreliable at Aldi, and what to do about each:
+
+| Item | Substitute |
+|---|---|
+| Toasted sesame oil | None that works. Toasted sesame seeds recover part of it. Buy a bottle elsewhere — it lasts ~5 batches. |
+| Rice vinegar | Cider vinegar. Or white wine vinegar; or distilled white at ¾ the quantity, it is sharper. |
+| Low-sodium soy sauce | **Not interchangeable with regular.** Regular runs ~900 mg per tbsp against ~575. Cut the quantity by a quarter and replace the volume with broth, then recheck the sodium projection. |
+| Fresh ginger | Ground ginger, ~1 tsp per tbsp of fresh. |
+
+Only the soy substitution can break a ceiling. The other three change flavour,
+not the numbers.
+
 **Sam's Club** for bulk goods and gas, via a family membership.
 
 Recipes should be buildable from Aldi alone wherever possible.

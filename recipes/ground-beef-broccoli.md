@@ -51,13 +51,13 @@ fresh_toppings:
   - 5 lbs ground beef (90/10)
   - ~5 ½ lbs broccoli florets (~2500 g, yields ~1200 g roasted)
   - 3 ½ cups jasmine rice (dry)
-  - ⅔ cup low-sodium soy sauce
+  - ⅔ cup low-sodium soy sauce (see Notes if only regular is available)
   - ¾ cup low-sodium beef broth
   - 8–9 cloves garlic, minced
   - 2 tbsp fresh ginger, minced (or 2 tsp ground)
   - 2 tbsp toasted sesame oil
   - 2 tbsp brown sugar
-  - 2 tbsp rice vinegar
+  - 2 tbsp rice vinegar (or cider vinegar)
   - 2 tbsp cornstarch + 4 tbsp cold water
   - ½ tsp red pepper flakes (optional)
   - Olive oil, salt, pepper
@@ -121,8 +121,29 @@ carry it, the vinegar keeps it bright, and the sugar is there only to round
 the salt. If it still reads flat after step 12, add vinegar before sugar.
 
 Projected sodium is ~750 mg, under the 800 ceiling but not by much, and it is
-almost entirely the soy. Use low-sodium soy and low-sodium broth — regular soy
-alone would push this past 1100 mg.
+almost entirely the soy.
+
+Substitutions, in order of how much they matter:
+
+**Low-sodium soy is load-bearing.** ⅔ cup of regular soy puts this at roughly
+1005 mg per container, well over the ceiling. If regular is all Aldi has, use
+½ cup and add ¼ cup more broth to keep the sauce volume — that lands near
+765 mg. Do not swap one for one.
+
+**Toasted sesame oil has no real substitute.** It is a finishing flavour, not
+a cooking fat, and untoasted sesame oil is not the same thing. Aldi carries it
+inconsistently. Without it the sauce is still a good savoury garlic-ginger
+beef, it just stops reading as sesame. Toasted sesame seeds stirred in at the
+end recover part of it. A small bottle is about five batches and keeps for
+months in the fridge, so it is worth sourcing once elsewhere.
+
+**The vinegar hardly matters.** Its job is acid against the salt and sugar.
+Cider vinegar is the easy swap and Aldi always has it. White wine vinegar is
+closest in profile. Distilled white works at 1 ½ tbsp rather than 2, since it
+is sharper than rice vinegar. Lemon juice works and reads brighter.
+
+**Ground ginger is fine** at 2 tsp in place of the fresh, and is the reliable
+Aldi option.
 
 Broccoli softens slightly in the freezer but holds better than zucchini.
 
