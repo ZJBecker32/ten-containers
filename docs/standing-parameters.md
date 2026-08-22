@@ -187,6 +187,30 @@ Unreliable at Aldi, and what to do about each:
 Only the soy substitution can break a ceiling. The other three change flavour,
 not the numbers.
 
+---
+
+## Judging a jarred sauce on the shelf
+
+A container takes ~42 g of sauce. A label serving is ~1 tbsp (18 g), so
+**multiply the label by about 2.3** to get what it adds per container. Roughly
+250 mg of sodium per tablespoon is break-even once the salt already in the
+meat and vegetables is counted.
+
+| Category | Typical | Verdict |
+|---|---|---|
+| Teriyaki, hoisin, BBQ, sweet chilli, stir-fry | 300–690 mg/tbsp | Fails. Engineered as concentrated coatings. |
+| Marinara, pasta sauce, enchilada, salsa | 50–200 mg/tbsp | Passes comfortably — dilute, not a glaze. |
+| Sriracha, mustard, hot sauce | varies | Irrelevant, used by the teaspoon. |
+
+The split is concentrated glaze versus dilute sauce, not store-bought versus
+homemade, and it is not specific to Aldi.
+
+**Scratch is control, not virtue.** The worst added-sugar figure this rotation
+has produced — 17 g, which retired honey garlic — was a scratch sauce, and it
+beat bottled teriyaki's 12 g. Making it yourself only helps if you then choose
+to use less. What actually wins on both numbers is no sauce at all: the
+Mediterranean bowls run 500 mg and 0 g on spices and lemon alone.
+
 **Sam's Club** for bulk goods and gas, via a family membership.
 
 Recipes should be buildable from Aldi alone wherever possible.
