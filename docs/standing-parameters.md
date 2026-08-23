@@ -167,6 +167,16 @@ condensation and sogginess.
 
 **Cut zucchini thick** — ½-inch half-moons. Thin slices are mush by day 3.
 
+**Ginger: freeze it, grate it from frozen.** A ~1-inch piece is about 1 tbsp
+minced, so a 2 tbsp recipe wants a 2-inch piece. Peel with the edge of a
+spoon rather than a peeler — it follows the knobs instead of wasting flesh.
+Grate rather than chop; the root is fibrous and a knife leaves strings.
+Whole unpeeled knobs keep for months in the freezer and grate more easily
+frozen, with the skin disintegrating so peeling becomes unnecessary. That
+suits a rotation that uses 2 tbsp every few weeks. Jarred minced ginger is
+the closest substitute; ground at 1 tsp per tbsp of fresh is duller but fine
+in anything simmered.
+
 ---
 
 ## Sourcing
