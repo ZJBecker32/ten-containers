@@ -41,7 +41,6 @@ yields:
 
 fresh_toppings:
   - sliced scallions
-  - sriracha
 ---
 
 ## Ground Beef and Broccoli Bowls
@@ -158,6 +157,17 @@ is sharper than rice vinegar. Lemon juice works and reads brighter.
 Aldi option.
 
 Broccoli softens slightly in the freezer but holds better than zucchini.
+
+Sriracha can be packed straight into the containers — it is shelf-stable and
+vinegar-based, so it does not degrade or make anything soggy. Roughly 80 mg of
+sodium per teaspoon, which takes a container from ~750 mg to ~830 and just
+over the ceiling.
+
+Scallions should not be packed. Sliced raw and left five days they go limp,
+and reheating cooks them into soft onion rather than a fresh garnish. Slicing
+the whole bunch at prep and keeping it in a sealed container in the fridge
+gets the convenience without the wilt — sliced scallions hold about a week and
+sprinkling takes no knife at eating time.
 
 **Nutrition:**
 Serving Size: 1 container, Calories: 685 kcal, Protein: 55 g, Carbohydrates: 52 g, Fat: 27 g, Fiber: 5 g, Sodium: 750 mg, Sugar: 3 g. Estimated from observed portion weights, not lab-tested. Excludes fresh toppings.

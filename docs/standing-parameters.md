@@ -176,6 +176,18 @@ the rice and the meat. Cooking them dulls the brightness.
 feta, fresh tomato, cucumber — all added at eating time. This is the single
 biggest factor in whether a day-5 container tastes fresh or tired.
 
+The rule is about dairy and wet produce, not condiments. Shelf-stable
+vinegar-based sauces — sriracha, hot sauce, mustard — pack fine and degrade
+nothing; just count their sodium if you do. What cannot be packed is anything
+that wilts or weeps: sliced herbs and alliums, tomato, cucumber, and anything
+dairy. Reheating settles the borderline cases, because a garnish that gets
+cooked on the way to the plate was never a fresh topping.
+
+For sliced garnishes there is a middle path. Slice the whole bunch at prep and
+keep it in a sealed container in the fridge rather than in the meals —
+scallions and herbs hold about a week that way, and sprinkling at eating time
+needs no knife.
+
 **Cool before sealing.** 10–15 minutes. Sealing hot food causes
 condensation and sogginess.
 
