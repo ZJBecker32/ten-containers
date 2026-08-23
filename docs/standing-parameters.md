@@ -42,7 +42,7 @@ a dated session. See `docs/cook-session.md`.
 |---|---|---|
 | Chicken breast, whole, crockpot | 0.64–0.76 | **Plan at 0.65.** Measured 0.637 (6.23 lbs → 1800 g), 2026-08-09 |
 | Chicken breast, cubed, oven 425°F | 0.41–0.58 | **Plan at 0.41.** Measured 0.409 (5.31 lbs → 984 g) |
-| Ground beef 90/10 | 0.75 | Drains more fat than turkey |
+| Ground beef 90/10 | 0.727–0.75 | Measured 0.727 (5.68 lbs → 1873 g), 2026-08-23 |
 | Ground turkey 93/7 | 0.72–0.75 | Measured 0.72 (4.6 lbs → 1500 g) |
 
 **Plan cubed chicken at the bottom of its range, not the middle.** The one
@@ -70,14 +70,28 @@ what varies is the sauce on top of it.
 | Bell peppers | ~57 g each cooked | Confirmed twice, both at 3 peppers → 170 g |
 | Onion | ~80 g each cooked | 3 onions → 240 g |
 | Zucchini | 0.72 | 2.31 lbs → 750 g |
-| Broccoli, roasted | 0.48 | 5.68 lbs → 1240 g. **For 1200 g roasted, buy ~5 ½ lbs.** |
+| Broccoli crowns, roasted | 0.38–0.48 | Two sessions: 5.68 lbs → 1240 g, 5.65 lbs → 966 g. **Buy 5 ½ lbs and accept 94–120 g per container.** |
 | Green beans, roasted | 0.60 | Measured 2026-08-09: 2 lbs → 545 g. **For 900 g roasted, buy ~3 ⅓ lbs.** |
 
-**The broccoli figure was wrong and has been corrected.** This table
-previously read "3 ½–4 lbs raw → ~1200 g roasted", which implies a yield near
-0.70. Measured is 0.48. Anything planned against the old number under-buys by
-roughly 40%, which is why a recipe targeting 120 g per container needs 5 ½ lbs
-and not 3 ½.
+**Broccoli is a range, not a number, and the range is wide.** This table once
+read "3 ½–4 lbs raw → ~1200 g roasted", implying a yield near 0.70. Two
+sessions have now measured it at 0.481 and 0.377 — on 5.68 and 5.65 lbs
+respectively, so nearly identical input for a 274 g difference in output.
+
+Both were weighed the same way, package weight of crowns before trimming, and
+both were air roasted in the Ninja in two batches. The variance is in the
+product: crowns differ in how much stalk comes attached, stalk is dense, and
+most of it is trimmed away before roasting. No change to technique closes it.
+
+**Weigh crowns as purchased. Do not weigh again after trimming.** Trim-then-
+weigh would tighten the ratio and change no decision: 5 ½ lbs of crowns yields
+94–120 g per container across the full observed range, and the per-container
+target is 90–120. A more precise number that lands in the same band is not
+worth a second trip to the scale mid-cook.
+
+This is the general rule for the file. A yield is worth measuring precisely
+when a decision hangs on it. Where the honest answer is a range and the
+shopping quantity works across all of it, record the range and move on.
 
 **The green bean figure was wrong too, and is now measured.** This table used
 to read "~2 lbs raw → ~900 g roasted", implying a yield near 0.99, flagged
