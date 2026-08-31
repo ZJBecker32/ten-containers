@@ -43,7 +43,7 @@ a dated session. See `docs/cook-session.md`.
 | Chicken breast, whole, crockpot | 0.64–0.76 | **Plan at 0.65.** Measured 0.637 (6.23 lbs → 1800 g), 2026-08-09 |
 | Chicken breast, cubed, oven 425°F | 0.41–0.58 | **Plan at 0.41.** Measured 0.409 (5.31 lbs → 984 g) |
 | Ground beef 90/10 | 0.727–0.75 | Measured 0.727 (5.68 lbs → 1873 g), 2026-08-23 |
-| Ground turkey 93/7 | 0.72–0.75 | Measured 0.72 (4.6 lbs → 1500 g) |
+| Ground turkey 93/7 | 0.72–0.82 | **Plan at 0.72.** 0.719 drained hard, 0.818 drained lightly |
 
 **Plan cubed chicken at the bottom of its range, not the middle.** The one
 session with numbers landed at 0.409, and a recipe built on 0.58 came up
@@ -67,9 +67,9 @@ what varies is the sauce on top of it.
 | Ingredient | Yield | Notes |
 |---|---|---|
 | Jasmine rice | ~407–457 g per dry cup | Three sessions: 1220 g / 3 cups, ~1500 g / 3 ½, 1600 g / 3 ½. **Plan at 410.** |
-| Bell peppers | ~57 g each cooked | Confirmed twice, both at 3 peppers → 170 g |
-| Onion | ~80 g each cooked | 3 onions → 240 g |
-| Zucchini | 0.72 | 2.31 lbs → 750 g |
+| Bell peppers | 57–103 g each cooked | Nearly 2× spread. **Buy 6, plan on 340–620 g.** |
+| Onion | 80–98 g each cooked | 3 onions → 240 g in one session, → 295 g in another |
+| Zucchini, roasted | 0.61–0.72 | 2.31 lbs → 750 g, and 3.4 lbs → 935 g |
 | Broccoli crowns, roasted | 0.38–0.48 | Two sessions: 5.68 lbs → 1240 g, 5.65 lbs → 966 g. **Buy 5 ½ lbs and accept 94–120 g per container.** |
 | Green beans, roasted | 0.60 | Measured 2026-08-09: 2 lbs → 545 g. **For 900 g roasted, buy ~3 ⅓ lbs.** |
 
@@ -104,10 +104,25 @@ That is twice now that a wrong figure in this file has been caught by
 arithmetic that would not reconcile, rather than by anyone noticing at the
 store. Both times the recipe planning against it under-bought by roughly 40%.
 
-Buy vegetables **by weight, not by count.** Head-count buying is what
-caused the broccoli overbuying and the pepper shortfall. Peppers and onions
-are still recorded per-each above only because no raw weight was logged for
-them; the cooked figure is what the recipes plan against.
+**Plan vegetables by weight. Buy them however the store sells them.** These
+are different instructions and conflating them produced a rule nobody could
+follow — Aldi sells peppers and onions by the unit with no scale in produce,
+so "weigh it in store" is not an action.
+
+What a recipe owes you is a weight to plan against, whatever the shopping
+unit. `6 bell peppers (~340–620 g roasted)` is correct: the count is what you
+put in the trolley, the grams are what the batch is built on. A bare count is
+what fails, because a pepper varies nearly 2× and a crown of broccoli carries
+an unpredictable amount of stalk.
+
+The validator enforces exactly that — it flags a counted vegetable only when
+the line carries no weight at all.
+
+**Measurements you know are contaminated are worse than none.** A rice reading
+of 526 g per dry cup, from a pot with too much water in it, looks exactly like
+a legitimate high reading. Averaged into a 407–457 range it would have raised
+the planning figure and under-bought rice on every recipe afterwards. Discard
+it explicitly and record why.
 
 ---
 

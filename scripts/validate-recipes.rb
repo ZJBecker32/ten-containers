@@ -229,11 +229,17 @@ files.each do |path|
     end
   end
 
-  # Vegetables by weight, not by count.
+  # Vegetables planned by weight. Aldi sells peppers and onions by the unit,
+  # so "weigh it in store" is not an instruction anyone can follow — what
+  # matters is that the line carries a weight to plan against, whatever the
+  # shopping unit. A count plus a gram figure passes; a bare count does not.
   (ing_section || '').each_line do |line|
     item = line.sub(/^\s*-\s+/, '').strip
     next if item == line.strip
-    warn_.("ingredient specified by count, not weight: #{item}") if item.match?(COUNT_VEG)
+    next unless item.match?(COUNT_VEG)
+    next if item.match?(/\d+\s*(g|kg|lbs?|oz)\b/i)
+
+    warn_.("vegetable given as a bare count, with no weight to plan against: #{item}")
   end
 
   results << { file: name, slug: fm['slug'], problems: problems }
