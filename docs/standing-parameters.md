@@ -69,7 +69,7 @@ what varies is the sauce on top of it.
 | Jasmine rice | ~407–457 g per dry cup | Three sessions: 1220 g / 3 cups, ~1500 g / 3 ½, 1600 g / 3 ½. **Plan at 410.** |
 | Bell peppers | 57–103 g each cooked | Nearly 2× spread. **Buy 6, plan on 340–620 g.** |
 | Onion | 80–98 g each cooked | 3 onions → 240 g in one session, → 295 g in another |
-| Zucchini, roasted | 0.61–0.72 | 2.31 lbs → 750 g, and 3.4 lbs → 935 g |
+| Zucchini, roasted | 0.56 drained | 3.4 lbs → 935 g on the pan, 860 g after draining. **Plan at 0.56.** |
 | Broccoli crowns, roasted | 0.38–0.48 | Two sessions: 5.68 lbs → 1240 g, 5.65 lbs → 966 g. **Buy 5 ½ lbs and accept 94–120 g per container.** |
 | Green beans, roasted | 0.60 | Measured 2026-08-09: 2 lbs → 545 g. **For 900 g roasted, buy ~3 ⅓ lbs.** |
 
@@ -207,6 +207,13 @@ needs no knife.
 condensation and sogginess.
 
 **Cut zucchini thick** — ½-inch half-moons. Thin slices are mush by day 3.
+
+**Drain roasted vegetables before portioning.** Zucchini gives up about 8% of
+its roasted weight as standing water — 75 g off a 935 g pan in one session.
+Tip them into a colander first. Water that is not poured off is packed into
+the containers instead, and it is a large part of why zucchini softens by
+midweek; the thick-cut rule above is fighting the same problem from the other
+end. Weigh after draining, since that is what actually goes into the meals.
 
 **Ginger: freeze it, grate it from frozen.** A ~1-inch piece is about 1 tbsp
 minced, so a 2 tbsp recipe wants a 2-inch piece. Peel with the edge of a

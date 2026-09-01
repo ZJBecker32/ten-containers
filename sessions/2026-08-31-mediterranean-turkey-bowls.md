@@ -17,13 +17,13 @@ measurements:
     yield_key: jasmine_rice
   veg:
     raw_g:
-    cooked_g: 1850
+    cooked_g: 1775
     yield_key:
 
 per_container_actual:
   turkey: 161
   rice: 167
-  veg: 168
+  veg: 161
 
 leftover_g: 0
 ---
@@ -34,10 +34,16 @@ Portioned into 11 containers rather than 10. Turkey and vegetables both came
 in well over plan, and 11 was the only count where turkey, vegetable and rice
 all landed inside their target bands at once.
 
-Vegetable broke down as zucchini 3.4 lbs → 935 g, 6 peppers → 620 g, 3 onions
-→ 295 g, for 1850 g total against an 1160 g plan. At 11 containers that is
-168 g each — the first time this rotation has reached the 150–175 g stretch
+Vegetable broke down as zucchini 3.4 lbs → 860 g, 6 peppers → 620 g, 3 onions
+→ 295 g, for 1775 g total against an 1160 g plan. At 11 containers that is
+161 g each — the first time this rotation has reached the 150–175 g stretch
 target rather than the 90–120 fallback.
+
+The zucchini figure is post-drain. It came off the pan at 935 g and lost 75 g,
+about 8% of its roasted weight, as standing water tipped off in a colander.
+Draining is now a step in the recipe. That water would otherwise have been
+packed into the containers, and it is a large part of why zucchini softens by
+midweek — the thick-cut rule fights the same problem from the other end.
 
 Peppers were doubled from the recipe's 3 because the previous cook ran light
 on them, and they were also much larger: 103 g each cooked against 57 g last
