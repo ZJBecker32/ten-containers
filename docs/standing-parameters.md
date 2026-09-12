@@ -160,9 +160,20 @@ Takes ~10 minutes to come to pressure, so start it first.
 walking away.** This has failed a session before.
 
 **Crockpot — chicken breast**
-Whole breasts, splash of broth, High 3–4 hrs or Low 6–7 hrs to 165°F.
-Drain before saucing or the result is watery. Reserve some liquid for the
-sauce.
+Whole breasts, splash of broth, High 4–5 hrs or Low 7–8 hrs. Drain before
+saucing or the result is watery. Reserve some liquid for the sauce.
+
+**Cook to shreddability, not to 165°F.** 165°F is the food-safety number and
+it is not the doneness number for pulled chicken — breast does not pull apart
+until roughly 195–205°F, once the connective tissue breaks down. A breast
+stopped at 165°F is safe and tough. Test with two forks rather than a
+thermometer: if it holds together in a chunk, give it another 30 minutes.
+
+This is a candidate explanation for the crockpot yield spread. A cook carried
+to 200°F drives off more moisture than one stopped at 165°F, which would put
+the measured 0.637 and the 0.70–0.76 previously on file at opposite ends of
+the same variable. Worth recording the fork test result alongside the weight
+next time.
 
 **Hand mixer — shredding**
 Directly in the crockpot. 6 lbs in ~30 seconds. A few pulses only;

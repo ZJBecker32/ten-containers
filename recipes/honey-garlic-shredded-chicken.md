@@ -71,7 +71,7 @@ fresh_toppings: []
 
 1.  Place 6 lbs whole chicken breasts in the crockpot. Season with salt and pepper and add ½ cup chicken broth for moisture. No cutting required — this is the point of the recipe.
 
-2.  Cook on High 3–4 hours, or Low 6–7 hours, until the chicken reaches 165°F and is fork-tender.
+2.  Cook on High 4–5 hours, or Low 7–8 hours. Test with two forks — 165°F is food-safe but breast does not pull apart until roughly 195–205°F.
 
 3.  Drain the cooking liquid but reserve ½ cup of it. Draining prevents a watery result; the reserved half cup goes back into the sauce for volume and flavor without added sugar.
 

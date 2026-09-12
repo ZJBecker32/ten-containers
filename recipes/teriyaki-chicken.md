@@ -2,16 +2,16 @@
 title: Teriyaki Chicken
 slug: teriyaki-chicken
 status: untested
-version: 3
+version: 4
 
 containers: 10
 storage:
   fridge: 6
   freezer: 4
 active_time_min: 40
-total_time_min: 240
+total_time_min: 300
 prep_time_min: 15
-cook_time_min: 210
+cook_time_min: 270
 
 equipment: [crockpot, hand-mixer, instant-pot, toaster-oven, food-scale]
 store: aldi
@@ -43,7 +43,7 @@ fresh_toppings: []
 
 **Serves:** 10
 **Prep Time:** 15 min
-**Cook Time:** 3–4 hrs
+**Cook Time:** 4–5 hrs
 
 **Ingredients:**
 
@@ -58,7 +58,7 @@ fresh_toppings: []
 
 1.  Place 5 lbs whole chicken breasts in the crockpot. Season with salt and pepper and add ½ cup chicken broth for moisture. No cutting required.
 
-2.  Cook on High 3–4 hours, or Low 6–7 hours, until the chicken reaches 165°F and is fork-tender.
+2.  Cook on High 4–5 hours, or Low 7–8 hours. Test with two forks rather than a thermometer — 165°F is food-safe but breast does not pull apart until roughly 195–205°F. If it holds together in a chunk, give it another 30 minutes.
 
 3.  Drain the cooking liquid. Draining prevents a watery result once the sauce goes on.
 
