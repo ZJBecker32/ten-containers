@@ -66,7 +66,8 @@ what varies is the sauce on top of it.
 
 | Ingredient | Yield | Notes |
 |---|---|---|
-| Jasmine rice | ~407–457 g per dry cup | Three sessions: 1220 g / 3 cups, ~1500 g / 3 ½, 1600 g / 3 ½. **Plan at 410.** |
+| Jasmine rice | ~451–457 g per dry cup at 3 ½ cups | Four sessions. The three at 3 ½ cups read 451, 455, 457; the single 3-cup session read 407. **Plan at 450 for 3–3 ½ cups.** |
+| Broccoli, frozen florets | 0.93 | 1020 g frozen → 950 g steamed. Far tighter than crowns, and no prep. |
 | Bell peppers | 57–103 g each cooked | Nearly 2× spread. **Buy 6, plan on 340–620 g.** |
 | Onion | 80–98 g each cooked | 3 onions → 240 g in one session, → 295 g in another |
 | Zucchini, roasted | 0.56 drained | 3.4 lbs → 935 g on the pan, 860 g after draining. **Plan at 0.56.** |
@@ -123,6 +124,19 @@ of 526 g per dry cup, from a pot with too much water in it, looks exactly like
 a legitimate high reading. Averaged into a 407–457 range it would have raised
 the planning figure and under-bought rice on every recipe afterwards. Discard
 it explicitly and record why.
+
+**Weigh meat before it is sauced, and note whether raw weight is pre-trim.**
+The buffalo cook on 2026-09-13 produced no usable chicken figure for both
+reasons at once: it was weighed with the sauce stirred through, and the raw
+number was package weight taken before trimming. Backing the sauce out by
+ingredient gave an apparent 0.565, an estimate subtracted from an estimate,
+sitting below everything on file. Recipes that stir sauce into the meat need
+an explicit weigh step between shredding and saucing — it is the only moment a
+clean number exists.
+
+A recipe's `per_container` figure for such a dish is the **sauced** weight,
+because that is what goes on the scale at portioning. Keep the meat-only
+figure in the notes if it is useful, but do not make it the target.
 
 ---
 
