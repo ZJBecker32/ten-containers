@@ -1,8 +1,8 @@
 ---
 title: Buffalo Chicken Bowls
 slug: buffalo-chicken
-status: untested
-version: 2
+status: dialed-in
+version: 3
 
 containers: 10
 storage:
@@ -20,12 +20,12 @@ tags: [no-cutting, no-oven, hands-off, freezer-friendly, scratch-sauce, low-effo
 
 per_container:
   chicken: 190
-  rice: 148
-  broccoli: 100
+  rice: 147
+  broccoli: 95
 
 nutrition_per_container:
-  calories: 575
-  protein_g: 54
+  calories: 555
+  protein_g: 51
   carbs_g: 48
   fat_g: 13
   fiber_g: 4
@@ -33,7 +33,12 @@ nutrition_per_container:
   added_sugar_g: 0
   estimated: true
 
-yields: {}
+last_cooked: 2026-10-01
+
+yields:
+  chicken_breast_whole_crockpot_pkg: 0.572
+  jasmine_rice_g_per_cup_dry: 451
+  broccoli_frozen_florets: 0.931
 
 fresh_toppings:
   - ranch or blue cheese dressing
@@ -94,24 +99,29 @@ fresh_toppings:
 
 **Notes:**
 
-COOKED 2026-09-13, still untested. Rice and broccoli were measured cleanly;
-the chicken was not, so nothing goes in `yields` and the status stays where it
-is until one clean chicken number exists.
+Two cook sessions behind this. 2026-09-13 gave clean rice and broccoli
+figures; 2026-10-01 gave the chicken number that was missing.
 
-  rice       3 ½ cups dry -> 1580 g   (451 g per dry cup)
-  broccoli   1020 g frozen ->  950 g   (yield 0.931)
-  chicken    5.7 lbs raw  -> 1914 g   WITH SAUCE — not usable
+  chicken    5.47 lb package -> 1420 g shredded, unsauced   (0.572)
+  rice       3 ½ cups dry    -> 1580 g                      (451 g per dry cup)
+  broccoli   1020 g frozen   ->  950 g                      (0.931)
 
-Two things spoiled the chicken figure, and both were the recipe's fault. It
-was weighed after saucing, and nothing in v1 said to weigh before. And the
-5.7 lbs was package weight taken before trimming, so it counts meat that never
-entered the pot. Backing the sauce out by ingredient gives an apparent 0.565,
-but that is an estimate subtracted from an estimate and it sits below every
-figure on file. Step 6 now exists so there is a moment where a clean number
-can be taken.
+**The chicken yield is on package weight, and it is lower than this repo
+expected** — 0.572 against a 0.65 planning figure. Two things plausibly
+explain the gap and they are confounded here: the breasts were visibly trimmed
+before cooking, and the cook was carried to shreddability near 200°F rather
+than stopped at 165°F. Both remove weight. Package basis is the right number
+to plan a shopping list against either way, because package weight is what you
+buy.
 
-Portioned 10 × 191 g sauced chicken, 158 g rice, 95 g broccoli — about 570
-kcal and 51 g of protein, both in band.
+The first cook's contaminated figure turned out to be close. It implied 0.565
+after estimating the sauce at 454 g by ingredient; 0.572 puts the real sauce
+near 434 g, so that estimate was 4% out. Reassuring in hindsight, and still
+not a number that should have been recorded — a lucky estimate and a
+measurement are not the same thing.
+
+Portioned 10 × 187 g sauced chicken, 148 g rice, 100 g broccoli on the second
+cook — about 552 kcal and 50 g of protein.
 
 This is built for a week with no time in it. Nothing touches an oven, there
 are no sheet pans to wash, and the only knife work is dicing celery at eating

@@ -40,10 +40,21 @@ a dated session. See `docs/cook-session.md`.
 
 | Ingredient | Yield | Notes |
 |---|---|---|
-| Chicken breast, whole, crockpot | 0.64–0.76 | **Plan at 0.65.** Measured 0.637 (6.23 lbs → 1800 g), 2026-08-09 |
+| Chicken breast, whole, crockpot | 0.57–0.64 on package weight | **Plan at 0.57** when cooking to shreddability. 0.572 (5.47 lb → 1420 g) 2026-10-01; 0.637 (6.23 lb → 1800 g) 2026-08-09 |
 | Chicken breast, cubed, oven 425°F | 0.41–0.58 | **Plan at 0.41.** Measured 0.409 (5.31 lbs → 984 g) |
 | Ground beef 90/10 | 0.727–0.75 | Measured 0.727 (5.68 lbs → 1873 g), 2026-08-23 |
 | Ground turkey 93/7 | 0.72–0.82 | **Plan at 0.72.** 0.719 drained hard, 0.818 drained lightly |
+
+**The crockpot figure dropped, and the old 0.70–0.76 should be treated as
+unreliable.** Both measurements now on file are package-weight basis and read
+0.637 and 0.572. The earlier 0.70–0.76 range predates any recorded session and
+is probably either a trimmed-weight basis or a cook stopped at 165°F.
+
+Plan at 0.57 while the method is to cook to shreddability. That endpoint drives
+off more moisture than stopping at 165°F, and the lower of the two measurements
+came from the cook that was explicitly taken there and explicitly trimmed. The
+two causes are confounded in the data; separating them would need a session
+that trims but stops early, which is not worth cooking deliberately.
 
 **Plan cubed chicken at the bottom of its range, not the middle.** The one
 session with numbers landed at 0.409, and a recipe built on 0.58 came up
