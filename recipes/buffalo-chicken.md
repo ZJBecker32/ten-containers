@@ -93,7 +93,7 @@ fresh_toppings:
 
 13. Cool the chicken, rice, and broccoli 10–15 minutes before portioning. Sealing hot food causes condensation and sogginess.
 
-14. Assembly line across 10 open containers: 190 g sauced chicken, then 148 g rice, then 100 g broccoli. That 190 g is roughly 145 g of meat plus its share of sauce — you weigh it sauced, because once it is stirred in you cannot separate them. No separate sauce container.
+14. Assembly line across 10 open containers: 190 g sauced chicken, then 147 g rice, then 95 g broccoli. That 190 g is roughly 145 g of meat plus its share of sauce — you weigh it sauced, because once it is stirred in you cannot separate them. No separate sauce container.
 
 15. Label with a dry-erase marker. 6 containers to the fridge, 4 to the freezer. Move freezer containers to the fridge the night before eating.
 
@@ -155,11 +155,17 @@ ranch adds another ~260 mg on top at eating time.
 
 **Chicken is 5 ¾ lbs of package weight, not the 6 ½ an earlier draft
 suggested.** Breast runs about 31 g of protein per 100 g against 26 for beef
-and turkey, so it needs a smaller portion for the same protein. Planned
-against the 0.65 crockpot yield in standing parameters, not the 0.76 that
-draft assumed — 0.76 is the top of the observed range and the one clean
-measurement this repo has is 0.637. v2 raised it from 5 ¼ because the first
-cook showed trim losses that package weight does not capture.
+and turkey, so it needs a smaller portion for the same protein. At the measured
+0.572 that buys 1492 g of shredded meat against a 1450 g target — about 3%
+spare, which is the right amount of margin for a figure with two sessions
+behind it. v2 raised it from 5 ¼ because the first cook showed trim losses that
+package weight does not capture, and the second cook's measurement confirmed
+the raise was the right call rather than a guess.
+
+Store sizes will not cooperate exactly. The second cook came in at 5.47 lbs,
+5% under target, and still landed 187 g per container against 190. Anything
+within about half a pound of 5 ¾ is fine; buy over rather than under, since
+leftover shredded chicken freezes and a short batch means re-portioning.
 
 `per_container.chicken` is **sauced** weight, ~190 g, of which roughly 145 g
 is meat. That is what you can actually put on a scale: the sauce is stirred
@@ -170,4 +176,4 @@ Ranch goes on at eating time, never packed — it separates when reheated.
 Celery diced fresh, not on prep day.
 
 **Nutrition:**
-Serving Size: 1 container, Calories: 575 kcal, Protein: 54 g, Carbohydrates: 48 g, Fat: 13 g, Fiber: 4 g, Sodium: 760 mg, Sugar: 0 g. Estimated and unverified — recipe has not been cooked. Excludes fresh toppings.
+Serving Size: 1 container, Calories: 555 kcal, Protein: 51 g, Carbohydrates: 48 g, Fat: 13 g, Fiber: 4 g, Sodium: 760 mg, Sugar: 0 g. Portion weights are observed over two cook sessions; the macros are still calculated from label values rather than measured. Excludes fresh toppings.

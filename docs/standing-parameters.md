@@ -67,11 +67,11 @@ crockpot retain more weight than cubed in the oven and eliminate raw
 chicken cutting entirely. Default to it unless a recipe specifically needs
 seared texture.
 
-Measured head to head: crockpot whole breast 0.637, oven-cubed 0.409. Even at
-the bottom of its range the crockpot returns about 56% more cooked meat per
-pound bought, on top of skipping the cutting. The 2026-08-09 cook produced the
-best pulled chicken in the rotation so far — the technique is settled, and
-what varies is the sauce on top of it.
+Measured head to head: crockpot whole breast 0.572–0.637, oven-cubed 0.409.
+Even at the bottom of its range the crockpot returns about 40% more cooked meat
+per pound bought, and at the top about 56%, on top of skipping the cutting. The
+2026-08-09 cook produced the best pulled chicken in the rotation so far — the
+technique is settled, and what varies is the sauce on top of it.
 
 ## Non-meat yields
 
@@ -194,11 +194,13 @@ until roughly 195–205°F, once the connective tissue breaks down. A breast
 stopped at 165°F is safe and tough. Test with two forks rather than a
 thermometer: if it holds together in a chunk, give it another 30 minutes.
 
-This is a candidate explanation for the crockpot yield spread. A cook carried
-to 200°F drives off more moisture than one stopped at 165°F, which would put
-the measured 0.637 and the 0.70–0.76 previously on file at opposite ends of
-the same variable. Worth recording the fork test result alongside the weight
-next time.
+This is a candidate explanation for the crockpot yield spread, and it costs
+weight. Both sessions on file were cooked this way and read 0.637 and 0.572, so
+the endpoint alone does not explain the gap between them — the lower one was
+also explicitly trimmed before cooking. Trim and endpoint stay confounded until
+a session records them separately. Worth noting the fork-test result and
+whether anything was trimmed alongside the weight next time; neither has been
+captured on the same sheet yet.
 
 **Hand mixer — shredding**
 Directly in the crockpot. 6 lbs in ~30 seconds. A few pulses only;
