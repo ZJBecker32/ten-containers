@@ -271,17 +271,41 @@ in anything simmered.
 — bottled lime juice is an acceptable substitute and cilantro can be
 skipped. Carries tzatziki and feta in the refrigerated section.
 
-Unreliable at Aldi, and what to do about each:
+**The useful question is not whether Aldi carries an item, but whether you can
+stock it ahead.** Almost everything that makes a scratch sauce keeps for
+months and wants buying once, from anywhere. Only a short list has to be in
+the store on the day you cook. Sorting ingredients that way turns most
+out-of-stock risk into a cupboard check, which is a much easier problem.
 
-| Item | Substitute |
+**Must be in stock on cook day.** These are the only items an empty shelf can
+actually stop:
+
+| Item | If it is not there |
 |---|---|
-| Toasted sesame oil | None that works. Toasted sesame seeds recover part of it. Buy a bottle elsewhere — it lasts ~5 batches. |
-| Rice vinegar | Cider vinegar. Or white wine vinegar; or distilled white at ¾ the quantity, it is sharper. |
-| Low-sodium soy sauce | **Not interchangeable with regular.** Regular runs ~900 mg per tbsp against ~575. Cut the quantity by a quarter and replace the volume with broth, then recheck the sodium projection. |
-| Fresh ginger | Ground ginger, ~1 tsp per tbsp of fresh. |
+| Chicken breast, ground beef, ground turkey | Reliable. Package sizes are not — plan to land within half a pound of target rather than on it. |
+| Fresh limes, fresh cilantro | Frequently out. Bottled lime juice substitutes; cilantro can be skipped entirely. |
+| Fresh ginger | Ground at ~1 tsp per tbsp of fresh — duller but fine in anything simmered. Jarred minced is closer. |
+| Frozen vegetables | Aldi's strongest category. No fallback has been needed. |
+| Fresh garnishes — scallions, tomatoes, celery | Skip them. Every `fresh_toppings` entry is optional by definition. |
 
-Only the soy substitution can break a ceiling. The other three change flavour,
-not the numbers.
+**Buy once, keeps for months.** Aldi's stock on these barely matters, because
+they should already be in the cupboard when the shopping list is written:
+
+| Item | Keeps | Note |
+|---|---|---|
+| Low-sodium soy sauce | years | **The only substitution here that can break a ceiling.** Regular runs ~900 mg per tbsp against ~575. Cut the quantity by a quarter and replace the volume with broth, then recheck the sodium projection. Do not swap one for one. |
+| Toasted sesame oil | ~1 yr sealed, ~6 mo opened | No substitute that works; toasted sesame seeds recover part of it. ~5 batches per bottle, so buy one elsewhere and stop thinking about it. Refrigerate after opening — it is oily enough to turn. |
+| Rice vinegar | indefinite | Cider vinegar. Or white wine vinegar; or distilled white at ¾ the quantity, it is sharper. |
+| Sesame seeds | ~1 yr sealed, longer frozen | A garnish, so nothing depends on having them. Oily enough to go rancid, which makes the freezer the better home. |
+| Cornstarch, brown sugar, jasmine rice, sriracha | years to indefinite | No substitution worth recording. |
+
+Everything in the second table changes flavour at worst. Only the soy can move
+a number far enough to matter.
+
+**The one item that looks like pantry and is not:** shelf-stable broth. A
+32 oz carton keeps about a year unopened and roughly 4–5 days once opened.
+Teriyaki draws 1 ¼ cups from a 4-cup carton, so either freeze the remainder in
+portions or plan a second use the same week.
 
 ---
 
@@ -309,4 +333,8 @@ Mediterranean bowls run 500 mg and 0 g on spices and lemon alone.
 
 **Sam's Club** for bulk goods and gas, via a family membership.
 
-Recipes should be buildable from Aldi alone wherever possible.
+Recipes should be buildable from Aldi plus the cupboard. That is a weaker
+requirement than Aldi alone and the honest one, because every scratch sauce in
+the rotation leans on shelf-stable items bought once rather than weekly. What
+should never be true is a recipe that cannot be shopped at Aldi on the day —
+which is why the fresh column above is the short one.

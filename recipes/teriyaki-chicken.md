@@ -49,20 +49,25 @@ fresh_toppings:
 
 **Ingredients:**
 
+Buy this week:
+
   - ~5 ¾ lbs chicken breast, whole (not cubed) — package weight; trim before cooking
-  - ½ cup chicken broth
-  - 3 ¼ cups jasmine rice (dry)
   - 4 bags frozen broccoli florets (~1360 g total)
-  - ⅔ cup low-sodium soy sauce (load-bearing — see Notes)
-  - ¾ cup low-sodium chicken broth
+  - 1 ¼ cups low-sodium chicken broth total (¾ for the sauce, ½ for the crockpot) — opened carton keeps 4–5 days
   - 8–9 cloves garlic, minced
-  - 2 tbsp fresh ginger, minced (or 2 tsp ground)
+  - 2 tbsp fresh ginger, minced (or 2 tsp ground — often out at Aldi)
+  - Scallions and sesame seeds, for eating time (both optional)
+
+Check the cupboard before you go — all of these keep for months:
+
+  - 3 ¼ cups jasmine rice (dry)
+  - ⅔ cup low-sodium soy sauce (load-bearing — see Notes)
   - 3 tbsp brown sugar
   - 2 tbsp rice vinegar (or cider vinegar)
-  - 1 tbsp toasted sesame oil
+  - 1 tbsp toasted sesame oil (unreliable at Aldi; a bottle lasts ~5 batches)
   - 2 tbsp cornstarch + 4 tbsp cold water
   - Salt, pepper
-  - Scallions, sesame seeds, sriracha (added fresh when eating)
+  - Sriracha, for eating time
 
 **Steps:**
 
