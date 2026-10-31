@@ -307,6 +307,41 @@ a number far enough to matter.
 Teriyaki draws 1 ¼ cups from a 4-cup carton, so either freeze the remainder in
 portions or plan a second use the same week.
 
+### When a recipe needs a second store
+
+Aldi runs a deliberately narrow assortment, so anything past a basic spice
+rack eventually points at Walmart or Trader Joe's. The cost of that depends
+entirely on one thing:
+
+**A pantry item from a second store is a one-time cost. A fresh item from a
+second store is a recurring one.** Sesame oil bought once covers five batches
+and never appears on a weekly list again. Fresh lemongrass would mean a Walmart
+trip every time the recipe comes up, on top of the Aldi run.
+
+So the design rule: **a recipe may depend on a second store for shelf-stable
+items, but not for fresh ones.** If a fresh ingredient is unobtainable at
+Aldi, substitute it or drop the recipe — do not accept a standing second trip.
+Every recipe in the rotation currently passes this, and so do the four
+candidates discussed so far (coconut curry, salsa verde, carnitas, katsu);
+their second-store risk is all jars, cans and dry spices.
+
+Rather than routing trips per recipe, keep a **standing restock list** and hit
+a bigger store when it has accumulated enough to be worth going. These are the
+known entries — none is urgent, all keep for months:
+
+| Item | Why it is here |
+|---|---|
+| Toasted sesame oil | Unreliable at Aldi. ~5 batches a bottle. |
+| Low-sodium soy sauce | Unreliable at Aldi, and the one substitution that can break a sodium ceiling. Worth buying two. |
+| Rice vinegar | Unreliable at Aldi, though cider vinegar covers it. |
+| Sesame seeds | Never confirmed at Aldi either way. Garnish only. |
+
+Everything above is from this repo's own shopping history. **Nothing here is a
+verified stock check of any particular store** — Aldi's assortment moves
+regionally and week to week, so treat the list as a record of what has gone
+missing before, and add to it when something actually is not there. A guess
+about a shelf is worth no more than a guess about a yield.
+
 ---
 
 ## Judging a jarred sauce on the shelf
