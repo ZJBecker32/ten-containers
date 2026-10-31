@@ -294,13 +294,22 @@ they should already be in the cupboard when the shopping list is written:
 | Item | Keeps | Note |
 |---|---|---|
 | Low-sodium soy sauce | years | **The only substitution here that can break a ceiling.** Regular runs ~900 mg per tbsp against ~575. Cut the quantity by a quarter and replace the volume with broth, then recheck the sodium projection. Do not swap one for one. |
-| Toasted sesame oil | ~1 yr sealed, ~6 mo opened | No substitute that works; toasted sesame seeds recover part of it. ~5 batches per bottle, so buy one elsewhere and stop thinking about it. Refrigerate after opening — it is oily enough to turn. |
+| Toasted sesame oil | ~1 yr sealed, ~6 mo opened | **Intermittent, not absent** — in stock 2026-10-31 after being missing on earlier trips. No substitute that works; toasted sesame seeds recover part of it. ~5 batches per bottle. Refrigerate after opening — it is oily enough to turn. |
 | Rice vinegar | indefinite | Cider vinegar. Or white wine vinegar; or distilled white at ¾ the quantity, it is sharper. |
-| Sesame seeds | ~1 yr sealed, longer frozen | A garnish, so nothing depends on having them. Oily enough to go rancid, which makes the freezer the better home. |
+| Sesame seeds | ~1 yr sealed, longer frozen | **Not stocked 2026-10-31** — the first direct check. A garnish, so nothing depended on it. Oily enough to go rancid, which makes the freezer the better home. |
 | Cornstarch, brown sugar, jasmine rice, sriracha | years to indefinite | No substitution worth recording. |
 
 Everything in the second table changes flavour at worst. Only the soy can move
 a number far enough to matter.
+
+**Buy these on sight, not on need.** The sesame oil turning up on 2026-10-31
+after being absent before is the useful shape of this problem: these items are
+intermittent rather than unstocked. Combined with keeping for months, that
+makes the right move opportunistic — put a bottle in the cart whenever Aldi
+happens to have one, whether or not a recipe calls for it that week. Do that
+consistently and the second-store trip for this whole category disappears,
+because the cupboard is never the thing that is short. Waiting until a recipe
+needs it is what turns an intermittent item into a separate errand.
 
 **The one item that looks like pantry and is not:** shelf-stable broth. A
 32 oz carton keeps about a year unopened and roughly 4–5 days once opened.
@@ -331,10 +340,10 @@ known entries — none is urgent, all keep for months:
 
 | Item | Why it is here |
 |---|---|
-| Toasted sesame oil | Unreliable at Aldi. ~5 batches a bottle. |
-| Low-sodium soy sauce | Unreliable at Aldi, and the one substitution that can break a sodium ceiling. Worth buying two. |
-| Rice vinegar | Unreliable at Aldi, though cider vinegar covers it. |
-| Sesame seeds | Never confirmed at Aldi either way. Garnish only. |
+| Toasted sesame oil | Intermittent at Aldi — present 2026-10-31, absent before. Buy on sight instead; ~5 batches a bottle. |
+| Low-sodium soy sauce | Intermittent at Aldi, and the one substitution that can break a sodium ceiling. Worth buying two. |
+| Rice vinegar | Intermittent at Aldi, though cider vinegar covers it. |
+| **Sesame seeds** | **Confirmed not stocked 2026-10-31.** The only item so far that genuinely needs another store. Garnish only, so it is never urgent. |
 
 Everything above is from this repo's own shopping history. **Nothing here is a
 verified stock check of any particular store** — Aldi's assortment moves
