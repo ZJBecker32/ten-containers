@@ -40,7 +40,7 @@ a dated session. See `docs/cook-session.md`.
 
 | Ingredient | Yield | Notes |
 |---|---|---|
-| Chicken breast, whole, crockpot | 0.57–0.64 on package weight | **Plan at 0.57** when cooking to shreddability. 0.572 (5.47 lb → 1420 g) 2026-10-01; 0.637 (6.23 lb → 1800 g) 2026-08-09 |
+| Chicken breast, whole, crockpot | 0.54–0.64 on package weight | **Plan at 0.54** when cooking to shreddability. 0.539 (6.06 lb → 1481 g) 2026-11-01; 0.572 (5.47 lb → 1420 g) 2026-10-01; 0.637 (6.23 lb → 1800 g) 2026-08-09 |
 | Chicken breast, cubed, oven 425°F | 0.41–0.58 | **Plan at 0.41.** Measured 0.409 (5.31 lbs → 984 g) |
 | Ground beef 90/10 | 0.727–0.75 | Measured 0.727 (5.68 lbs → 1873 g), 2026-08-23 |
 | Ground turkey 93/7 | 0.72–0.82 | **Plan at 0.72.** 0.719 drained hard, 0.818 drained lightly |
@@ -50,11 +50,18 @@ unreliable.** Both measurements now on file are package-weight basis and read
 0.637 and 0.572. The earlier 0.70–0.76 range predates any recorded session and
 is probably either a trimmed-weight basis or a cook stopped at 165°F.
 
-Plan at 0.57 while the method is to cook to shreddability. That endpoint drives
-off more moisture than stopping at 165°F, and the lower of the two measurements
-came from the cook that was explicitly taken there and explicitly trimmed. The
-two causes are confounded in the data; separating them would need a session
-that trims but stops early, which is not worth cooking deliberately.
+Plan at 0.54 while the method is to cook to shreddability. That endpoint drives
+off more moisture than stopping at 165°F, and trimming removes weight a package
+basis still counts. The two causes stay confounded; separating them would need a
+session that trims but stops early, which is not worth cooking deliberately.
+
+**The three readings are a trend, not scatter.** In date order they run 0.637,
+0.572, 0.539 — each lower than the last. The most likely explanation is
+compliance with this page: every cook has trimmed more deliberately and carried
+the chicken further toward shreddability than the one before, and both of those
+cost weight. If that is what is happening, the figure should flatten once the
+method stops changing, and 0.54 may not be the floor yet. Plan at the lowest
+observation rather than the mean until a session repeats one.
 
 **Plan cubed chicken at the bottom of its range, not the middle.** The one
 session with numbers landed at 0.409, and a recipe built on 0.58 came up
@@ -77,23 +84,44 @@ technique is settled, and what varies is the sauce on top of it.
 
 | Ingredient | Yield | Notes |
 |---|---|---|
-| Jasmine rice | ~451–457 g per dry cup at 3 ½ cups | Four sessions. The three at 3 ½ cups read 451, 455, 457; the single 3-cup session read 407. **Plan at 450 for 3–3 ½ cups.** |
+| Jasmine rice | ~451–461 g per dry cup at 3 ½ cups | Five sessions. The four at 3 ½ cups read 451, 455, 457, 461 — mean 456, every one above the planning figure. The single 3-cup session read 407. **Plan at 450 for 3–3 ½ cups**, which runs ~1% conservative and is the right direction to be wrong in. |
 | Broccoli, frozen florets | 0.93 | 1020 g frozen → 950 g steamed. Far tighter than crowns, and no prep. |
 | Bell peppers | 57–103 g each cooked | Nearly 2× spread. **Buy 6, plan on 340–620 g.** |
 | Onion | 80–98 g each cooked | 3 onions → 240 g in one session, → 295 g in another |
 | Zucchini, roasted | 0.56 drained | 3.4 lbs → 935 g on the pan, 860 g after draining. **Plan at 0.56.** |
-| Broccoli crowns, roasted | 0.38–0.48 | Two sessions: 5.68 lbs → 1240 g, 5.65 lbs → 966 g. **Buy 5 ½ lbs and accept 94–120 g per container.** |
+| Broccoli crowns, roasted or air fried | 0.377–0.481 | Three sessions: 5.68 lbs → 1240 g (0.481), 5.65 lbs → 966 g (0.377), 7.49 lbs → 1356 g (0.399) 2026-11-01. A 28% spread that two more sessions have not narrowed — see below. **Buy 5 ½ lbs and accept 94–120 g per container.** |
 | Green beans, roasted | 0.60 | Measured 2026-08-09: 2 lbs → 545 g. **For 900 g roasted, buy ~3 ⅓ lbs.** |
 
 **Broccoli is a range, not a number, and the range is wide.** This table once
-read "3 ½–4 lbs raw → ~1200 g roasted", implying a yield near 0.70. Two
-sessions have now measured it at 0.481 and 0.377 — on 5.68 and 5.65 lbs
-respectively, so nearly identical input for a 274 g difference in output.
+read "3 ½–4 lbs raw → ~1200 g roasted", implying a yield near 0.70. Three
+sessions have now measured 0.481, 0.377 and 0.399. The first two came from
+nearly identical input — 5.68 and 5.65 lbs — for a 274 g difference in output.
 
-Both were weighed the same way, package weight of crowns before trimming, and
-both were air roasted in the Ninja in two batches. The variance is in the
-product: crowns differ in how much stalk comes attached, stalk is dense, and
-most of it is trimmed away before roasting. No change to technique closes it.
+All three were weighed the same way, package weight of crowns before trimming.
+The variance is in the product: crowns differ in how much stalk comes attached,
+stalk is dense, and most of it is trimmed away before cooking. No change to
+technique closes it, and a third session has now confirmed that rather than
+narrowing it.
+
+**The appliance does not appear to matter.** The 2026-11-01 session cooked
+7.49 lbs in the new air fryer and returned 0.399, against 0.377 for the toaster
+oven on a comparable load — a difference well inside a spread that already runs
+28%. That is the expected result when a recipe cooks to a visual endpoint:
+crisped edges define how much water has left, so the endpoint sets the yield and
+the machine only sets how fast you get there. Treat the crown figures as one
+pool regardless of which box they were cooked in.
+
+That session did not record how the load was split between the two appliances,
+so 0.399 may be a blend rather than an air fryer figure. It does not change the
+conclusion, since both candidate values sit inside the existing range, but a
+clean head-to-head would need the two halves weighed separately.
+
+**Frozen florets win on every axis except taste.** 0.93 against 0.377–0.481,
+no washing, no cutting, no oiling, no batching, no pan, and a third of the raw
+weight to carry home for the same cooked output. The 2026-11-01 cook needed
+7.49 lbs of crowns to beat four frozen bags by 90 g. Fresh crowns are now a
+flavour choice being paid for in labour and money, which is a legitimate trade
+to make deliberately and a poor one to make by default.
 
 **Weigh crowns as purchased. Do not weigh again after trimming.** Trim-then-
 weigh would tighten the ratio and change no decision: 5 ½ lbs of crowns yields

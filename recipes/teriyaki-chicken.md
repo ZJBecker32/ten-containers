@@ -1,8 +1,9 @@
 ---
 title: Teriyaki Chicken
 slug: teriyaki-chicken
-status: untested
-version: 5
+status: testing
+version: 6
+last_cooked: 2026-11-01
 
 containers: 10
 storage:
@@ -19,21 +20,24 @@ protein_source: chicken-breast
 tags: [no-cutting, no-oven, hands-off, freezer-friendly, scratch-sauce, low-effort]
 
 per_container:
-  chicken: 190
-  rice: 147
-  broccoli: 125
+  chicken: 200
+  rice: 148
+  broccoli: 127
 
 nutrition_per_container:
-  calories: 520
-  protein_g: 52
-  carbs_g: 55
+  calories: 533
+  protein_g: 53
+  carbs_g: 56
   fat_g: 7
   fiber_g: 4
   sodium_mg: 720
   added_sugar_g: 4
   estimated: true
 
-yields: {}
+yields:
+  chicken_breast_whole_crockpot_pkg: 0.539
+  jasmine_rice_g_per_cup_dry: 461
+  broccoli_crowns_fresh: 0.399
 
 fresh_toppings:
   - sliced scallions
@@ -51,7 +55,7 @@ fresh_toppings:
 
 Buy this week:
 
-  - ~5 ¾ lbs chicken breast, whole (not cubed) — package weight; trim before cooking
+  - ~6 lbs chicken breast, whole (not cubed) — package weight; trim before cooking
   - 4 bags frozen broccoli florets (~1360 g total)
   - 1 ¼ cups low-sodium chicken broth total (¾ for the sauce, ½ for the crockpot) — opened carton keeps 4–5 days
   - 8–9 cloves garlic, minced
@@ -71,7 +75,7 @@ Check the cupboard before you go — all of these keep for months:
 
 **Steps:**
 
-1.  Place ~5 ¾ lbs whole chicken breasts in the crockpot, trimming any tough or unappealing parts first. Season with salt and pepper and add ½ cup chicken broth. No cutting required.
+1.  Place ~6 lbs whole chicken breasts in the crockpot, trimming any tough or unappealing parts first. Season with salt and pepper and add ½ cup chicken broth. No cutting required.
 
 2.  Cook on High 4–5 hours, or Low 7–8 hours. Do not open the lid before hour 4 — each peek adds 15–20 minutes.
 
@@ -101,15 +105,24 @@ Check the cupboard before you go — all of these keep for months:
 
 15. Cool the chicken, rice, and broccoli 10–15 minutes before portioning. Sealing hot food causes condensation and sogginess.
 
-16. Assembly line across 10 open containers: 190 g sauced chicken, then 147 g rice, then 125 g broccoli. That 190 g is roughly 145 g of meat plus its share of sauce. No separate sauce container — the cornstarch is what makes that safe.
+16. Assembly line across 10 open containers: 200 g sauced chicken, then 148 g rice, then 127 g broccoli. That 200 g is 148 g of meat plus 52 g of sauce — both measured, not inferred. No separate sauce container; the cornstarch is what makes that safe.
 
 17. Label with a dry-erase marker. 6 containers to the fridge, 4 to the freezer. Move freezer containers to the fridge the night before eating.
 
 **Notes:**
 
-STILL UNTESTED. v5 changes three things at once, so every number here is
-planned rather than observed. Weigh the shredded chicken (step 6), the cooked
-rice, and the steamed broccoli, then promote with a real date.
+Cooked 2026-11-01, the first time this recipe has existed outside arithmetic.
+Chicken, rice and sauce are now observed:
+
+  chicken    6.06 lb package -> 1481 g shredded, unsauced   (0.539)
+  sauce      measured at 520 g, not estimated
+  rice       3 ½ cups dry    -> 1613 g                      (461 g per dry cup)
+
+`testing` rather than `dialed-in`, because that cook deviated from this recipe
+in two ways. It used fresh broccoli instead of the frozen specified here, and
+3 ½ cups of rice instead of 3 ¼. The protein and the sauce are settled; the
+vegetable as written still has not been through a cook in this recipe. One run
+with the frozen bags promotes it.
 
 **The bottled sauce is gone, and with it the reason this recipe never got
 cooked.** Two bottles put it at ~1400 mg of sodium and 12 g of added sugar —
@@ -127,9 +140,15 @@ more broth to hold the sauce volume. Do not swap one for one.
 **Frozen broccoli replaces 5 ½ lbs of fresh florets**, which is where most of
 the old 40-minute active time went: washing, cutting, oiling, two 12–15 minute
 roasting batches, and a sheet pan to scrub. Buffalo measured frozen florets at
-0.931 against 0.38–0.48 for fresh crowns, so it is both far less work and far
-more predictable. 4 bags rather than buffalo's 3, because this recipe has
+0.931 against 0.377–0.481 for fresh crowns, so it is both far less work and
+far more predictable. 4 bags rather than buffalo's 3, because this recipe has
 always run a heavier vegetable portion.
+
+The 2026-11-01 cook tested fresh crowns in the new air fryer and the numbers
+back the frozen spec: 7.49 lbs of crowns yielded 0.399, giving 1356 g where
+4 frozen bags give ~1266 g — a marginal gain for roughly 15 minutes of extra
+knife work, a higher price, and three times the raw weight to carry home.
+Taste is the only argument fresh has left, and that is not recorded yet.
 
 **The sauce is no longer packed separately.** v4 used ten small side
 containers because bottled teriyaki is thin and would soak the rice. A
@@ -142,9 +161,18 @@ Together those three changes take active time from 40 minutes to about 20,
 which would make this the second low-effort recipe in the rotation. Buffalo is
 currently the only one, and the next easiest cookable recipe is 45 minutes.
 
-`per_container.chicken` is **sauced** weight, following buffalo. The 5 ¾ lbs is
-planned against the 0.57 crockpot yield now in standing parameters, giving
-~1450 g of meat plus ~450 g of sauce.
+`per_container.chicken` is **sauced** weight, following buffalo, and here both
+halves are measured rather than inferred: 148 g of meat plus 52 g of sauce.
+Buffalo had to estimate its own sauce and never confirmed it, so 520 g is the
+first real figure this repo has for a scratch sauce of this volume — 16%
+heavier than the ~450 g projected.
+
+The buy quantity rose from 5 ¾ lbs to 6 because the crockpot yield keeps
+falling. The three sessions read 0.637, 0.572 and now 0.539 in date order,
+which is a trend rather than scatter, and standing parameters now plans at
+0.54. The overshoot on this cook hid the drop entirely — 6.06 lbs at 0.539
+returned 1481 g, where 5 ¾ lbs at the old 0.57 predicted 1487 g. Buying 5%
+long absorbed a yield 5% short.
 
 Note that `ground-beef-broccoli` counts its protein *unsauced* — 185 g of beef
 with the sauce uncounted on top. The two recipes genuinely disagree about what
@@ -152,12 +180,15 @@ with the sauce uncounted on top. The two recipes genuinely disagree about what
 the number you can actually put on a scale, and the beef recipe should be
 reconciled to it on its next cook rather than guessed at now.
 
-At ~520 kcal this would be the lightest bowl in the rotation, which is a
-consequence of lean shredded breast and a sauce that is mostly soy and broth
-rather than oil. If it eats light, more rice is the cheap fix.
+At ~533 kcal this is the lightest bowl in the rotation, a consequence of lean
+shredded breast and a sauce that is mostly soy and broth rather than oil. The
+2026-11-01 cook ran heavier at ~554 kcal because it used 3 ½ cups of rice and
+136 g of broccoli; both are fine, and 3 ¼ cups is the spec only because it
+matches buffalo and keeps the carbs down. Either is defensible — pick one and
+record which.
 
 Reheats in a microwave, which is the only thing available at work. Rice and
 chicken freeze well; the broccoli softens slightly but holds.
 
 **Nutrition:**
-Serving Size: 1 container, Calories: 520 kcal, Protein: 52 g, Carbohydrates: 55 g, Fat: 7 g, Fiber: 4 g, Sodium: 720 mg, Sugar: 4 g. Estimated and unverified — this version has not been cooked. Excludes fresh toppings.
+Serving Size: 1 container, Calories: 533 kcal, Protein: 53 g, Carbohydrates: 56 g, Fat: 7 g, Fiber: 4 g, Sodium: 720 mg, Sugar: 4 g. Portion weights are observed; the macros and the sodium are still calculated from label values. Sodium has not been independently verified and remains the number most worth checking. Excludes fresh toppings.
