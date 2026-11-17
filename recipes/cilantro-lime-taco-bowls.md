@@ -2,8 +2,8 @@
 title: Cilantro Lime Taco Bowls
 slug: cilantro-lime-taco-bowls
 status: dialed-in
-version: 4
-last_cooked: 2026-07-26
+version: 5
+last_cooked: 2026-11-17
 
 containers: 10
 storage:
@@ -22,11 +22,11 @@ tags: [no-oven, freezer-friendly, budget, high-fiber]
 per_container:
   meat: 170
   rice: 150
-  beans: 80
-  veg: 110
+  beans: 75
+  veg: 100
 
 nutrition_per_container:
-  calories: 700
+  calories: 690
   protein_g: 52
   carbs_g: 60
   fat_g: 25
@@ -39,6 +39,8 @@ yields:
   ground_beef_90_10: 0.75
   jasmine_rice_g_per_cup_dry: 428
   bell_pepper_g_each_cooked: 57
+  black_beans_g_per_can: 248
+  fajita_veg_combined_cooked_g: 1015
 
 fresh_toppings:
   - shredded cheese
@@ -66,8 +68,7 @@ fresh_toppings:
   - 3 ½ cups jasmine rice (dry)
   - 2–3 limes, juiced (or 3–4 tbsp bottled)
   - ½ bunch fresh cilantro, chopped (optional)
-  - 6 bell peppers
-  - 1 large onion
+  - 6 bell peppers and 2 medium onions (with the corn, ~1015 g cooked — see Notes)
   - 1 bag frozen sweet corn (12–16 oz)
   - Olive oil, as needed
   - Shredded cheese, salsa, sour cream (added fresh when eating)
@@ -88,7 +89,7 @@ fresh_toppings:
 
 7.  Add the water called for on 3 packets plus another ¼ cup for the bulk spices. Simmer 2–3 minutes until thickened. Taste and add salt if it reads flat — that is the point of the swap, the salt is now yours to set rather than the packet's.
 
-8.  In a separate pan, heat a little olive oil. Add the diced bell peppers and onion and sauté 6–8 minutes until softened.
+8.  In a separate pan, heat a little olive oil. Add the diced bell peppers and onions and sauté 6–8 minutes until softened.
 
 9.  Add the frozen corn for the last 3–4 minutes. Let it pick up a few golden char spots for a fire-roasted flavor.
 
@@ -96,7 +97,7 @@ fresh_toppings:
 
 11. Let the meat, rice, veggies, and beans cool 10 minutes before portioning. Sealing hot food causes condensation and sogginess.
 
-12. Assembly line across 10 open containers: 170 g meat, then 150 g rice, then 80 g beans, then 110 g veg and corn. No separate sauce container — the taco seasoning is already in the meat.
+12. Assembly line across 10 open containers: 170 g meat, then 150 g rice, then 75 g beans, then 100 g veg and corn. No separate sauce container — the taco seasoning is already in the meat.
 
 13. Label with a dry-erase marker. 6 containers to the fridge for the first half of the week, 4 to the freezer. Move freezer containers to the fridge the night before eating.
 
@@ -126,7 +127,9 @@ standing in for the fourth, which projects to ~700 mg.
 Only the seasoning changed, so the observed yields above still hold. The
 sodium figure has always been `estimated`, so recalculating it is legitimate —
 but **taste this before treating 700 as settled**, and note whether it needs
-salt added back. Half a teaspoon across the whole batch is only ~116 mg per
+salt added back. Still unverified: the 2026-11-17 cook used five packets by
+mistake and was stretched to 12 containers to compensate, so it could not test
+this. Half a teaspoon across the whole batch is only ~116 mg per
 container and would still land near 713.
 
 Eventually worth mixing the blend in bulk and dropping packets entirely, which
@@ -135,15 +138,13 @@ a cornstarch slurry to replace the thickening the packets provide — that is
 what step 7's simmer relies on, and it is the reason not to jump straight to
 an all-bulk version on the fastest recipe in the rotation.
 
-Open item: the vegetable arithmetic does not close. Using only measured
-figures — 57 g per cooked pepper and ~80 g per cooked onion, both now in
-`docs/standing-parameters.md` — 6 peppers plus 1 onion plus a 12–16 oz bag of
-corn comes to roughly 760–880 g. That is 76–87 g per container, not the 110 g
-this recipe claims, a shortfall of 220–340 g per batch. Either the veg was
-never weighed on the sessions behind this recipe, or more onion went in than
-the ingredient list records. Weigh the combined veg before portioning on the
-next cook and correct whichever end is wrong. Nothing here has been changed
-without a scale behind it.
+The vegetable weight is measured, as of 2026-11-17. Six peppers, two medium
+onions and the corn came to **1015 g** combined, which is ~100 g per container
+at 10. This had been an open question since July: the recipe claimed 110 g
+while the per-pepper and per-onion figures in standing parameters only
+supported 76–87 g. The real number sits between them. The old arithmetic had
+counted the onion as one medium onion's ~80 g. It is now written as two medium
+onions, which is what actually goes in.
 
 **Nutrition:**
-Serving Size: 1 container, Calories: 700 kcal, Protein: 52 g, Carbohydrates: 60 g, Fat: 25 g, Fiber: 9 g, Sodium: 700 mg, Sugar: 2 g. Estimated, excludes fresh toppings. The sodium figure is a v4 projection and has not been cooked — see Notes.
+Serving Size: 1 container, Calories: 690 kcal, Protein: 52 g, Carbohydrates: 60 g, Fat: 25 g, Fiber: 9 g, Sodium: 700 mg, Sugar: 2 g. Estimated, excludes fresh toppings. The sodium figure is a v4 projection and has not been cooked — see Notes.

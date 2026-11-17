@@ -84,7 +84,8 @@ technique is settled, and what varies is the sauce on top of it.
 
 | Ingredient | Yield | Notes |
 |---|---|---|
-| Jasmine rice | ~451–461 g per dry cup at 3 ½ cups | Five sessions. The four at 3 ½ cups read 451, 455, 457, 461 — mean 456, every one above the planning figure. The single 3-cup session read 407. **Plan at 450 for 3–3 ½ cups**, which runs ~1% conservative and is the right direction to be wrong in. |
+| Jasmine rice | ~451–461 g per dry cup at 3 ½ cups | Five sessions. The four at 3 ½ cups read 451, 455, 457, 461 — mean 456, every one above the planning figure. The single 3-cup session read 407 and a 4 ¼-cup session read 476 — bigger batches give more per cup. **Plan at 450 for 3–3 ½ cups**, which runs ~1% conservative and is the right direction to be wrong in. |
+| Black beans, canned | ~248 g per can | Rinsed, drained, warmed. 3 cans → 745 g, 2026-11-17. |
 | Broccoli, frozen florets | 0.93 | 1020 g frozen → 950 g steamed. Far tighter than crowns, and no prep. |
 | Bell peppers | 57–103 g each cooked | Nearly 2× spread. **Buy 6, plan on 340–620 g.** |
 | Onion | 80–98 g each cooked | 3 onions → 240 g in one session, → 295 g in another |
